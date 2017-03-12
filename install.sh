@@ -11,12 +11,6 @@
 echo "cd to Dotfiles directory"
 cd ~/Dotfiles
 
-echo "Install vim configurations..."
-rm ~/.vimrc
-rm ~/.gvimrc
-ln -s ~/Dotfiles/.vimrc ~/.vimrc
-ln -s ~/Dotfiles/.vimrc ~/.gvimrc
-
 echo "Install eslint configurations..."
 rm ~/.eslintrc
 ln -s ~/Dotfiles/.eslintrc ~/.eslintrc
