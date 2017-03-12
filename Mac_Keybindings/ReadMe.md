@@ -1,0 +1,1 @@
+Copy file to ~/Library/Keybindings/DefaultKeyBinding.dict
