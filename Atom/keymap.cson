@@ -1,0 +1,59 @@
+# Your keymap
+#
+# Atom keymaps work similarly to style sheets. Just as style sheets use
+# selectors to apply styles to elements, Atom keymaps use selectors to associate
+# keystrokes with events in specific contexts. Unlike style sheets however,
+# each selector can only be declared once.
+#
+# You can create a new keybinding in this file by typing "key" and then hitting
+# tab.
+#
+# Here's an example taken from Atom's built-in keymap:
+#
+# 'atom-text-editor':
+#   'enter': 'editor:newline'
+#
+# 'atom-workspace':
+#   'ctrl-shift-p': 'core:move-up'
+#   'ctrl-p': 'core:move-down'
+#
+# You can find more information about keymaps in these guides:
+# * http://flight-manual.atom.io/using-atom/sections/basic-customization/#_customizing_keybindings
+# * http://flight-manual.atom.io/behind-atom/sections/keymaps-in-depth/
+#
+# If you're having trouble with your keybindings not working, try the
+# Keybinding Resolver: `Cmd+.` on macOS and `Ctrl+.` on other platforms. See the
+# Debugging Guide for more information:
+# * http://flight-manual.atom.io/hacking-atom/sections/debugging/#check-the-keybindings
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
+'atom-text-editor.vim-mode-plus.normal-mode':
+ ':': 'vim-mode-plus-ex-mode:open'
+ '!': 'vim-mode-plus-ex-mode:toggle-setting'
+
+'body atom-text-editor.autocomplete-active':
+ 'ctrl-p': 'autocomplete-plus:move-up'
+ 'ctrl-n': 'autocomplete-plus:move-down'
+ 'pageup': 'autocomplete-plus:page-up'
+ 'pagedown': 'autocomplete-plus:page-down'
+ 'home': 'autocomplete-plus:move-to-top'
+ 'end': 'autocomplete-plus:move-to-bottom'
+
+'atom-text-editor':
+ 'alt-/': 'autocomplete-plus:activate'
+
+'atom-text-editor.vim-mode-plus.insert-mode':
+ 'j k': 'vim-mode-plus:reset-normal-mode'
+ 'ctrl-a': 'vim-mode-plus:insert-at-beginning-of-line'
+ 'ctrl-b': 'vim-mode-plus:move-left'
+ 'ctrl-f': 'vim-mode-plus:move-right'
+ 'ctrl-d': 'core:delete'
+
+'atom-text-editor.vim-mode-plus':
+ 'ctrl-e': 'vim-mode-plus:move-to-last-character-of-line'
+
+'atom-workspace, atom-workspace atom-text-editor':
+ 'ctrl-shift-M': 'markdown-preview-plus:toggle'
