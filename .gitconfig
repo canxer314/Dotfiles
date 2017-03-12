@@ -8,7 +8,8 @@
 	di	= !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
 	aa = add --all
 	rr = rm -r --cached
-	cm	= commit
+	cm	= commit -m
+	ci	= commit -a -v
 	pu = push
 	cl	= clone
 	br	= branch
@@ -18,7 +19,6 @@
 	st	= status
 	co	= checkout
 	sm	= submodule
-	ci	= commit -a -v
 	unst = reset HEAD
 	throw	= reset --hard HEAD
 	throwh	= reset --hard HEAD^
