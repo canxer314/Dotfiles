@@ -19,8 +19,8 @@
   editor:
     autoIndent: false
     autoIndentOnPaste: false
-    fontFamily: "Roboto Mono"
-    fontSize: 16
+    fontFamily: "Ubuntu Mono"
+    fontSize: 20
     scrollPastEnd: true
     softWrap: true
     softWrapAtPreferredLineLength: true
