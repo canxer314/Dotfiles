@@ -53,6 +53,7 @@
  'ctrl-d': 'core:delete'
 
 'atom-text-editor.vim-mode-plus':
+ 'ctrl-g': 'vim-mode-plus:reset-normal-mode'
  'ctrl-e': 'vim-mode-plus:move-to-last-character-of-line'
 
 'atom-workspace, atom-workspace atom-text-editor':

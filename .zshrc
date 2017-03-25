@@ -84,5 +84,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias g="git"
-alias e="emacs"
-alias em="open -a 'Emacs' ."
+alias em="emacs"
+alias ke="pkill -SIGUSR2 -i emacs"
+alias e="/Applications/Emacs.app/Contents/MacOS/Emacs"
