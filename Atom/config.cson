@@ -29,6 +29,8 @@
     userId: "e86caf1f-c4a5-1496-cc23-e0de5986bc82"
   fonts:
     fontFamily: "Ubuntu Mono"
+  kite:
+    showKiteTourOnStatup: false
   linter:
     errorPanelHeight: 151
   "linter-eslint":
