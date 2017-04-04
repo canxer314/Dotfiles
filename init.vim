@@ -1,3 +1,19 @@
+" get OS
+function! GetRunningOS()
+  if has("win32")
+    return "win"
+  endif
+  if has("unix")
+    if system('uname')=~'Darwin'
+      return "mac"
+    else
+      return "linux"
+    endif
+  endif
+endfunction
+
+let os = GetRunningOS()
+
 " Here are some basic customizations, please refer to the ~/.SpaceVim.d/init.vim
 " file for all possible options:
 let g:spacevim_default_indent = 3
@@ -41,20 +57,30 @@ let g:spacevim_custom_plugins = [
     \ ['wsdjeg/GitHub.vim'],
     \ ]
 
-" set the guifont
-let g:spacevim_guifont = 'Roboto\ Mono\ for\ Powerline\ 14'
+" set GUI font for powerline
+if os == "mac" || os == "linux"
+    let g:spacevim_guifont='Roboto\ Mono\ for\ Powerline\ 14'
+else
+    if has('gui_running')
+      if has('gui_win32')
+        let g:spacevim_guifont='Monaco:h12:cANSI'
+      else
+        let g:spacevim_guifont='Monaco\ 12'
+      endif
+    endif
+endif
 
 " set keybinding
 :imap jk <Esc>
 
 "emacs keymaping for insert mode cursor movement{{{
-nmap <c-a> I<esc> 
-nmap <c-e> A<esc>
-nmap <c-k> D
+nmap <c-a> <home> 
+nmap <c-e> <end>
+nmap <c-k> d$
 inoremap <c-d> <del>
-inoremap <c-k> <esc>lC
-inoremap <c-a> <esc>I
-inoremap <c-e> <esc>A
+inoremap <c-k> <esc>lc$
+inoremap <c-a> <home>
+inoremap <c-e> <end>
 inoremap <c-f> <right>
 inoremap <c-b> <left>
 inoremap <c-p> <up>
