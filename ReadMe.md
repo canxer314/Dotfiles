@@ -1,4 +1,4 @@
-# Ting Zhou's Configuration for Dotfiles and Atom
+# Ting Zhou's Configuration for SpaceVim, Dotfiles and Atom
 
 ## Installation
 
@@ -6,7 +6,7 @@ The root directory should be ***~/Dotfiles***
 
  `git clone https://github.com/ztlevi/Dotfiles.git ~/Dotfiles`
 
-1. Vim
+1. SpaceVim
 
    Install it with 
 
@@ -23,7 +23,6 @@ The root directory should be ***~/Dotfiles***
 
    ```shell
     cd ~/Dotfiles
-
     ./install.sh
    ```
 
