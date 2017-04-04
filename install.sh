@@ -5,8 +5,8 @@
 # ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 # install tmux
 # brew install tmux
-#install git 
-#brew install git
+# install git 
+# brew install git
 
 echo "cd to Dotfiles directory"
 cd ~/Dotfiles
@@ -36,6 +36,6 @@ rm ~/.atom/keymap.cson
 ln -s ~/Dotfiles/Atom/config.cson ~/.atom/config.cson
 ln -s ~/Dotfiles/Atom/keymap.cson ~/.atom/keymap.cson
 
-#echo "update submodules"
-git submodule init
-git submodule update
+# echo "update submodules"
+# git submodule init
+# git submodule update
