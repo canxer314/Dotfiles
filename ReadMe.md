@@ -28,6 +28,13 @@ The root directory should be ***~/Dotfiles***
     ./install.sh
    ```
 
+3. Atom
+
+   Sync with sync-settings packge.
+
+   1. Create personal access token on github
+   2. Copy the GistID
+
 ## Mac Keybindings
 Settings are described in *Mac_keybindings/ReadMe.md*
 
