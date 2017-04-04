@@ -74,13 +74,10 @@ endif
 :imap jk <Esc>
 
 "emacs keymaping for insert mode cursor movement{{{
-nmap <c-a> <home> 
-nmap <c-e> <end>
-nmap <c-k> d$
 inoremap <c-d> <del>
 inoremap <c-k> <esc>lc$
-inoremap <c-a> <home>
-inoremap <c-e> <end>
+inoremap <c-a> <esc>I
+inoremap <c-e> <esc>A
 inoremap <c-f> <right>
 inoremap <c-b> <left>
 inoremap <c-p> <up>
