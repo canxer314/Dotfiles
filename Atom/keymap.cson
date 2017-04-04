@@ -47,14 +47,13 @@
 
 'atom-text-editor.vim-mode-plus.insert-mode':
  'j k': 'vim-mode-plus:reset-normal-mode'
- 'ctrl-a': 'vim-mode-plus:insert-at-beginning-of-line'
+ 'ctrl-a': 'vim-mode-plus:move-to-first-character-of-line'
  'ctrl-b': 'vim-mode-plus:move-left'
  'ctrl-f': 'vim-mode-plus:move-right'
  'ctrl-d': 'core:delete'
 
 'atom-text-editor.vim-mode-plus':
  'ctrl-g': 'vim-mode-plus:reset-normal-mode'
- 'ctrl-e': 'vim-mode-plus:move-to-last-character-of-line'
 
 'atom-workspace, atom-workspace atom-text-editor':
  'ctrl-shift-M': 'markdown-preview-plus:toggle'
