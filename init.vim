@@ -27,7 +27,7 @@ let g:spacevim_max_column     = 80
 " let g:spacevim_colorscheme = 'solarized'
 
 " Set plugin manager, you want to use, default is dein.vim
-" let g:spacevim_plugin_manager = 'dein'  " neobundle or dein or vim-plug
+let g:spacevim_plugin_manager = 'dein'  " neobundle or dein or vim-plug
 
 " use space as `<Leader>`
 let mapleader = "\<space>"
@@ -47,15 +47,15 @@ call SpaceVim#layers#load('ui')
 
 " If there is a particular plugin you don't like, you can define this
 " variable to disable them entirely:
-let g:spacevim_disabled_plugins=[
-    \ ['junegunn/fzf.vim'],
-    \ ]
+" let g:spacevim_disabled_plugins=[
+    " \ ['junegunn/fzf.vim'],
+    " \ ]
 
 " If you want to add some custom plugins, use these options:
-let g:spacevim_custom_plugins = [
-    \ ['plasticboy/vim-markdown', {'on_ft' : 'markdown'}],
-    \ ['wsdjeg/GitHub.vim'],
-    \ ]
+" let g:spacevim_custom_plugins = [
+"    \ ['plasticboy/vim-markdown', {'on_ft' : 'markdown'}],
+"    \ ['wsdjeg/GitHub.vim'],
+"    \ ]
 
 " set GUI font for powerline
 if os == "mac" || os == "linux"
