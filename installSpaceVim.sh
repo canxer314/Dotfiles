@@ -8,13 +8,9 @@
 # install git
 # brew install git
 
-echo "Remove vim configurations..."
-rm ~/.vimrc
-rm ~/.gvimrc
-
-echo "Create .SpaceVim.d folder and init.vim"
-mkdir ~/.SpaceVim.d
-ln -s ~/Dotfiles/init.vim ~/.SpaceVim.d/init.vim
+echo "Install space-vim setting"
+rm ~/.spacevim
+ln -s ~/Dotfiles/.spacevim ~/.spacevim
 
 echo "Install SpaceVim"
-curl -sLf https://spacevim.org/install.sh | bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/liuchengxu/space-vim/master/install.sh)"

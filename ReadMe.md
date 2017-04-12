@@ -15,10 +15,6 @@ The root directory should be ***~/Dotfiles***
    ./installSpaceVim.sh
    ```
 
-   Update plugin with `:call dein#install()`
-
-   Uninstall it with `curl -sLf https://spacevim.org/install.sh | bash -s — uninstall`
-
 2. Dotfiles
 
    Install it with 
