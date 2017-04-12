@@ -27,15 +27,6 @@ echo "Install zsh configurations..."
 rm ~/.zshrc
 ln -s ~/Dotfiles/.zshrc ~/.zshrc
 
-echo "cd to ~/Dotfiles/Atom"
-cd ~/Dotfiles/Atom
-
-echo "Install Atom config and keymap"
-rm ~/.atom/config.cson
-rm ~/.atom/keymap.cson
-ln -s ~/Dotfiles/Atom/config.cson ~/.atom/config.cson
-ln -s ~/Dotfiles/Atom/keymap.cson ~/.atom/keymap.cson
-
 # echo "update submodules"
 # git submodule init
 # git submodule update
