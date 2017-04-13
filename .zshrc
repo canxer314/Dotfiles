@@ -99,8 +99,8 @@ antigen bundle bower
 # antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
-#antigen theme agnoster
-antigen theme candy
+antigen theme agnoster
+#antigen theme candy
 
 if [[ $CURRENT_OS == 'OS X' ]]; then
     antigen bundle brew
