@@ -48,6 +48,7 @@ function! UserInit()
 
     " Install private plugins
     " Plug 'extr0py/oni'
+    Plug 'mileszs/ack.vim'
 endfunction
 
 " Put your costom configurations here, e.g., change the colorscheme.
