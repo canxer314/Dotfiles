@@ -14,6 +14,8 @@ The root directory should be ***~/Dotfiles***
    cd ~/Dotfiles
    ./installSpaceVim.sh
    ```
+	Update the plugin with `:PlugUpdate`
+
 
 2. Dotfiles
 

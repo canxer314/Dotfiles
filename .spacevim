@@ -4,7 +4,7 @@
 " Use exclude option if you don't want the full Layer,
 " e.g., Layer 'better-defaults', { 'exclude': 'itchyny/vim-cursorword' }
 
-" get OS
+" Get OS
 function! GetRunningOS()
   if has("win32")
     return "win"
@@ -20,11 +20,21 @@ endfunction
 
 function! Layers()
 
-    " Default layers, recommended!
     Layer 'fzf'
+    Layer 'syntax-checking'
+    Layer 'auto-completion'
     Layer 'unite'
     Layer 'better-defaults'
-    Layer 'airline'
+    Layer 'file-manager'
+    Layer 'chinese'
+    Layer 'programming'
+
+    " Lang
+    Layer 'java'
+    Layer 'javascript'
+    Layer 'html'
+    Layer 'markdown'
+    Layer 'python'
 
 endfunction
 
@@ -42,6 +52,7 @@ endfunction
 
 " Put your costom configurations here, e.g., change the colorscheme.
 function! UserConfig()
+    "let os = GetRunningOS()
 
     " If you enable airline layer and have installed the powerline fonts, set it here.
     let g:airline_powerline_fonts=1
@@ -50,17 +61,5 @@ function! UserConfig()
       set termguicolors
     endif
 
-    let os = GetRunningOS()
-
-    "emacs keymaping for insert mode cursor movement{{{
-    inoremap <c-d> <del>
-    inoremap <c-k> <esc>lc$
-    inoremap <c-a> <esc>I
-    inoremap <c-e> <esc>A
-    inoremap <c-f> <right>
-    inoremap <c-b> <left>
-    inoremap <c-p> <up>
-    inoremap <c-n> <down>
-    "}}}
 
 endfunction
