@@ -1,13 +1,33 @@
+export LANG='en_US.UTF-8'
+export LC_ALL="en_US.UTF-8"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/ztlevi/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+source $ZSH/oh-my-zsh.sh
+
+UNAME=`uname`
+
+# Fallback info
+CURRENT_OS='Linux'
+DISTRO=''
+
+if [[ $UNAME == 'Darwin' ]]; then
+    CURRENT_OS='OS X'
+else
+    # Must be Linux, determine distro
+    if [[ -f /etc/redhat-release ]]; then
+        # CentOS or Ubuntu?
+        if grep -q "CentOS" /etc/redhat-release; then
+            DISTRO='CentOS'
+        else
+            DISTRO='Ubuntu'
+        fi
+    fi
+fi
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -51,16 +71,58 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git bundler osx)
 
-source $ZSH/oh-my-zsh.sh
+source ~/Dotfiles/antigen/antigen.zsh
+# call antigen update on your terminal and it will update the oh-my-zsh repository
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+#antigen bundle robbyrussell/oh-my-zsh lib/
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle git
+antigen bundle tmuxinator
+antigen bundle osx
+antigen bundle ruby
+antigen bundle autojump
+antigen bundle textmate
+antigen bundle pip
+antigen bundle lein
+antigen bundle command-not-found
+antigen bundle gulp
+antigen bundle node
+antigen bundle npm
+antigen bundle nvm
+antigen bundle bower
+
+# Syntax highlighting bundle.
+# don't enable this theme, it doesn't work well with ansi-term in emacs
+# antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Load the theme.
+#antigen theme agnoster
+antigen theme candy
+
+if [[ $CURRENT_OS == 'OS X' ]]; then
+    antigen bundle brew
+    antigen bundle brew-cask
+    antigen bundle gem
+    antigen bundle osx
+elif [[ $CURRENT_OS == 'Linux' ]]; then
+# None so far...
+
+if [[ $DISTRO == 'CentOS' ]]; then
+    antigen bundle centos
+fi
+elif [[ $CURRENT_OS == 'Cygwin' ]]; then
+    antigen bundle cygwin
+fi
+
+# Tell antigen that you're done.
+antigen apply
 
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -75,18 +137,21 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias g="git"
 alias em="/usr/local/bin/emacs"
-alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
+if [[ $CURRENT_OS == 'OS X' ]]; then
+    alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
+elif [[ $CURRENT_OS == 'Linux' ]]; then
+    alias emacs="usr/bin/emacs"
+    alias xampp="sudo /opt/lampp/lampp"
+    alias lampp="sudo /opt/lampp/lampp"
+    alias eclipse="sudo /Applications/eclipse/eclipse"
+fi    
+
 alias e="emacs"
+alias se="sudo emacs"
 alias ke="pkill -SIGUSR2 -i emacs"
 alias edebug="emacs --debug-init"
 alias etime="emacs --timed-requires --profile"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
