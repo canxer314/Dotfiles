@@ -4,8 +4,6 @@ export LC_ALL="en_US.UTF-8"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
 
 source $ZSH/oh-my-zsh.sh
 
@@ -137,12 +135,10 @@ antigen apply
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-alias g="git"
-alias em="/usr/local/bin/emacs"
 if [[ $CURRENT_OS == 'OS X' ]]; then
     alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
 elif [[ $CURRENT_OS == 'Linux' ]]; then
-    alias emacs="usr/bin/emacs"
+    alias emacs="/usr/bin/emacs"
     alias xampp="sudo /opt/lampp/lampp"
     alias lampp="sudo /opt/lampp/lampp"
     alias eclipse="sudo /Applications/eclipse/eclipse"
