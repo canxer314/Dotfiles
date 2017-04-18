@@ -31,6 +31,9 @@ ln -s ~/Dotfiles/.bash_profile ~/.bash_profile
 ln -s ~/Dotfiles/.zshrc ~/.zshrc
 ln -s ~/Dotfiles/.zshenv ~/.zshenv
 
+echo "Install Xmodmap key tweak for linux"
+ln -s ~/Dotfiles/.Xmodmap ~/.Xmodmap
+
 # echo "update submodules"
 # git submodule init
 # git submodule update
