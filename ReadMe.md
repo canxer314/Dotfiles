@@ -8,6 +8,7 @@ The root directory should be ***~/Dotfiles***
 
 1. SpaceVim
 
+   Install git, vim, curl first.
    Install it with 
 
    ```shell
@@ -19,6 +20,7 @@ The root directory should be ***~/Dotfiles***
 
 2. Dotfiles
 
+   Install zsh first.
    Install it with 
 
    ```shell
