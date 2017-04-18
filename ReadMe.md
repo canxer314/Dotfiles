@@ -45,3 +45,6 @@ Settings are described in *Mac_keybindings/ReadMe.md*
 
 2. Ubuntu Mono
 
+## Notes
+1. Xmodmap file is the key tweak for linux.
+
