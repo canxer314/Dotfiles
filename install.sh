@@ -5,7 +5,7 @@
 # ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 # install tmux
 # brew install tmux
-# install git 
+# install git
 # brew install git
 
 echo "cd to Dotfiles directory"
@@ -35,5 +35,5 @@ echo "Install Xmodmap key tweak for linux"
 ln -s ~/Dotfiles/.Xmodmap ~/.Xmodmap
 
 # echo "update submodules"
-# git submodule init
-# git submodule update
+git submodule init
+git submodule update
