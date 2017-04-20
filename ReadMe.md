@@ -47,4 +47,4 @@ Settings are described in *Mac_keybindings/ReadMe.md*
 
 ## Notes
 1. Xmodmap file is the key tweak for linux.
-
+2. Fix npm completion permission. https://docs.npmjs.com/getting-started/fixing-npm-permissions .

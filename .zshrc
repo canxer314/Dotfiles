@@ -106,11 +106,11 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
     antigen bundle gem
     antigen bundle osx
 elif [[ $CURRENT_OS == 'Linux' ]]; then
-# None so far...
+    # None so far...
 
-if [[ $DISTRO == 'CentOS' ]]; then
-    antigen bundle centos
-fi
+    if [[ $DISTRO == 'CentOS' ]]; then
+        antigen bundle centos
+    fi
 elif [[ $CURRENT_OS == 'Cygwin' ]]; then
     antigen bundle cygwin
 fi
@@ -151,3 +151,12 @@ alias edebug="emacs --debug-init"
 alias etime="emacs --timed-requires --profile"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+if [[ $CURRENT_OS == 'OS X' ]]; then
+    
+elif [[ $CURRENT_OS == 'Linux' ]]; then
+    export PATH="$HOME/.linuxbrew/bin:$PATH"
+    export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+    export PATH=$PATH:$JAVA_HOME/bin
+    NPM_CONFIG_PREFIX=~/.npm-global   
+fi
