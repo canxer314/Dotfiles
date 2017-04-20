@@ -20,8 +20,12 @@ The root directory should be ***~/Dotfiles***
 
 2. Dotfiles
 
-   Install zsh first.
-   Install it with 
+   Install zsh first, `brew install zsh zsh-completions` or `apt install zsh` on Ubuntu.
+   Install oh-my-zsh:
+   ```shell
+   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+   ```
+   Put the dotfiles in the home directory: 
 
    ```shell
     cd ~/Dotfiles
@@ -41,9 +45,8 @@ Settings are described in *Mac_keybindings/ReadMe.md*
 ## Fonts
 
 1. Roboto Mono for Powerline
-
-
-2. Ubuntu Mono
+2. Ubuntu Mono and the one for Powerline
+3. Source Code Pro for Powerline
 
 ## Notes
 1. Xmodmap file is the key tweak for linux.
