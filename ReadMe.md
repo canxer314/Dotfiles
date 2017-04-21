@@ -5,10 +5,14 @@
 The root directory should be ***~/Dotfiles***
 
  `git clone https://github.com/ztlevi/Dotfiles.git ~/Dotfiles`
+ 
+ or
+ 
+ `git clone git@github.com:ztlevi/Dotfiles.git ~/Dotfiles`
 
 1. SpaceVim
 
-   Install git, vim, curl first.
+   Install **git, vim, curl** first.
    Install it with 
 
    ```shell
@@ -21,6 +25,7 @@ The root directory should be ***~/Dotfiles***
 2. Dotfiles
 
    Install zsh first, `brew install zsh zsh-completions` or `apt install zsh` on Ubuntu.
+   
    Install oh-my-zsh:
    ```shell
    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
