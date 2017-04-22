@@ -3,39 +3,49 @@
 ** Installation
 
    The root directory should be */~/Dotfiles/*
-
+   
+   Use
    #+BEGIN_SRC shell
    git clone https://github.com/ztlevi/Dotfiles.git ~/Dotfiles
    #+END_SRC
 
    or
 
-   =git clone git@github.com:ztlevi/Dotfiles.git ~/Dotfiles=
+   #+BEGIN_SRC shell
+   git clone git@github.com:ztlevi/Dotfiles.git ~/Dotfiles
+   #+END_SRC
 
    1. SpaceVim
 
-     Install *git, vim, curl* first. Install it with
-
-     =shell    cd ~/Dotfiles    ./installSpaceVim.sh= Update the plugin with
-     =:PlugUpdate=
+      - Install *git, vim, curl* first. Install it with
+     
+      #+BEGIN_SRC shell
+      cd ~/Dotfiles
+      ./installSpaceVim.sh
+      #+END_SRC
+      - Update the plugin with =:PlugUpdate=
 
    2. Dotfiles
 
-     Install zsh first, =brew install zsh zsh-completions= or
-     =apt install zsh= on Ubuntu.
+      Install zsh first, =brew install zsh zsh-completions= or =apt install zsh= on Ubuntu.
 
-     Install oh-my-zsh:
-     =shell    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"=
-     Put the dotfiles in the home directory:
-
-     =shell     cd ~/Dotfiles     ./install.sh=
+      Install oh-my-zsh:
+      #+BEGIN_SRC shell
+      sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+      #+END_SRC
+      
+      Put the dotfiles in the home directory:
+      #+BEGIN_SRC shell
+      cd ~/Dotfiles
+      ./install.sh
+      #+END_SRC
 
    3. Atom
 
-     Sync with sync-settings packge.
+      Sync with sync-settings packge.
 
-     1. Create personal access token on github
-     2. Copy the GistID
+      1. Create personal access token on github
+      2. Copy the GistID
 
 ** Mac Keybindings
 
@@ -49,6 +59,6 @@
 
 ** Notes
 
-   1. Xmodmap file is the key tweak for linux.
+   1. Xmodmap file is used for key tweak on linux.
    2. Fix npm completion permission.
       https://docs.npmjs.com/getting-started/fixing-npm-permissions .
