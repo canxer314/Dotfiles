@@ -18,11 +18,10 @@
    1. SpaceVim
 
       1. Install *git, vim, curl* first. Install it with
-     
-      #+BEGIN_SRC shell
-      cd ~/Dotfiles
-      ./installSpaceVim.sh
-      #+END_SRC
+         #+BEGIN_SRC shell
+          cd ~/Dotfiles
+          ./installSpaceVim.sh
+         #+END_SRC
       2. Update the plugin with =:PlugUpdate=
 
    2. Dotfiles
