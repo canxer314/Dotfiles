@@ -1,4 +1,4 @@
-* Ting Zhou's Configuration for SpaceVim, Dotfiles and Atom
+* Ting Zhou's Configuration for space-vim, Dotfiles and Atom
   
 ** Installation
 
@@ -15,36 +15,41 @@
    git clone git@github.com:ztlevi/Dotfiles.git ~/Dotfiles
    #+END_SRC
 
-   1. SpaceVim
+*** space-vim
 
-      1. Install *git, vim, curl* first. Install it with
-         #+BEGIN_SRC shell
-          cd ~/Dotfiles
-          ./installSpaceVim.sh
-         #+END_SRC
-      2. Update the plugin with =:PlugUpdate=
+    1. Install *git, vim, curl* first.
+    2. Install space-vim:
+       #+BEGIN_SRC shell
+        cd ~/Dotfiles
+        ./installspace-vim.sh
+       #+END_SRC
+    3. Update the plugin with =:PlugUpdate=
+    4. For Ubuntu, install vim-gnome to fix *,+ register problem
+       #+BEGIN_SRC shell
+       sudo apt install vim-gnome
+       #+END_SRC
 
-   2. Dotfiles
+*** Dotfiles
 
-      Install zsh first, =brew install zsh zsh-completions= or =apt install zsh= on Ubuntu.
+    Install zsh first, =brew install zsh zsh-completions= or =apt install zsh= on Ubuntu.
 
-      Install oh-my-zsh:
-      #+BEGIN_SRC shell
+    Install oh-my-zsh:
+    #+BEGIN_SRC shell
       sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-      #+END_SRC
+    #+END_SRC
       
-      Put the dotfiles in the home directory:
-      #+BEGIN_SRC shell
+    Put the dotfiles in the home directory:
+    #+BEGIN_SRC shell
       cd ~/Dotfiles
       ./install.sh
-      #+END_SRC
+    #+END_SRC
 
-   3. Atom
+*** Atom
 
-      Sync with sync-settings packge.
+    Sync with sync-settings packge.
 
-      1. Create personal access token on github
-      2. Copy the GistID
+    1. Create personal access token on github
+    2. Copy the GistID
 
 ** Mac Keybindings
 
