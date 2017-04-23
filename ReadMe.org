@@ -18,16 +18,19 @@
 *** space-vim
 
     1. Install *git, vim, curl* first.
+       Notes: Vim +clipboard, fix no * and + register problem
+       For Mac: ~brew install vim~, then vim locates under the */usr/local/bin/vim*
+       For Ubuntu, install vim-gnome
+       #+BEGIN_SRC shell
+       sudo apt install vim-gnome
+       #+END_SRC
+
     2. Install space-vim:
        #+BEGIN_SRC shell
         cd ~/Dotfiles
         ./installspace-vim.sh
        #+END_SRC
     3. Update the plugin with =:PlugUpdate=
-    4. For Ubuntu, install vim-gnome to fix *,+ register problem
-       #+BEGIN_SRC shell
-       sudo apt install vim-gnome
-       #+END_SRC
 
 *** Dotfiles
 

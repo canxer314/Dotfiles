@@ -137,6 +137,7 @@ antigen apply
 
 if [[ $CURRENT_OS == 'OS X' ]]; then
     alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
+    alias vim="/usr/local/bin/vim"
 elif [[ $CURRENT_OS == 'Linux' ]]; then
     alias emacs="/usr/bin/emacs"
     alias xampp="sudo /opt/lampp/lampp"
@@ -144,6 +145,8 @@ elif [[ $CURRENT_OS == 'Linux' ]]; then
     alias eclipse="sudo /Applications/eclipse/eclipse"
 fi    
 
+alias v="vim"
+alias sv="sudo vim"
 alias e="emacs"
 alias se="sudo emacs"
 alias ke="pkill -SIGUSR2 -i emacs"
