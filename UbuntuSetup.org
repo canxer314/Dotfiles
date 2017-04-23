@@ -1,6 +1,11 @@
 * Ubuntu Setup
 **  Install essential build tool
-   Update apt first: ~sudo apt update~
+   Update apt first: 
+   #+BEGIN_SRC shell
+   sudo apt update
+   sudo apt dist-upgrade
+   #+END_SRC
+
    - Linuxbrew (Git, Curl, Python, ruby, build-essential)
      #+BEGIN_SRC shell
      sudo apt-get install build-essential curl git python-setuptools ruby
@@ -44,6 +49,10 @@
     - Blueman (Bluetooth)
       #+BEGIN_SRC shell
       sudo apt-get install blueman
+      #+END_SRC
+    - Clipit (Clipboard Tool)
+      #+BEGIN_SRC shell
+      sudo apt install clipit
       #+END_SRC
     - Wine (Playonlinux)
       #+BEGIN_SRC shell
