@@ -1,7 +1,7 @@
 * Ubuntu Setup
 **  Install essential build tool
    Update apt first: ~sudo apt update~
-   - Linuxbrew
+   - Linuxbrew (Git, Curl, Python, ruby, build-essential)
      #+BEGIN_SRC shell
      sudo apt-get install build-essential curl git python-setuptools ruby
      ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
@@ -15,6 +15,61 @@
      sudo apt-get install git build-essential fakeroot kernel-package libncurses5-dev libssl-dev
      #+END_SRC
 
+** Install Libraries and Apps
+*** Libraries
+    - JDK 8
+      1. First of all you need to add webupd8team Java PPA repository in your system. After that install, Oracle Java 8 using following a set of commands.
+         #+BEGIN_SRC shell
+          sudo add-apt-repository ppa:webupd8team/java
+          sudo apt-get update
+          sudo apt-get install oracle-java8-installer
+         #+end_src
+      2. Configuring Java Environment
+
+         Also, install java configuration package. It seems like below package is already installed with latest operating systems during installation of JAVA packages. But you can still make sure by running below command.
+         #+BEGIN_SRC shell
+          sudo apt-get install oracle-java8-set-default
+         #+END_SRC
+         Now edit /etc/environment configuration file and add following entries to set JAVA_HOME and JRE_HOME environment variables.
+         #+BEGIN_SRC shell
+          JAVA_HOME=/usr/lib/jvm/java-8-oracle
+          JRE_HOME=/usr/lib/jvm/java-8-oracle/jre
+         #+END_SRC
+*** Developer Tools
+    - zeal
+      #+BEGIN_SRC shell
+      sudo apt install zeal
+      #+END_SRC
+*** Others
+    - Blueman (Bluetooth)
+      #+BEGIN_SRC shell
+      sudo apt-get install blueman
+      #+END_SRC
+    - Wine (Playonlinux)
+      #+BEGIN_SRC shell
+      sudo apt-get install --install-recommends winehq-stable
+      #+END_SRC
+    - Typora
+      #+BEGIN_SRC shell
+      # optional, but recommended
+      sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
+      # add Typora's repository
+      sudo add-apt-repository 'deb https://typora.io ./linux/'
+      sudo apt-get update
+      # install typora
+      sudo apt-get install typora
+      #+END_SRC
+    - OBS
+      For Ubuntu 15.04 and following versions, FFmpeg is officially included:
+      #+BEGIN_SRC shell
+      sudo apt-get install ffmpeg
+      #+END_SRC
+      Then you can install OBS with the following commands:
+      #+BEGIN_SRC shell
+      sudo add-apt-repository ppa:obsproject/obs-studio
+      sudo apt-get update && sudo apt-get install obs-studio
+      #+END_SRC
+
 ** Reduce startup and shutdown timeout
 
    1. /etc/systemd/system.conf:
@@ -27,7 +82,9 @@
       #+BEGIN_SRC language
       systemctl daemon-reload
       #+END_SRC
-   
+** Key Bindings
+   - Change Application Hide(Minimize window) to Ctrl-h
+   - Change Application Quit(Close Window) to Ctrl-q
 **  Need to be modified
    # Update repos
    #
