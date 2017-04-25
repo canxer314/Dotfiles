@@ -30,7 +30,7 @@
 	accept-theirs = "!f() { git checkout --theirs -- \"${@:-.}\"; git add -u \"${@:-.}\"; }; f"
 	tagcommit = !sh -c 'git rev-list $0 | head -n 1'
 [core]
-	editor = /usr/bin/vim
+	editor = vim
 [push]
 	default = matching
 [branch]
