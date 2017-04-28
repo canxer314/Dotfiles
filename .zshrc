@@ -12,19 +12,14 @@ UNAME=`uname`
 # Fallback info
 CURRENT_OS='Linux'
 DISTRO=''
+VER=''
 
 if [[ $UNAME == 'Darwin' ]]; then
-    CURRENT_OS='OS X'
+    CURRENT_OS='OSX'
 else
-    # Must be Linux, determine distro
-    if [[ -f /etc/redhat-release ]]; then
-        # CentOS or Ubuntu?
-        if grep -q "CentOS" /etc/redhat-release; then
-            DISTRO='CentOS'
-        else
-            DISTRO='Ubuntu'
-        fi
-    fi
+    # Determine Linux distro
+    DISTRO=$(lsb_release -si)
+    VER=$(lsb_release -sr)
 fi
 
 # Uncomment the following line to use case-sensitive completion.
@@ -100,7 +95,7 @@ antigen bundle bower
 antigen theme agnoster
 #antigen theme candy
 
-if [[ $CURRENT_OS == 'OS X' ]]; then
+if [[ $CURRENT_OS == 'OSX' ]]; then
     antigen bundle brew
     antigen bundle brew-cask
     antigen bundle gem
@@ -110,7 +105,12 @@ elif [[ $CURRENT_OS == 'Linux' ]]; then
 
     if [[ $DISTRO == 'CentOS' ]]; then
         antigen bundle centos
+    elif [[ $DISTRO == 'Arch' ]]; then
+        antigen bundle archlinux
+    elif [[ $DISTRO == 'Ubuntu' ]]; then
+        antigen bundle debian
     fi
+
 elif [[ $CURRENT_OS == 'Cygwin' ]]; then
     antigen bundle cygwin
 fi
@@ -135,14 +135,14 @@ antigen apply
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-if [[ $CURRENT_OS == 'OS X' ]]; then
+if [[ $CURRENT_OS == 'OSX' ]]; then
     alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
     alias vim="/usr/local/bin/vim"
 elif [[ $CURRENT_OS == 'Linux' ]]; then
     alias emacs="/usr/bin/emacs"
-    alias xampp="sudo /opt/lampp/lampp"
-    alias lampp="sudo /opt/lampp/lampp"
-    alias eclipse="sudo /Applications/eclipse/eclipse"
+    alias vim="/usr/bin/vim"
+    alias xampp="/opt/lampp/xampp"
+    alias lampp="/opt/lampp/lampp"
 fi    
 
 alias v="vim"
@@ -155,9 +155,8 @@ alias etime="emacs --timed-requires --profile"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-if [[ $CURRENT_OS == 'OS X' ]]; then
+if [[ $CURRENT_OS == 'OSX' ]]; then
     
 elif [[ $CURRENT_OS == 'Linux' ]]; then
-    export PATH="$HOME/.linuxbrew/bin:$PATH"
-    NPM_CONFIG_PREFIX=~/.npm-global   
+    # Some path here
 fi
