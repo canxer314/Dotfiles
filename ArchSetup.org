@@ -1,29 +1,41 @@
 * Arch Setup
 ** Chinese Encoding and font issue
-   Install *noto-fonts-cjk* (Google Noto CJK fonts), which supports Chinese, Japanese, Korean.
-
-** Grub boot menu setting
-   Install and use Grub-customizer
+   1. Install *noto-fonts-cjk* (Google Noto CJK fonts), which supports Chinese, Japanese, Korean.
+   2. Edit */etc/fonts/conf.d/65-nonlatin.conf*, put the preferred font e.g. Noto Sans CJK SC in the file under *sans-serif* family tag.
+      #+BEGIN_SRC 
+      <!-- chinese fonts are actually serifed -->
+      <family>Noto Sans CJK SC</family> <!-- han (zh-cn,zh-tw) -->
+      #+END_SRC
 
 ** Pacman
    - Update System: 
      #+BEGIN_SRC shell
      sudo pacman -Syu
      #+END_SRC
-   - fix error: could not open file /var/lib/pacman/sync/antergos.db: Unrecognized archive format...
+   - Removing unused packages (orphans)
+     For recursively removing orphans and their configuration files:
+     #+BEGIN_SRC shell
+     pacman -Rns $(pacman -Qtdq)
+     #+END_SRC
+   - Fix database error: could not open file /var/lib/pacman/sync/antergos.db: Unrecognized archive format...
      #+BEGIN_SRC shell
      sudo pacman -Syy
      #+END_SRC
+     Notes: Passing two --refresh or -y flags will force a refresh of all package databases, even if they appear to be up-to-date.
 
 ** Developer tools
    - JDK
    - Node, NPM
    - Xampp: Apache, PHP, Phpmyadmin tool
+   - Eclipse jee
+   - Netbeans
+   - Intellij idea
    - vim-gnome: Install vim-gnome instead of just vim, because it including more features like xterm-clipboard.
    - zeal: Developer docsets.
 
 ** Other tools
-   - Latte Dock(Dock just like Mac Dock)
+   - *Grub-customizer* :boot menu setting
+   - *Latte Dock* :Dock just like Mac Dock
      #+BEGIN_SRC shell
      sudo pacman -Syu
      # install dependencies
@@ -31,7 +43,19 @@
      sudo pacman -S latte-dock
      #+END_SRC
 
-   - Sogou pinyin(Chinese input)
+   - Dropbox: Sync files
+   - Grsync: backup tool
+   - Typora: Markdown editor
+   - Pandoc: Conversion between markup formats
+   - Xflux-gui(Not working right now): GUI flux, like night shift
+   - Redshift: night shift
+   - OBS: video recorder
+   - Webtorrent: torrent downloader
+     Netease: Music client
+   - Slack
+   - Telegram
+   - Electronic Wechat: Wechat built on Electron
+   - Sogou pinyin: Chinese input
      1. Install fcitx-sogoupinyin
      2. Install fcitx-gtk2, fix Chrome cannot use fcitx
      3. Put the following codes in the ~/.xprofile
@@ -40,16 +64,14 @@
         export QT_IM_MODULE=fcitx
         export XMODIFIERS="@im=fcitx"
         #+END_SRC
-
-   - Typora(Markdown editor)
-   - OBS(video recorder)
+   - Youdao-dict: Chinese <-> English Dictionary
 
 ** Reduce startup and shutdown timeout
 
    1. /etc/systemd/system.conf:
       #+BEGIN_SRC 
-    DefaultTimeoutStartSec=10s
-    DefaultTimeoutStopSec=10s
+      DefaultTimeoutStartSec=10s
+      DefaultTimeoutStopSec=10s
       #+END_SRC
 
    2. Then reload systemd by

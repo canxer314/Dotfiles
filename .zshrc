@@ -146,9 +146,9 @@ elif [[ $CURRENT_OS == 'Linux' ]]; then
 fi    
 
 alias v="vim"
-alias sv="sudo vim"
+alias sv="sudo -E vim"
 alias e="emacs"
-alias se="sudo emacs"
+alias se="sudo -E emacs"
 alias ke="pkill -SIGUSR2 -i emacs"
 alias edebug="emacs --debug-init"
 alias etime="emacs --timed-requires --profile"
