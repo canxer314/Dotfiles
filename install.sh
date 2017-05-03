@@ -32,6 +32,7 @@ ln -s ~/Dotfiles/.zshrc ~/.zshrc
 ln -s ~/Dotfiles/.zshenv ~/.zshenv
 
 echo "Install Xmodmap key tweak for linux"
+rm ~/.Xmodmap
 ln -s ~/Dotfiles/.Xmodmap ~/.Xmodmap
 
 # echo "update submodules"

@@ -64,6 +64,8 @@
         export QT_IM_MODULE=fcitx
         export XMODIFIERS="@im=fcitx"
         #+END_SRC
+     4. You may need to install kcm-fcitx for KDE.
+
    - Youdao-dict: Chinese <-> English Dictionary
 
 ** Reduce startup and shutdown timeout
