@@ -1,13 +1,16 @@
 * Arch Setup
-** Chinese Encoding and font issue
-   1. Install *noto-fonts-cjk* (Google Noto CJK fonts), which supports Chinese, Japanese, Korean.
-   2. Edit */etc/fonts/conf.d/65-nonlatin.conf*, put the preferred font e.g. Noto Sans CJK SC in the file under *sans-serif* family tag.
-      #+BEGIN_SRC 
-      <!-- chinese fonts are actually serifed -->
-      <family>Noto Sans CJK SC</family> <!-- han (zh-cn,zh-tw) -->
-      #+END_SRC
-
 ** Pacman
+   - System backup
+     1. Generate package list
+        #+BEGIN_SRC shell
+        pacman -Qqe > ~/Dotfiles/ArchPackageList.txt
+        #+END_SRC
+     2. Reinstall the packages
+        #+BEGIN_SRC shell
+        sudo pacman -S `cat ~/Dotfiles/ArchPackageList.txt`
+        #This will also work, but Pacman will exit if you have a package
+        #installed that is not in the repositories.
+        #+END_SRC
    - Update System: 
      #+BEGIN_SRC shell
      sudo pacman -Syu
@@ -22,6 +25,24 @@
      sudo pacman -Syy
      #+END_SRC
      Notes: Passing two --refresh or -y flags will force a refresh of all package databases, even if they appear to be up-to-date.
+
+** Nvidia Drivers
+   And we have the nvidia-installer doing all this automatic:
+   #+BEGIN_SRC shell
+   sudo pacman -S nvidia-installer
+   # To test the installation (-t)
+   nvidia-installer -b -t
+   # real installation:
+   sudo nvidia-installer -b
+   #+END_SRC
+
+** Chinese Encoding and font issue
+   1. Install *noto-fonts-cjk* (Google Noto CJK fonts), which supports Chinese, Japanese, Korean.
+   2. Edit */etc/fonts/conf.d/65-nonlatin.conf*, put the preferred font e.g. Noto Sans CJK SC in the file under *sans-serif* family tag.
+      #+BEGIN_SRC 
+      <!-- chinese fonts are actually serifed -->
+      <family>Noto Sans CJK SC</family> <!-- han (zh-cn,zh-tw) -->
+      #+END_SRC
 
 ** Developer tools
    - JDK
