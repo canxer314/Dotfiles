@@ -13,6 +13,8 @@ automake
 b43-fwcutter
 bash
 bash-completion
+bbswitch
+bbswitch-lts
 bind-tools
 binutils
 bison
@@ -23,6 +25,7 @@ breeze
 breeze-gtk
 breeze-kde4
 btrfs-progs
+bumblebee
 bzip2
 bzr
 cdrdao
@@ -127,6 +130,8 @@ less
 lib32-libldap
 lib32-libvdpau
 lib32-mesa
+lib32-nvidia-utils
+lib32-virtualgl
 libdvdcss
 libtool
 libtxc_dxtn
@@ -167,6 +172,9 @@ numix-frost-themes
 numix-icon-theme
 numix-icon-theme-square
 nvidia
+nvidia-installer
+nvidia-lts
+nvidia-settings
 nvidia-utils
 obs-studio
 okular
@@ -236,6 +244,7 @@ user-manager
 util-linux
 vi
 vim-gnome
+virtualgl
 vlc
 webtorrent-desktop-bin
 wget
