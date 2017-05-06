@@ -8,6 +8,7 @@ antergos-wallpapers
 antergos-welcome
 ark
 aspell-en
+atom-editor-bin
 autoconf
 automake
 b43-fwcutter
@@ -72,6 +73,7 @@ git
 glibc
 grep
 groff
+grsync
 grub
 grub-customizer
 grub2-theme-antergos
@@ -229,6 +231,7 @@ systemsettings
 tar
 telegram-desktop-bin
 texinfo
+the_silver_searcher
 transmission-qt
 ttf-bitstream-vera
 ttf-dejavu
@@ -245,6 +248,7 @@ util-linux
 vi
 vim-gnome
 virtualgl
+visual-studio-code
 vlc
 webtorrent-desktop-bin
 wget

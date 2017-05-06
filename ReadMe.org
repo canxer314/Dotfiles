@@ -51,7 +51,7 @@
     Sync with sync-settings packge.
 
     1. Create personal access token on github
-    2. Copy the GistID
+    2. Copy the GistID: 4bda37259f0d4e181442afff706c0cb2
 
 *** VSCode
     Sync GistID: a21a200d929d90a2267b820f3e9f0e4a

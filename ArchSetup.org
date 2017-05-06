@@ -1,16 +1,5 @@
 * Arch Setup
 ** Pacman
-   - System backup
-     1. Generate package list
-        #+BEGIN_SRC shell
-        pacman -Qqe > ~/Dotfiles/ArchPackageList.txt
-        #+END_SRC
-     2. Reinstall the packages
-        #+BEGIN_SRC shell
-        sudo pacman -S `cat ~/Dotfiles/ArchPackageList.txt`
-        #This will also work, but Pacman will exit if you have a package
-        #installed that is not in the repositories.
-        #+END_SRC
    - Update System: 
      #+BEGIN_SRC shell
      sudo pacman -Syu
@@ -26,6 +15,17 @@
      #+END_SRC
      Notes: Passing two --refresh or -y flags will force a refresh of all package databases, even if they appear to be up-to-date.
 
+** System backup
+   1. Generate package list
+      #+BEGIN_SRC shell
+      pacman -Qqe > ~/Dotfiles/ArchPackageList.txt
+      #+END_SRC
+   2. Reinstall the packages
+      #+BEGIN_SRC shell
+      sudo pacman -S `cat ~/Dotfiles/ArchPackageList.txt`
+      #This will also work, but Pacman will exit if you have a package
+      #installed that is not in the repositories.
+      #+END_SRC
 ** Nvidia Drivers
    And we have the nvidia-installer doing all this automatic:
    #+BEGIN_SRC shell
