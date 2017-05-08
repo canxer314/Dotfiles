@@ -26,6 +26,11 @@
       #This will also work, but Pacman will exit if you have a package
       #installed that is not in the repositories.
       #+END_SRC
+   3. Grsync
+      #+BEGIN_SRC shell
+      # System backup options
+      --exclude={"/Videos/*", "/Dropbox/*", "/Downloads/*"}
+      #+END_SRC
 ** Nvidia Drivers
    And we have the nvidia-installer doing all this automatic:
    #+BEGIN_SRC shell

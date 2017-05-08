@@ -92,8 +92,9 @@ antigen bundle bower
 # antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
-antigen theme agnoster
-#antigen theme candy
+# antigen theme agnoster
+# antigen theme candy
+antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
 
 if [[ $CURRENT_OS == 'OSX' ]]; then
     antigen bundle brew
