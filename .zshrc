@@ -74,7 +74,6 @@ antigen use oh-my-zsh
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
 antigen bundle tmuxinator
-antigen bundle osx
 antigen bundle ruby
 antigen bundle autojump
 antigen bundle textmate
@@ -98,7 +97,6 @@ antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-
 
 if [[ $CURRENT_OS == 'OSX' ]]; then
     antigen bundle brew
-    antigen bundle brew-cask
     antigen bundle gem
     antigen bundle osx
 elif [[ $CURRENT_OS == 'Linux' ]]; then
