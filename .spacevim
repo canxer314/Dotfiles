@@ -58,6 +58,7 @@ function! UserConfig()
     " If you enable airline layer and have installed the powerline fonts, set it here.
     let g:airline_powerline_fonts=1
 
+    set clipboard=unnamed
     if (has("termguicolors"))
       set termguicolors
     endif
