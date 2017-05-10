@@ -7,10 +7,11 @@
 	# `git di $number` shows the diff between the state `$number` revisions ago and the current state
 	di	= !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
 	aa = add --all
-	rr = rm -r --cached
+	rr = rm -r --cached .
 	cm	= commit -m
 	ci	= commit -a -v
-	pu = push
+	ps = push
+	pl = pull
 	cl	= clone
 	br	= branch
 	bv = branch -vv
