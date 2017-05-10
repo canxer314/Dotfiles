@@ -15,6 +15,10 @@ echo "Install eslint configurations..."
 rm ~/.eslintrc
 ln -s ~/Dotfiles/.eslintrc ~/.eslintrc
 
+echo "Install eslint configurations..."
+rm ~/.pylintrc
+ln -s ~/Dotfiles/.pylintrc ~/.pylintrc
+
 echo "Install gitconfig configurations..."
 rm ~/.gitconfig
 ln -s ~/Dotfiles/.gitconfig ~/.gitconfig
