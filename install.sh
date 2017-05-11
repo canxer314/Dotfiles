@@ -19,6 +19,10 @@ echo "Install eslint configurations..."
 rm ~/.pylintrc
 ln -s ~/Dotfiles/.pylintrc ~/.pylintrc
 
+echo "Install ctags configurations..."
+rm ~/.ctags
+ln -s ~/Dotfiles/.ctags ~/.ctags
+
 echo "Install gitconfig configurations..."
 rm ~/.gitconfig
 ln -s ~/Dotfiles/.gitconfig ~/.gitconfig
