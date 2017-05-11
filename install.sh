@@ -8,6 +8,21 @@
 # install git
 # brew install git
 
+UNAME=`uname`
+
+# Fallback info
+CURRENT_OS='Linux'
+DISTRO=''
+VER=''
+
+if [[ $UNAME == 'Darwin' ]]; then
+    CURRENT_OS='OS X'
+else
+    # Determine Linux distro
+    DISTRO=$(lsb_release -si)
+    VER=$(lsb_release -sr)
+fi
+
 echo "cd to Dotfiles directory"
 cd ~/Dotfiles
 
@@ -39,9 +54,14 @@ ln -s ~/Dotfiles/.bash_profile ~/.bash_profile
 ln -s ~/Dotfiles/.zshrc ~/.zshrc
 ln -s ~/Dotfiles/.zshenv ~/.zshenv
 
-echo "Install Xmodmap key tweak for linux"
-rm ~/.Xmodmap
-ln -s ~/Dotfiles/.Xmodmap ~/.Xmodmap
+if [[ $CURRENT_OS == 'OS X' ]]; then
+    echo "OS X configurations here!"
+elif [[ $CURRENT_OS == 'Linux' ]]; then
+    echo "Linux configurations here!"
+    echo "Install Xmodmap key tweak for linux"
+    rm ~/.Xmodmap
+    ln -s ~/Dotfiles/.Xmodmap ~/.Xmodmap
+fi
 
 # echo "update submodules"
 git submodule init

@@ -15,7 +15,7 @@ DISTRO=''
 VER=''
 
 if [[ $UNAME == 'Darwin' ]]; then
-    CURRENT_OS='OSX'
+    CURRENT_OS='OS X'
 else
     # Determine Linux distro
     DISTRO=$(lsb_release -si)
@@ -95,7 +95,7 @@ antigen bundle bower
 # antigen theme candy
 antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
 
-if [[ $CURRENT_OS == 'OSX' ]]; then
+if [[ $CURRENT_OS == 'OS X' ]]; then
     antigen bundle brew
     antigen bundle gem
     antigen bundle osx
@@ -134,7 +134,7 @@ antigen apply
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-if [[ $CURRENT_OS == 'OSX' ]]; then
+if [[ $CURRENT_OS == 'OS X' ]]; then
     alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
     alias vim="/usr/local/bin/vim"
 elif [[ $CURRENT_OS == 'Linux' ]]; then
@@ -154,7 +154,7 @@ alias etime="emacs --timed-requires --profile"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-if [[ $CURRENT_OS == 'OSX' ]]; then
+if [[ $CURRENT_OS == 'OS X' ]]; then
     
 elif [[ $CURRENT_OS == 'Linux' ]]; then
     # Some path here
