@@ -153,9 +153,3 @@ alias edebug="emacs --debug-init"
 alias etime="emacs --timed-requires --profile"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-if [[ $CURRENT_OS == 'OS X' ]]; then
-    
-elif [[ $CURRENT_OS == 'Linux' ]]; then
-    # Some path here
-fi
