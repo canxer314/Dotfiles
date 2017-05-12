@@ -1,7 +1,6 @@
 accountsservice
 acpid
 alsa-utils
-antergos-kde-setup
 antergos-keyring
 antergos-mirrorlist
 antergos-wallpapers
@@ -38,6 +37,7 @@ cmake
 coreutils
 crda
 cryptsetup
+ctags
 cups
 cups-pk-helper
 device-mapper
@@ -70,7 +70,9 @@ gcc
 gcc-libs
 gettext
 git
+gitkraken
 glibc
+gparted
 grep
 groff
 grsync
@@ -87,8 +89,10 @@ gstreamer-vaapi
 gufw
 gwenview
 gzip
+handbrake
 haveged
 hplip
+htop
 hunspell-en
 inetutils
 intellij-idea-ultimate-edition
@@ -169,6 +173,7 @@ nilfs-utils
 nm-connection-editor
 nodejs
 noto-fonts-cjk
+npm
 ntfs-3g
 numix-frost-themes
 numix-icon-theme
@@ -232,7 +237,7 @@ tar
 telegram-desktop-bin
 texinfo
 the_silver_searcher
-transmission-qt
+tmux
 ttf-bitstream-vera
 ttf-dejavu
 ttf-liberation

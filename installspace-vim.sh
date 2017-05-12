@@ -14,3 +14,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/liuchengxu/space-vim/maste
 echo "Install space-vim setting"
 rm ~/.spacevim
 ln -s ~/Dotfiles/.spacevim ~/.spacevim
+
+echo "Install tmux setting"
+rm ~/.tmux.conf
+ln -s ~/Dotfiles/.tmux.conf ~/.tmux.conf
+rm ~/.tmux.mac
+ln -s ~/Dotfiles/.tmux.mac ~/.tmux.mac

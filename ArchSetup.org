@@ -26,10 +26,13 @@
       #This will also work, but Pacman will exit if you have a package
       #installed that is not in the repositories.
       #+END_SRC
-   3. Grsync
+   3. *Grsync*
+      My backup path:
+      /home
+      /run/media/ztlevi/65e80ac4-1f5a-4028-bfa2-885178ebdfa4
       #+BEGIN_SRC shell
-      # System backup options
-      --exclude={"/Videos/*", "/Dropbox/*", "/Downloads/*"}
+      # Grsync additional options
+      --exclude-from="/home/ztlevi/Dotfiles/grsync-rules"
       #+END_SRC
 ** Nvidia Drivers
    And we have the nvidia-installer doing all this automatic:

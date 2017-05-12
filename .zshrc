@@ -1,9 +1,10 @@
 export LANG='en_US.UTF-8'
 export LC_ALL="en_US.UTF-8"
+export TERM="xterm-256color"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+set -o ignoreeof
 
 source $ZSH/oh-my-zsh.sh
 
@@ -147,5 +148,12 @@ alias se="sudo -E emacs"
 alias ke="pkill -SIGUSR2 -i emacs"
 alias edebug="emacs --debug-init"
 alias etime="emacs --timed-requires --profile"
+
+alias t="tmux"
+alias tn="tmux new -s"
+alias ta="tmux attach -t"
+alias tl="tmux ls"
+alias tk="tmux kill-session -t"
+alias tka="tmux kill-session -a"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

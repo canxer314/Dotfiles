@@ -1,0 +1,37 @@
+#######file /home/ztlevi/Dotfiles/grsync-rules#######
+# Dotfiles/grsync-rules
+
+# Large files that I exclude from a backup of the home directory /home/fred/ .
+# Feel free to add more file types.  NB *Most* of these files will
+# be in the directories I exclude below, but not all of them.
+
+# - *.gz
+# - *.tgz
+# - *.iso
+# - *.jpeg
+# - *.mp3
+# - *.mp4
+# - *.png
+# - *.wmv
+
+# Virtualbox disk images
+*.vdi
+# I exclude Mozilla Thunderbird mail index files - they continually rebuild.
+*.msf
+
+# Directories that I exclude.
+# A leading slash '/' anchors from the top level of the backup (rather
+# than the root of the filesystem).
+
+Downloads/
+Videos/
+Dropbox/
+.cache/
+.icons/
+.thumbnails/
+
+# Subdirectories that I exclude.
+Trash/
+Cache/
+perl-bookshelf/
+#######end of file /home/ztlevi/Dotfiles/grsync-rules#######
