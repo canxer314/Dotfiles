@@ -136,12 +136,8 @@ antigen apply
 
 if [[ $CURRENT_OS == 'OS X' ]]; then
     alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
-    alias vim="/usr/local/bin/vim"
 elif [[ $CURRENT_OS == 'Linux' ]]; then
-    alias emacs="/usr/bin/emacs"
-    alias vim="/usr/bin/vim"
-    alias xampp="/opt/lampp/xampp"
-    alias lampp="/opt/lampp/lampp"
+    # Linux alias
 fi    
 
 alias v="vim"

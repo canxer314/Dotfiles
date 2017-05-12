@@ -19,11 +19,8 @@
 
     1. Install *git, vim, curl* first.
        Notes: Vim +clipboard, fix no * and + register problem
-       For Mac: ~brew install vim~, then vim locates under the */usr/local/bin/vim*
-       For Ubuntu, install vim-gnome
-       #+BEGIN_SRC shell
-       sudo apt install vim-gnome
-       #+END_SRC
+       For Mac: ~brew install macvim --with-override-system-vim~
+       For Linux, install vim-gnome
 
     2. Install space-vim:
        #+BEGIN_SRC shell
