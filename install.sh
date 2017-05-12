@@ -54,6 +54,12 @@ ln -s ~/Dotfiles/.bash_profile ~/.bash_profile
 ln -s ~/Dotfiles/.zshrc ~/.zshrc
 ln -s ~/Dotfiles/.zshenv ~/.zshenv
 
+echo "Install tmux setting"
+rm ~/.tmux.conf
+ln -s ~/Dotfiles/.tmux.conf ~/.tmux.conf
+rm ~/.tmux.mac
+ln -s ~/Dotfiles/.tmux.mac ~/.tmux.mac
+
 if [[ $CURRENT_OS == 'OS X' ]]; then
     echo "OS X configurations here!"
 elif [[ $CURRENT_OS == 'Linux' ]]; then

@@ -27,7 +27,6 @@
         cd ~/Dotfiles
         ./installspace-vim.sh
        #+END_SRC
-        Notes: This script including tmux settings. You may need to ~brew install reattach-to-user-namespace~ on Mac
     3. Update the plugin with =:PlugUpdate=
 
 *** Dotfiles
@@ -45,6 +44,7 @@
       ./install.sh
     #+END_SRC
 
+    Notes: This script including tmux settings. You may need to ~brew install reattach-to-user-namespace~ on Mac
 *** Atom
     Sync with sync-settings packge.
 
