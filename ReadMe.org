@@ -24,27 +24,37 @@
 
     2. Install space-vim:
        #+BEGIN_SRC shell
-        cd ~/Dotfiles
-        ./installspace-vim.sh
+       cd ~/Dotfiles
+       ./installspace-vim.sh
        #+END_SRC
     3. Update the plugin with =:PlugUpdate=
 
 *** Dotfiles
 
-    Install zsh first, =brew install zsh zsh-completions= or =apt install zsh= on Ubuntu.
+    1. Install zsh first
 
-    Install oh-my-zsh:
-    #+BEGIN_SRC shell
-      sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-    #+END_SRC
+    2. Install oh-my-zsh:
+       #+BEGIN_SRC shell
+       sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+       #+END_SRC
       
-    Put the dotfiles in the home directory:
-    #+BEGIN_SRC shell
-      cd ~/Dotfiles
-      ./install.sh
-    #+END_SRC
+    3. Install Tumx
 
-    Notes: This script including tmux settings. You may need to ~brew install reattach-to-user-namespace~ on Mac
+       Furthermore, to install Tmux Package Manager: 
+       #+BEGIN_SRC shell
+       git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+       #+END_SRC
+
+       Notes: *tmux-yank* package requirements [[https://github.com/tmux-plugins/tmux-yank][here]]. 
+       Mac: ~brew install reattach-to-user-namespace~
+       Linux: ~pacman -S xsel~
+
+    4. Put the dotfiles in the home directory:
+       #+BEGIN_SRC shell
+       cd ~/Dotfiles
+       ./install.sh
+       #+END_SRC
+
 *** Atom
     Sync with sync-settings packge.
 
