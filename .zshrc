@@ -154,9 +154,6 @@ alias tn="tmux new -s"
 alias ta="tmux attach -t"
 alias tl="tmux ls"
 alias tk="tmux kill-session -t"
-alias tka="tmux kill-session -a"
-alias trw="tmux rename-window"
-alias trs="tmux rename-session"
 alias ts="tmux source ~/.tmux.conf"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
