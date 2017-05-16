@@ -4,6 +4,8 @@ export TERM="xterm-256color"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# disable C-d close window
 set -o ignoreeof
 
 source $ZSH/oh-my-zsh.sh
@@ -74,7 +76,7 @@ antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
-antigen bundle tmuxinator
+antigen bundle tmux
 antigen bundle ruby
 antigen bundle autojump
 antigen bundle textmate
@@ -149,12 +151,8 @@ alias se="sudo -E emacs"
 alias ke="pkill -SIGUSR2 -i emacs"
 alias edebug="emacs --debug-init"
 alias etime="emacs --timed-requires --profile"
-
 alias t="tmux"
-alias tn="tmux new -s"
-alias ta="tmux attach -t"
-alias tl="tmux ls"
-alias tk="tmux kill-session -t"
-alias ts="tmux source ~/.tmux.conf"
+
+export EDITOR='vim'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
