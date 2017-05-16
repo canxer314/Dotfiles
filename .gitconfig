@@ -17,7 +17,7 @@
 	bv = branch -vv
 	ba = branch -ra
 	bd = branch -d
-	st	= status
+	st	= status -sb
 	co	= checkout
 	sm	= submodule
 	unst = reset HEAD
