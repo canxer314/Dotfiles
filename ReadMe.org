@@ -1,4 +1,4 @@
-* Ting Zhou's Configuration for space-vim, Dotfiles and Atom
+* Ting Zhou's Configuration for space-vim, ZSH, Dotfiles and Atom
   
 ** Installation
 
@@ -29,7 +29,7 @@
        #+END_SRC
     3. Update the plugin with =:PlugUpdate=
 
-*** Dotfiles
+*** ZSH
 
     1. Install zsh first
 
@@ -49,11 +49,14 @@
        Mac: ~brew install reattach-to-user-namespace~
        Linux: ~pacman -S xsel~
 
-    4. Put the dotfiles in the home directory:
-       #+BEGIN_SRC shell
-       cd ~/Dotfiles
-       ./install.sh
-       #+END_SRC
+*** Dotfiles
+    Put the dotfiles in the home directory:
+    #+BEGIN_SRC shell
+    # other dependencies needed
+    npm install -g eslint js-beautify tern
+    cd ~/Dotfiles
+    ./install.sh
+    #+END_SRC
 
 *** Atom
     Sync with sync-settings packge.
