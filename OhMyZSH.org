@@ -2,6 +2,29 @@
 ** Homebrew
    sudo chown -R $(whoami) /usr/local 
 ** Tmux
+   | Key        | Description                            |
+   |------------+----------------------------------------|
+   | prefix     | C-x                                    |
+   | prefix I   | Install plugins                        |
+   | prefix U   | Update plugins                         |
+   | prefix C-s | Save                                   |
+   | prefix C-r | Restore                                |
+   | prefix y   | Copy to system clipboard               |
+   | prefix v   | Begin selection                        |
+   | prefix q   | Kill window                            |
+   | prefix n   | New window                             |
+   | prefix c   | Kill pane                              |
+   | prefix C-c | Kill session                           |
+   | prefix v   | Split window vertically                |
+   | prefix s   | Split window horizontally              |
+   | prefix +   | New maximized window with current pane |
+   | prefix -   | Last window                            |
+   | prefix r   | Reload source file                     |
+   | C-h        | Select pane Left                       |
+   | C-j        | Select pane Down                       |
+   | C-k        | Select pane Up                         |
+   | C-l        | Select pane Right                      |
+   
    alias ta='tmux attach -t'
    alias tad='tmux attach -d -t'
    alias ts='tmux new-session -s'

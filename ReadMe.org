@@ -7,11 +7,7 @@
    Use
    #+BEGIN_SRC shell
    git clone https://github.com/ztlevi/Dotfiles.git ~/Dotfiles
-   #+END_SRC
-
-   or
-
-   #+BEGIN_SRC shell
+   # OR
    git clone git@github.com:ztlevi/Dotfiles.git ~/Dotfiles
    #+END_SRC
 
@@ -31,7 +27,7 @@
 
 *** ZSH
 
-    1. Install zsh first
+    1. Install zsh first, instructions [[https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH][here]].
 
     2. Install oh-my-zsh:
        #+BEGIN_SRC shell
@@ -49,14 +45,18 @@
        Mac: ~brew install reattach-to-user-namespace~
        Linux: ~pacman -S xsel~
 
+    4. The instructions is in OhMyZSH.org
+
 *** Dotfiles
-    Put the dotfiles in the home directory:
-    #+BEGIN_SRC shell
-    # other dependencies needed
-    npm install -g eslint js-beautify tern
-    cd ~/Dotfiles
-    ./install.sh
-    #+END_SRC
+    1. Some dependencies here, and you will need to install python.
+       #+BEGIN_SRC shell
+       npm install -g js-beautify
+       #+END_SRC
+    2. Put the dotfiles in the home directory:
+       #+BEGIN_SRC shell
+       cd ~/Dotfiles
+       ./install.sh
+       #+END_SRC
 
 *** Atom
     Sync with sync-settings packge.
@@ -70,7 +70,7 @@
 ** Mac Keybindings
 
    Settings are described in /Mac\_keybindings/ReadMe.md/
-
+   
 ** Fonts
 
    1. Roboto Mono for Powerline
