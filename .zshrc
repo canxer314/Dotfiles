@@ -153,6 +153,4 @@ alias edebug="emacs --debug-init"
 alias etime="emacs --timed-requires --profile"
 alias t="tmux"
 
-export EDITOR='vim'
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

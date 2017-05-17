@@ -50,7 +50,7 @@
 *** Dotfiles
     1. Some dependencies here, and you will need to install python.
        #+BEGIN_SRC shell
-       npm install -g js-beautify
+       npm i -g js-beautify npm
        #+END_SRC
     2. Put the dotfiles in the home directory:
        #+BEGIN_SRC shell
@@ -66,7 +66,7 @@
 
 *** VSCode
     Sync GistID: a21a200d929d90a2267b820f3e9f0e4a
-
+    
 ** Mac Keybindings
 
    Settings are described in /Mac\_keybindings/ReadMe.md/
@@ -80,5 +80,7 @@
 ** Notes
 
    1. Xmodmap file is used for key tweak on linux.
-   2. Fix npm completion permission.
-      https://docs.npmjs.com/getting-started/fixing-npm-permissions .
+   2. Fix npm permission.
+      #+BEGIN_SRC shell
+      sudo chown -R $(whoami) /usr/local 
+      #+END_SRC

@@ -1,6 +1,4 @@
 * ZSH
-** Homebrew
-   sudo chown -R $(whoami) /usr/local 
 ** Tmux
    | Key        | Description                            |
    |------------+----------------------------------------|
