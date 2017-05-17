@@ -47,12 +47,10 @@ rm ~/.jsbeautifyrc
 ln -s ~/Dotfiles/.jsbeautifyrc ~/.jsbeautifyrc
 
 echo "Install zsh configurations..."
-rm ~/.bash_profile
 rm ~/.zshrc
-rm ~/.zshenv
-ln -s ~/Dotfiles/.bash_profile ~/.bash_profile
+rm ~/.zprofile
 ln -s ~/Dotfiles/.zshrc ~/.zshrc
-ln -s ~/Dotfiles/.zshenv ~/.zshenv
+ln -s ~/Dotfiles/.zprofile ~/.zprofile
 
 echo "Install tmux setting"
 rm ~/.tmux.conf

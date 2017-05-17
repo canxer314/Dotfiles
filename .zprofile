@@ -1,4 +1,5 @@
-source ~/.bash_profile
+alias g="git"
+alias cl="clear"
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
