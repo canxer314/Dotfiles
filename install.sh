@@ -52,7 +52,7 @@ rm ~/.zshenv
 rm ~/.zprofile
 ln -s ~/Dotfiles/.zshrc ~/.zshrc
 ln -s ~/Dotfiles/.zshenv ~/.zshenv
-ln -s ~/Dotfiles/.zprofile ~/.zprofile
+ln -s ~/Dotfiles/.zshenv ~/.zprofile
 
 echo "Install tmux setting"
 rm ~/.tmux.conf
