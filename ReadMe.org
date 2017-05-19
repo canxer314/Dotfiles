@@ -14,9 +14,9 @@
 *** space-vim
 
     1. Install *git, vim, curl* first.
-       Notes: Vim +clipboard, fix no * and + register problem
-       For Mac: ~brew install macvim --with-override-system-vim~
-       For Linux, install vim-gnome
+       ~vim --version~ to check your vim has +clipboard and +python/python3 support
+       - For Mac: ~brew install macvim --with-override-system-vim~
+       - For Linux, install *vim-clipboard* instead of vim
 
     2. Install space-vim:
        #+BEGIN_SRC shell
