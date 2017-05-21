@@ -77,7 +77,7 @@ antigen apply
 # User configuration
 
 if [[ $CURRENT_OS == 'OS X' ]]; then
-    alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
+    alias emacs="/usr/local/opt/emacs-mac/Emacs.app/Contents/MacOS/Emacs"
     alias of="open -a finder ."
 elif [[ $CURRENT_OS == 'Linux' ]]; then
     # Linux alias

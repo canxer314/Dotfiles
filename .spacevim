@@ -68,6 +68,18 @@ function! UserConfig()
       set termguicolors
     endif
 
+    " emacs keymaping for cursor movement{{{
+    nmap <c-a> ^
+    nmap <c-e> $
+    vmap <c-a> ^
+    vmap <c-e> $
+    inoremap <c-p> <up>
+    inoremap <c-n> <down>
+    " command line
+    cnoremap <C-a> <Home>
+    cnoremap <C-e> <End>
+    "}}}
+
     " Prompt for a command to run
     map <Leader>vp :VimuxPromptCommand<CR>
     " Run last command executed by VimuxRunCommand

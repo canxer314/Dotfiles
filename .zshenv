@@ -58,3 +58,6 @@ HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Rust package manager
+export PATH="$HOME/.cargo/bin:$PATH"
