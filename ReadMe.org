@@ -28,6 +28,10 @@
 *** ZSH
 
     1. Install zsh first, instructions [[https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH][here]].
+       #+BEGIN_SRC shell
+       # set zsh as default
+       chsh -s $(which zsh)
+       #+END_SRC
 
     2. Install oh-my-zsh:
        #+BEGIN_SRC shell
