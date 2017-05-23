@@ -42,6 +42,7 @@ antigen bundle node
 antigen bundle npm
 antigen bundle nvm
 antigen bundle bower
+antigen bundle Vifon/deer
 
 # Syntax highlighting bundle.
 # don't enable this theme, it doesn't work well with ansi-term in emacs
@@ -74,13 +75,17 @@ fi
 # Tell antigen that you're done.
 antigen apply
 
+# deer - file navigation for zsh setup
+autoload -U deer
+zle -N deer
+bindkey '\ek' deer # shortcut is Alt-k
+
 # User configuration
 
 if [[ $CURRENT_OS == 'OS X' ]]; then
     alias emacs="/usr/local/opt/emacs-mac/Emacs.app/Contents/MacOS/Emacs"
     alias of="open -a finder ."
 elif [[ $CURRENT_OS == 'Linux' ]]; then
-    # Linux alias
 fi    
 
 alias v="vim"
@@ -91,5 +96,8 @@ alias ke="pkill -SIGUSR2 -i emacs"
 alias edebug="emacs --debug-init"
 alias etime="emacs --timed-requires --profile"
 alias t="tmux"
+alias cat="ccat"
+alias p="python"
+alias p3="python3"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

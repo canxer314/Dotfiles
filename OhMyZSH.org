@@ -1,4 +1,7 @@
 * ZSH
+** Dependences
+   1. ccat https://github.com/jingweno/ccat
+   2. tig https://github.com/jonas/tig
 ** Tmux
    | Key        | Description                            |
    |------------+----------------------------------------|
