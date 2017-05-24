@@ -28,6 +28,7 @@ btrfs-progs
 bumblebee
 bzip2
 bzr
+ccat
 cdrdao
 cdrtools
 chromium
@@ -156,6 +157,7 @@ m4
 make
 man-db
 man-pages
+markdown
 mdadm
 mesa
 mesa-vdpau
@@ -163,6 +165,7 @@ milou
 modemmanager
 nano
 nautilus-dropbox
+neovim
 net-tools
 netbeans
 netctl
@@ -212,6 +215,7 @@ psmisc
 pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
+pycharm-professional
 python-gobject
 python-pyqt5
 python-pysmbc
@@ -221,6 +225,7 @@ qtcurve-qt5
 qtcurve-utils
 redshift
 reiserfsprogs
+ruby
 s-nail
 sed
 shadow
@@ -237,10 +242,12 @@ tar
 telegram-desktop-bin
 texinfo
 the_silver_searcher
+tig
 tmux
 ttf-bitstream-vera
 ttf-dejavu
 ttf-liberation
+ttf-monaco
 typora
 ufw
 unrar
@@ -251,7 +258,7 @@ usbutils
 user-manager
 util-linux
 vi
-vim-gnome
+vim-clipboard
 virtualgl
 visual-studio-code
 vlc
@@ -311,6 +318,7 @@ xorg-xvinfo
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+xsel
 yaourt
 youdao-dict
 zd1211-firmware
