@@ -96,8 +96,9 @@ alias ke="pkill -SIGUSR2 -i emacs"
 alias edebug="emacs --debug-init"
 alias etime="emacs --timed-requires --profile"
 alias t="tmux"
-alias cat="ccat"
 alias p="python"
 alias p3="python3"
+alias cat="ccat"
+alias arec="asciinema rec --max-wait=2" # -t to specify title
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
