@@ -100,5 +100,6 @@ alias p="python"
 alias p3="python3"
 alias cat="ccat"
 alias arec="asciinema rec --max-wait=2" # -t to specify title
+alias h="hexo"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
