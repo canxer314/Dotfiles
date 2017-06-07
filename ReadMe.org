@@ -7,8 +7,6 @@
    Use
    #+BEGIN_SRC shell
    git clone https://github.com/ztlevi/Dotfiles.git ~/Dotfiles
-   # OR
-   git clone git@github.com:ztlevi/Dotfiles.git ~/Dotfiles
    #+END_SRC
 
 *** space-vim
