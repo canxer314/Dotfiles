@@ -88,4 +88,15 @@ function! UserConfig()
     map <Leader>vi :VimuxInspectRunner<CR>
     " Zoom the tmux runner pane
     map <Leader>vz :VimuxZoomRunner<CR>
+
+    " set GUI font for powerline
+    if has('gui_running')
+      set guioptions-=T  " no toolbar
+      set lines=60 columns=108 linespace=0
+      if has('gui_win32')
+        set guifont=Ubuntu_Mono:h16:cANSI
+      else
+        set guifont=Ubuntu\ Mono\ 16
+      endif
+    endif
 endfunction
