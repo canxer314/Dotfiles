@@ -43,6 +43,7 @@ antigen bundle npm
 antigen bundle nvm
 antigen bundle bower
 antigen bundle Vifon/deer
+antigen bundle zsh-users/zsh-autosuggestions
 
 # Syntax highlighting bundle.
 # don't enable this theme, it doesn't work well with ansi-term in emacs
