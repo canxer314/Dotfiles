@@ -14,7 +14,7 @@
    - Install git on MacOS
 
      #+BEGIN_SRC shell
-     brew install
+     brew install git
      #+END_SRC
 
    - Setup email address and username by:
