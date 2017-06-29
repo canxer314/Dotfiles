@@ -86,7 +86,7 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
     alias emacs="/usr/local/opt/emacs-mac/Emacs.app/Contents/MacOS/Emacs"
     alias of="open -a finder ."
 elif [[ $CURRENT_OS == 'Linux' ]]; then
-fi    
+fi
 
 alias v="vim"
 alias sv="sudo -E vim"
@@ -98,7 +98,6 @@ alias etime="emacs --timed-requires --profile"
 alias t="tmux"
 alias p="python"
 alias p3="python3"
-alias cat="ccat"
 alias arec="asciinema rec --max-wait=2" # -t to specify title
 alias h="hexo"
 
