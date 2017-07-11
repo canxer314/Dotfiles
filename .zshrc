@@ -100,5 +100,7 @@ alias p="python"
 alias p3="python3"
 alias arec="asciinema rec --max-wait=2" # -t to specify title
 alias h="hexo"
+alias ng="npm list -g --depth=0"
+alias nl="npm list --depth=0"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
