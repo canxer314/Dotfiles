@@ -42,6 +42,10 @@ echo "Install gitconfig configurations..."
 rm ~/.gitconfig
 ln -s ~/Dotfiles/.gitconfig ~/.gitconfig
 
+echo "Install global gitignore file..."
+rm ~/.gitignore_global
+ln -s ~/Dotfiles/.gitignore_global ~/.gitignore_global
+
 echo "Install jsbeautify configurations..."
 rm ~/.jsbeautifyrc
 ln -s ~/Dotfiles/.jsbeautifyrc ~/.jsbeautifyrc
