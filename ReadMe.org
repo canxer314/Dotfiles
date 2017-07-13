@@ -82,6 +82,10 @@
      #+BEGIN_SRC shell
      brew bundle --file="~/Library/Mobile Documents/com~apple~CloudDocs/PackageManagerLists/Brewfile"
      #+END_SRC
+   - Clean up
+     #+BEGIN_SRC shell
+     brew bundle cleanup --force --file="~/Library/Mobile Documents/com~apple~CloudDocs/PackageManagerLists/Brewfile"
+     #+END_SRC
 ** Fonts
 
    1. Roboto Mono for Powerline
