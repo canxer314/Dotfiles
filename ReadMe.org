@@ -72,7 +72,16 @@
 ** Mac Keybindings
 
    Settings are described in /Mac\_keybindings/ReadMe.md/
-   
+
+** Homebrew Backup   
+   - Backup
+     #+BEGIN_SRC shell
+     brew bundle dump --force --file="~/Library/Mobile Documents/com~apple~CloudDocs/PackageManagerLists/Brewfile"
+     #+END_SRC
+   - Restore
+     #+BEGIN_SRC shell
+     brew bundle --file="~/Library/Mobile Documents/com~apple~CloudDocs/PackageManagerLists/Brewfile"
+     #+END_SRC
 ** Fonts
 
    1. Roboto Mono for Powerline
