@@ -36,7 +36,10 @@
        sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
        #+END_SRC
       
-    3. Install Tumx
+    3. The instructions is in OhMyZSH.org
+
+*** Tmux
+    1. Install Tumx
 
        Furthermore, to install Tmux Package Manager: 
        #+BEGIN_SRC shell
@@ -47,7 +50,13 @@
        Mac: ~brew install reattach-to-user-namespace~
        Linux: ~pacman -S xsel~
 
-    4. The instructions is in OhMyZSH.org
+    2. Key bindings
+
+       - prefix + I: Installs new plugins from GitHub or any other git repository. Refreshes TMUX environment
+
+       - prefix + U: updates plugin(s)
+
+       - prefix + alt + u: remove/uninstall plugins not on the plugin list
 
 *** Dotfiles
     1. Some dependencies here, and you will need to install python.
