@@ -1,6 +1,6 @@
 {
     "parser": "babel-eslint",
-    "plugins": [ "react", "html"],
+    "plugins": ["react", "html"],
     "env": {
         "browser": true,
         "es6": true,
