@@ -83,7 +83,7 @@ bindkey '\ek' deer # shortcut is Alt-k
 # User configuration
 
 if [[ $CURRENT_OS == 'OS X' ]]; then
-    alias emacs="/usr/local/opt/emacs-mac/Emacs.app/Contents/MacOS/Emacs"
+    alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
     alias of="open -a finder ."
 elif [[ $CURRENT_OS == 'Linux' ]]; then
 fi
