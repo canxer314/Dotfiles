@@ -39,7 +39,7 @@
     3. The instructions is in OhMyZSH.org
 
 *** Tmux
-    1. Install Tumx
+    1. Install Tumx using system package manager like homebrew, apt-get, pacman.
 
        Furthermore, to install Tmux Package Manager: 
        #+BEGIN_SRC shell
@@ -51,6 +51,7 @@
        Linux: ~pacman -S xsel~
 
     2. Key bindings
+       - prefix: I set it to C-x
 
        - prefix + I: Installs new plugins from GitHub or any other git repository. Refreshes TMUX environment
 
