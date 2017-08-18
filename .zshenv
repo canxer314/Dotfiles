@@ -9,6 +9,12 @@ export ZSH=~/.oh-my-zsh
 
 export PATH="/usr/local/sbin:$PATH"
 
+# Rust package manager
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# Anaconda path
+export PATH="$HOME/anaconda/bin:$PATH"
+
 # Set the global node modules path to /usr/local/bin
 # Fix permissions using: sudo chown -R $(whoami) /usr/local 
 export npm_config_prefix=/usr/local
@@ -60,6 +66,3 @@ HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Rust package manager
-export PATH="$HOME/.cargo/bin:$PATH"
