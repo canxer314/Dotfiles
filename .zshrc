@@ -103,5 +103,6 @@ alias h="hexo"
 alias ng="npm list -g --depth=0"
 alias nl="npm list --depth=0"
 alias rm='trash'
+alias sf='screenfetch'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
