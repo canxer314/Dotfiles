@@ -84,7 +84,11 @@ bindkey '\ek' deer # shortcut is Alt-k
 
 if [[ $CURRENT_OS == 'OS X' ]]; then
     alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
-    alias of="open -a finder ."
+    if [ -d '/Applications/ForkLift.app' ]; then
+        alias of="open -a ForkLift ."
+    else
+        alias of="open ."
+    fi
 elif [[ $CURRENT_OS == 'Linux' ]]; then
 fi
 
