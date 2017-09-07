@@ -22,6 +22,7 @@ else
     VER=$(lsb_release -sr)
 fi
 
+# Update bundles with `antigen reset`
 source ~/Dotfiles/antigen/antigen.zsh
 # call antigen update on your terminal and it will update the oh-my-zsh repository
 # Load the oh-my-zsh's library.
@@ -43,6 +44,7 @@ antigen bundle npm
 antigen bundle nvm
 antigen bundle bower
 antigen bundle Vifon/deer
+antigen bundle zsh-users/zsh-completions
 
 # Syntax highlighting bundle.
 # don't enable this theme, it doesn't work well with ansi-term in emacs
