@@ -110,5 +110,6 @@ alias ng="npm list -g --depth=0"
 alias nl="npm list --depth=0"
 alias rm='trash'
 alias sf='screenfetch'
+alias bu='brew upgrade | brew cleanup | brew cask cleanup'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
