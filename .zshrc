@@ -97,6 +97,7 @@ fi
 alias v="vim"
 alias sv="sudo -E vim"
 alias e="emacs"
+alias e.="open -a Emacs ."
 alias se="sudo -E emacs"
 alias ke="pkill -SIGUSR2 -i emacs"
 alias edebug="emacs --debug-init"
