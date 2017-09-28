@@ -112,5 +112,6 @@ alias nl="npm list --depth=0"
 alias rm='trash'
 alias sf='screenfetch'
 alias bu='brew upgrade | brew cleanup | brew cask cleanup'
+alias rv='reveal-md --highlight-theme github --theme simple -w'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

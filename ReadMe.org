@@ -40,8 +40,12 @@
 
 *** Tmux
     1. Install Tumx using system package manager like homebrew, apt-get, pacman.
+       
+       #+BEGIN_SRC shell
+       brew install tmux
+       #+END_SRC
 
-       Furthermore, to install Tmux Package Manager: 
+    2. Furthermore, to install Tmux Package Manager: 
        #+BEGIN_SRC shell
        git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
        #+END_SRC
@@ -50,7 +54,7 @@
        Mac: ~brew install reattach-to-user-namespace~
        Linux: ~pacman -S xsel~
 
-    2. Key bindings
+    3. Key bindings
        - prefix: I set it to C-x
 
        - prefix + I: Installs new plugins from GitHub or any other git repository. Refreshes TMUX environment
@@ -59,10 +63,14 @@
 
        - prefix + alt + u: remove/uninstall plugins not on the plugin list
 
-*** Dotfiles
-    1. Some dependencies here, and you will need to install python.
+*** Other Dependencies
+    1. System package manager dependencies:
        #+BEGIN_SRC shell
-       npm i -g js-beautify npm
+       brew install screenfetch trash asciinema
+       #+END_SRC
+    1. NPM dependencies here, and you will need to install python.
+       #+BEGIN_SRC shell
+       npm i -g npm js-beautify hexo-cli reveal-md phantomjs
        #+END_SRC
     2. Put the dotfiles in the home directory:
        #+BEGIN_SRC shell
