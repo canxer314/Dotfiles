@@ -12,15 +12,14 @@ export PATH="/usr/local/sbin:$PATH"
 # Rust package manager
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# NVM
+export NVM_DIR="$HOME/.nvm"
+
 # Anaconda path
 export PATH="$HOME/anaconda/bin:$PATH"
 
 # Java Version
 export JAVA_HOME=`/usr/libexec/java_home -v 9`
-
-# Set the global node modules path to /usr/local/bin
-# Fix permissions using: sudo chown -R $(whoami) /usr/local 
-export npm_config_prefix=/usr/local
 
 export EDITOR=vim
 

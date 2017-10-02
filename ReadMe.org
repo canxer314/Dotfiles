@@ -63,20 +63,30 @@
 
        - prefix + alt + u: remove/uninstall plugins not on the plugin list
 
+*** NVM
+    Use nvm as node version manager.
+    #+BEGIN_SRC shell
+    brew install nvm
+    nvm install 6
+    nvm use 6
+    #+END_SRC
+
 *** Other Dependencies
     1. System package manager dependencies:
        #+BEGIN_SRC shell
        brew install screenfetch trash asciinema
        #+END_SRC
-    1. NPM dependencies here, and you will need to install python.
+    2. NPM dependencies here, and you will need to install python.
        #+BEGIN_SRC shell
        npm i -g npm js-beautify hexo-cli reveal-md phantomjs
        #+END_SRC
-    2. Put the dotfiles in the home directory:
+    3. Put the dotfiles in the home directory:
        #+BEGIN_SRC shell
        cd ~/Dotfiles
        ./install.sh
        #+END_SRC
+       
+       
 
 ** Mac Keybindings
 

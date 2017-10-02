@@ -22,6 +22,9 @@ else
     VER=$(lsb_release -sr)
 fi
 
+# Source NVM
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 # Update bundles with `antigen reset`
 source ~/Dotfiles/antigen/antigen.zsh
 # call antigen update on your terminal and it will update the oh-my-zsh repository
