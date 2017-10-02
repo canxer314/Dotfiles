@@ -118,6 +118,11 @@
 
    1. Xmodmap file is used for key tweak on linux.
    2. Fix npm permission.
+
+      Set the global node modules path to /usr/local/bin
+      
+      Fix permissions using: sudo chown -R $(whoami) /usr/local 
+
       #+BEGIN_SRC shell
       sudo chown -R $(whoami) /usr/local 
       #+END_SRC
