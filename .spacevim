@@ -72,6 +72,8 @@ function! UserConfig()
     endif
 
     " emacs keymaping for cursor movement{{{
+    nmap <c-g> <Esc>
+    vmap <c-g> <Esc>
     nmap <c-a> ^
     nmap <c-e> $
     vmap <c-a> ^
