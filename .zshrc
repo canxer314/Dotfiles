@@ -100,6 +100,8 @@ fi
 
 alias v="vim"
 alias sv="sudo -E vim"
+alias nv="nvim"
+alias snv="sudo -E nvim"
 alias e="emacs"
 alias e.="open -a emacs ."
 alias se="sudo -E emacs"
