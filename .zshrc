@@ -98,10 +98,9 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
 elif [[ $CURRENT_OS == 'Linux' ]]; then
 fi
 
+alias vim="nvim"
 alias v="vim"
 alias sv="sudo -E vim"
-alias nv="nvim"
-alias snv="sudo -E nvim"
 alias e="emacs"
 alias e.="open -a emacs ."
 alias se="sudo -E emacs"
