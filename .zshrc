@@ -56,7 +56,7 @@ antigen bundle zsh-users/zsh-completions
 
 # Load the theme.
 # antigen theme candy
-antigen theme gnzh
+antigen theme bureau
 # antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
 
 if [[ $CURRENT_OS == 'OS X' ]]; then
