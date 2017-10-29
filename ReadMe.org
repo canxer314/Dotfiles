@@ -11,10 +11,14 @@
 
 *** space-vim
 
-    1. Install *git, vim, curl* first.
-       ~vim --version~ to check your vim has +clipboard and +python/python3 support
-       - For Mac: ~brew install macvim --with-override-system-vim~
-       - For Linux, install *gvim* instead of vim (with +clipboard support)
+    1. Install *git, vim/neovim, curl* first.
+       1. vim
+          ~vim --version~ to check your vim has +clipboard and +python/python3 support
+          - For Mac: ~brew install macvim --with-override-system-vim~
+          - For Linux, install *gvim* instead of vim (with +clipboard support)
+       2. neovim
+          Python support script is already written in /installspace-vim.sh/. Make sure you have Python 2 or 3 installed.
+          - For Mac: ~brew install neovim~
 
     2. Install space-vim:
        #+BEGIN_SRC shell
@@ -88,13 +92,11 @@
        cd ~/Dotfiles
        ./install.sh
        #+END_SRC
-       
-       
 
 ** Mac Keybindings
 
    Settings are described in /Mac\_keybindings/ReadMe.md/
-
+   
 ** Homebrew Backup   
    - Backup
      #+BEGIN_SRC shell
@@ -108,6 +110,7 @@
      #+BEGIN_SRC shell
      brew bundle cleanup --file="~/Library/Mobile Documents/com~apple~CloudDocs/PackageManagerLists/Brewfile"
      #+END_SRC
+     
 ** Fonts
 
    1. Roboto Mono for Powerline
