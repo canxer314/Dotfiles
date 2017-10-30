@@ -15,11 +15,13 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # NVM
 export NVM_DIR="$HOME/.nvm"
 
-# Anaconda path
+# Anaconda
 export PATH="$HOME/anaconda/bin:$PATH"
 
-# Java Version
+# Java
 export JAVA_HOME=`/usr/libexec/java_home -v 9`
+export JRE_HOME=$JAVA_HOME/jre
+export CLASSPATH=$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
 
 # Set the global node modules path to /usr/local/bin
 # Fix permissions using: sudo chown -R $(whoami) /usr/local 
