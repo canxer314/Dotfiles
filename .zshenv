@@ -18,6 +18,9 @@ export NVM_DIR="$HOME/.nvm"
 # Anaconda
 export PATH="$HOME/anaconda/bin:$PATH"
 
+# No github credentials
+HOMEBREW_NO_GITHUB_API=1
+
 # Java
 export JAVA_HOME=`/usr/libexec/java_home -v 9`
 export JRE_HOME=$JAVA_HOME/jre
