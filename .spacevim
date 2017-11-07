@@ -97,11 +97,15 @@ function! UserConfig()
     endif
 
     " Grepper
-    nnoremap <leader>g :Grepper -tool git<cr>
-    nnoremap <leader>G :Grepper -tool ag<cr>
+    nnoremap <leader>sp :Grepper -tool rg<cr>
+    nnoremap <leader>sgp :Grepper -tool grep<cr>
 
     nmap gs <plug>(GrepperOperator)
     xmap gs <plug>(GrepperOperator)
+
+    " Search
+    nmap <enter> :.cc<Cr> " oepn error
+    nmap <leader>ri :copen<Cr> " resume error buffer
 
     " emacs keymaping for cursor movement{{{
     nmap <c-g> <Esc>
