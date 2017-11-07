@@ -20,14 +20,16 @@ endfunction
 
 function! Layers()
 
-    Layer 'lightline'
+    Layer 'airline'
     Layer 'fzf'
     Layer 'syntax-checking'
+    Layer 'text-align'
     " Layer 'deoplete'
     Layer 'unite'
     Layer 'better-defaults', {'exclude': 'dominikduda/vim_current_word'}
     Layer 'better-motion'
     Layer 'file-manager'
+    Layer 'tmux'
     Layer 'chinese'
     Layer 'programming'
 
@@ -51,7 +53,6 @@ function! UserInit()
     " Install private plugins
     " Plug 'extr0py/oni'
     Plug 'mileszs/ack.vim'
-    Plug 'christoomey/vim-tmux-navigator'
     Plug 'benmills/vimux'
     Plug 'rakr/vim-one'
 
@@ -71,20 +72,22 @@ endfunction
 function! UserConfig()
     "let os = GetRunningOS()
 
-    " airline setting
-    " If you enable airline layer and have installed the powerline fonts, set it here.
-    " let g:airline_powerline_fonts=1
-    " let g:airline_theme='one
-
     " airline settting
-    let g:lightline = {
-      \ 'colorscheme': 'PaperColor',
-      \ }
+    " let g:lightline = {
+    "   \ 'colorscheme': 'PaperColor',
+    "   \ }
 
     " theme
     colorscheme one
     let g:one_allow_italics = 1 " I love italic for comments
     set background=light " for the light version
+
+    " airline setting
+    " If you enable airline layer and have installed the powerline fonts, set it here.
+    let g:airline_theme='one'
+    let g:airline_powerline_fonts = 0
+    let g:airline_left_sep = ''
+    let g:airline_right_sep = ''
 
     set noundofile
 
