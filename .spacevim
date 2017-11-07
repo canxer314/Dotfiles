@@ -56,6 +56,7 @@ function! UserInit()
     Plug 'mileszs/ack.vim'
     Plug 'benmills/vimux'
     Plug 'rakr/vim-one'
+    Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 
     " deoplete plugin
     if has('nvim')
@@ -95,6 +96,13 @@ function! UserConfig()
     if (has("termguicolors"))
       set termguicolors
     endif
+
+    " Grepper
+    nnoremap <leader>g :Grepper -tool git<cr>
+    nnoremap <leader>G :Grepper -tool ag<cr>
+
+    nmap gs <plug>(GrepperOperator)
+    xmap gs <plug>(GrepperOperator)
 
     " emacs keymaping for cursor movement{{{
     nmap <c-g> <Esc>
