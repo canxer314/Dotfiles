@@ -29,6 +29,7 @@ function! Layers()
     Layer 'better-defaults', {'exclude': 'dominikduda/vim_current_word'}
     Layer 'better-motion'
     Layer 'file-manager'
+    Layer 'ctrlp'
     Layer 'tmux'
     Layer 'chinese'
     Layer 'programming'
