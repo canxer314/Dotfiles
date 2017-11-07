@@ -24,7 +24,7 @@ function! Layers()
     Layer 'fzf'
     Layer 'syntax-checking'
     Layer 'text-align'
-    " Layer 'deoplete'
+    Layer 'deoplete'
     Layer 'unite'
     Layer 'better-defaults', {'exclude': 'dominikduda/vim_current_word'}
     Layer 'file-manager'
@@ -32,6 +32,7 @@ function! Layers()
     Layer 'tmux'
     Layer 'chinese'
     Layer 'programming'
+    Layer 'editing'
 
     " Lang
     Layer 'java'
@@ -58,13 +59,6 @@ function! UserInit()
     Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 
     " deoplete plugin
-    if has('nvim')
-      Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    else
-      Plug 'Shougo/deoplete.nvim'
-      Plug 'roxma/nvim-yarp'
-      Plug 'roxma/vim-hug-neovim-rpc'
-    endif
     Plug 'zchee/deoplete-jedi'
     Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 endfunction
