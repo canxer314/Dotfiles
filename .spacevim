@@ -65,6 +65,7 @@ endfunction
 
 " Put your costom configurations here, e.g., change the colorscheme.
 function! UserConfig()
+    set mouse=a
     "let os = GetRunningOS()
 
     " airline settting
