@@ -1,12 +1,12 @@
 * Ting Zhou's Configuration for space-vim, ZSH, Dotfiles and Atom
-  
+
 ** Installation
 
    The root directory should be *~/Dotfiles/*
-   
+
    Use
    #+BEGIN_SRC shell
-   git clone https://github.com/ztlevi/Dotfiles.git ~/Dotfiles
+     git clone https://github.com/ztlevi/Dotfiles.git ~/Dotfiles
    #+END_SRC
 
 *** space-vim
@@ -22,8 +22,8 @@
 
     2. Install space-vim:
        #+BEGIN_SRC shell
-       cd ~/Dotfiles
-       ./installspace-vim.sh
+         cd ~/Dotfiles
+         ./installspace-vim.sh
        #+END_SRC
     3. Update the plugin with =:PlugUpdate=
 
@@ -31,30 +31,30 @@
 
     1. Install zsh first, instructions [[https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH][here]].
        #+BEGIN_SRC shell
-       # set zsh as default
-       chsh -s $(which zsh)
+         # set zsh as default
+         chsh -s $(which zsh)
        #+END_SRC
 
     2. Install oh-my-zsh:
        #+BEGIN_SRC shell
-       sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+         sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
        #+END_SRC
-      
+
     3. The instructions is in OhMyZSH.org
 
 *** Tmux
     1. Install Tumx using system package manager like homebrew, apt-get, pacman.
-       
+
        #+BEGIN_SRC shell
-       brew install tmux
+         brew install tmux
        #+END_SRC
 
-    2. Furthermore, to install Tmux Package Manager: 
+    2. Furthermore, to install Tmux Package Manager:
        #+BEGIN_SRC shell
-       git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+         git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
        #+END_SRC
 
-       Notes: *tmux-yank* package requirements [[https://github.com/tmux-plugins/tmux-yank][here]]. 
+       Notes: *tmux-yank* package requirements [[https://github.com/tmux-plugins/tmux-yank][here]].
        Mac: ~brew install reattach-to-user-namespace~
        Linux: ~pacman -S xsel~
 
@@ -70,47 +70,52 @@
 *** NVM
     Use nvm as node version manager.
     #+BEGIN_SRC shell
-    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
-    nvm install 6
-    nvm use 6
-    
-    # set the system as default node
-    nvm alias default system
+      curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
+      nvm install 6
+      nvm use 6
+
+      # set the system as default node
+      nvm alias default system
     #+END_SRC
 
 *** Other Dependencies
     1. System package manager dependencies:
        #+BEGIN_SRC shell
-       brew install screenfetch trash asciinema
+         brew install screenfetch trash asciinema
        #+END_SRC
     2. NPM dependencies here, and you will need to install python.
        #+BEGIN_SRC shell
-       npm i -g npm js-beautify hexo-cli reveal-md phantomjs
+         npm i -g npm js-beautify hexo-cli reveal-md phantomjs
        #+END_SRC
     3. Put the dotfiles in the home directory:
        #+BEGIN_SRC shell
-       cd ~/Dotfiles
-       ./install.sh
+         cd ~/Dotfiles
+         ./install.sh
+       #+END_SRC
+    4. node and anaconda3
+       #+BEGIN_SRC shell
+         brew install node@8
+         brew cask install anaconda
        #+END_SRC
 
 ** Mac Keybindings
 
    Settings are described in /Mac\_keybindings/ReadMe.md/
-   
-** Homebrew Backup   
+
+** Homebrew Backup
    - Backup
      #+BEGIN_SRC shell
-     brew bundle dump --force --file="~/Library/Mobile Documents/com~apple~CloudDocs/PackageManagerLists/Brewfile"
+       brew bundle dump --force --file="~/Library/Mobile Documents/com~apple~CloudDocs/PackageManagerLists/Brewfile"
      #+END_SRC
    - Restore
      #+BEGIN_SRC shell
-     brew bundle --file="~/Library/Mobile Documents/com~apple~CloudDocs/PackageManagerLists/Brewfile"
+       brew bundle --file="~/Library/Mobile Documents/com~apple~CloudDocs/PackageManagerLists/Brewfile"
      #+END_SRC
    - Clean up
      #+BEGIN_SRC shell
-     brew bundle cleanup --file="~/Library/Mobile Documents/com~apple~CloudDocs/PackageManagerLists/Brewfile"
+       brew bundle cleanup --file="~/Library/Mobile Documents/com~apple~CloudDocs/PackageManagerLists/Brewfile"
      #+END_SRC
-     
+
 ** Fonts
 
    1. Roboto Mono for Powerline
@@ -122,5 +127,5 @@
    1. Xmodmap file is used for key tweak on linux.
    2. Fix npm permission.
       #+BEGIN_SRC shell
-      sudo chown -R $(whoami) /usr/local 
+        sudo chown -R $(whoami) /usr/local
       #+END_SRC

@@ -16,7 +16,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 
 # Anaconda
-export PATH="$HOME/anaconda/bin:$PATH"
+export PATH=/usr/local/anaconda3/bin:"$PATH"
 
 # No github credentials
 HOMEBREW_NO_GITHUB_API=1
@@ -27,7 +27,7 @@ export JRE_HOME=$JAVA_HOME/jre
 export CLASSPATH=$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
 
 # Set the global node modules path to /usr/local/bin
-# Fix permissions using: sudo chown -R $(whoami) /usr/local 
+# Fix permissions using: sudo chown -R $(whoami) /usr/local
 export npm_config_prefix=/usr/local
 
 export EDITOR=vim
