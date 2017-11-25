@@ -57,6 +57,7 @@ function! UserInit()
     Plug 'benmills/vimux'
     Plug 'rakr/vim-one'
     Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
+    Plug 'Chiel92/vim-autoformat'
 
     " deoplete plugin
     Plug 'zchee/deoplete-jedi'
@@ -90,6 +91,9 @@ function! UserConfig()
     if (has("termguicolors"))
       set termguicolors
     endif
+
+    " AutoFormat
+    noremap <F3> :Autoformat<CR>
 
     " Grepper
     nnoremap <leader>sp :Grepper -tool rg<cr>
