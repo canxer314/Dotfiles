@@ -94,6 +94,7 @@ function! UserConfig()
 
     " AutoFormat
     noremap <F3> :Autoformat<CR>
+    let g:formatdef_remark_markdown = '"remark --silent --no-color --setting listItemIndent:1 "'
 
     " Grepper
     nnoremap <leader>sp :Grepper -tool rg<cr>
