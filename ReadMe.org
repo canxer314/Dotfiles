@@ -121,6 +121,9 @@
    1. Roboto Mono for Powerline
    2. Ubuntu Mono and the one for Powerline
    3. Source Code Pro for Powerline
+   4. Operator Mono and Lig
+   5. Monofur for Powerline
+   6. Menlo - Regular
 
 ** Notes
 
