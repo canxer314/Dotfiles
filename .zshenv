@@ -26,6 +26,11 @@ export JAVA_HOME=`/usr/libexec/java_home -v 9`
 export JRE_HOME=$JAVA_HOME/jre
 export CLASSPATH=$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
 
+# Android
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 # Set the global node modules path to /usr/local/bin
 # Fix permissions using: sudo chown -R $(whoami) /usr/local
 export npm_config_prefix=/usr/local
