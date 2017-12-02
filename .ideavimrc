@@ -60,5 +60,6 @@ nmap <leader>e       :action ShowErrorDescription<cr>
 nmap ,=              :action ReformatCode<CR>
 nmap <c-o>           :action Back<cr>
 nmap <c-i>           :action Forward<cr>
-" tab is used in karabiner as <C-i>
+" tab is used in karabiner as <C-i>, <C-d> as delete
 nmap <tab>           :action Forward<cr>
+nmap <delete>        <C-d>
