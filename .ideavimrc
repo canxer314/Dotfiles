@@ -41,7 +41,7 @@ nmap <leader>wj <c-w>j
 nmap <leader>wv <c-w>v
 nmap <leader>ws <c-w>s
 nmap <leader>wc <c-w>c
-
+nmap <leader>wm :action HideAllWindows<CR>
 
 " ============================================================================
 " IDE actions
