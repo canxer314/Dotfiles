@@ -8,8 +8,10 @@ let mapleader = " "
 
 set vim-surround
 
+" ============================================================================
 " emacs keymaping for cursor movement{{{
 " You have to unbind C-g before it works
+" ============================================================================
 nmap <c-g> <Esc>
 vmap <c-g> <Esc>
 nmap <c-a> ^
@@ -25,15 +27,10 @@ cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 "}}}
 
-" Enter the command-line mode
-noremap <CR> :
-
-" Reload .ideavimrc
-nnoremap <leader>r :source ~/.ideavimrc<CR>
-
-
+" ============================================================================
 " key bindings for quickly moving between windows
 " h left, l right, k up, j down
+" ============================================================================
 nmap <leader>wh <c-w>h
 nmap <leader>wl <c-w>l
 nmap <leader>wk <c-w>k
@@ -42,6 +39,15 @@ nmap <leader>wv <c-w>v
 nmap <leader>ws <c-w>s
 nmap <leader>wc <c-w>c
 nmap <leader>wm :action HideAllWindows<CR>
+
+vmap <leader>wh <c-w>h
+vmap <leader>wl <c-w>l
+vmap <leader>wk <c-w>k
+vmap <leader>wj <c-w>j
+vmap <leader>wv <c-w>v
+vmap <leader>ws <c-w>s
+vmap <leader>wc <c-w>c
+vmap <leader>wm :action HideAllWindows<CR>
 
 " ============================================================================
 " IDE actions
@@ -63,3 +69,20 @@ nmap <c-i>           :action Forward<cr>
 " tab is used in karabiner as <C-i>, <C-d> as delete
 nmap <tab>           :action Forward<cr>
 nmap <delete>        <C-d>
+
+vmap <leader><Space> :action GotoAction<CR>
+vmap <leader>c       :action GotoClass<CR>
+vmap <leader>ff      :action GotoFile<CR>
+vmap <leader>bb      :action RecentFiles<CR>
+vmap <leader>e       :action ShowErrorDescription<cr>
+vmap ,=              :action ReformatCode<CR>
+vmap <c-o>           :action Back<cr>
+vmap <c-i>           :action Forward<cr>
+vmap <tab>           :action Forward<cr>
+vmap <delete>        <C-d>
+
+" Enter the command-line mode
+noremap <CR> :
+
+" Reload .ideavimrc
+nnoremap <leader>r :source ~/.ideavimrc<CR>
