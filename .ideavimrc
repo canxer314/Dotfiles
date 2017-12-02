@@ -58,5 +58,7 @@ nmap gs              :action GotoSymbol<cr>
 nmap <leader>nm      :action FileStructurePopup<cr>
 nmap <leader>e       :action ShowErrorDescription<cr>
 nmap ,=              :action ReformatCode<CR>
-nmap <leader>o :action Back<cr>
-nmap <leader>i :action Forward<cr>
+nmap <c-o>           :action Back<cr>
+nmap <c-i>           :action Forward<cr>
+" tab is used in karabiner as <C-i>
+nmap <tab>           :action Forward<cr>
