@@ -1,0 +1,61 @@
+set gdefault
+set smartcase
+
+" Integrate with system clipboard
+set clipboard=unnamedplus,unnamed
+
+let mapleader = " "
+
+set vim-surround
+
+" emacs keymaping for cursor movement{{{
+nmap <c-g> <Esc>
+vmap <c-g> <Esc>
+nmap <c-a> ^
+nmap <c-e> $
+vmap <c-a> ^
+vmap <c-e> $
+imap <c-e> <Esc>A
+imap <c-a> <Esc>I
+inoremap <c-p> <up>
+inoremap <c-n> <down>
+" command line
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+"}}}
+
+" Enter the command-line mode
+noremap <CR> :
+
+" Reload .ideavimrc
+nnoremap <leader>r :source ~/.ideavimrc<CR>
+
+
+" key bindings for quickly moving between windows
+" h left, l right, k up, j down
+nmap <leader>wh <c-w>h
+nmap <leader>wl <c-w>l
+nmap <leader>wk <c-w>k
+nmap <leader>wj <c-w>j
+nmap <leader>wv <c-w>v
+nmap <leader>ws <c-w>s
+nmap <leader>wc <c-w>c
+
+
+" ============================================================================
+" IDE actions
+" ============================================================================
+
+nmap <leader><Space> :action GotoAction<CR>
+nmap <leader>c       :action GotoClass<CR>
+nmap <leader>ff      :action GotoFile<CR>
+nmap <leader>bb      :action RecentFiles<CR>
+nmap <leader>d       :action CloseContent<CR>
+nmap gd              :action GotoDeclaration<cr>
+nmap gh              :action QuickJavaDoc<CR>
+nmap gs              :action GotoSymbol<cr>
+nmap <leader>nm      :action FileStructurePopup<cr>
+nmap <leader>e       :action ShowErrorDescription<cr>
+nmap ,=              :action ReformatCode<CR>
+nmap <leader>o :action Back<cr>
+nmap <leader>i :action Forward<cr>

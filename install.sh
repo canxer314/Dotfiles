@@ -60,6 +60,10 @@ echo "Install tmux setting"
 rm ~/.tmux.conf
 ln -s ~/Dotfiles/.tmux.conf ~/.tmux.conf
 
+echo "Install ideaVim setting"
+rm ~/.ideavimrc
+ln -s ~/Dotfiles/.ideavimrc ~/.ideavimrc
+
 if [[ $CURRENT_OS == 'OS X' ]]; then
     echo "OS X configurations here!"
 elif [[ $CURRENT_OS == 'Linux' ]]; then
