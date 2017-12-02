@@ -90,10 +90,17 @@ vmap <tab>           :action Forward<cr>
 vmap <delete>        <C-d>
 
 " Enter the command-line mode
-noremap <CR> :
+nmap <CR> :
+vmap <CR> :
 
 " Reload .ideavimrc
-nnoremap <leader>r :source ~/.ideavimrc<CR>
+nmap <leader>r :source ~/.ideavimrc<CR>
+vmap <leader>r :source ~/.ideavimrc<CR>
 
 " check the action list
 nmap <leader>al :actionlist<CR>
+vmap <leader>al :actionlist<CR>
+
+" git
+nmap <leader>gs :action Vcs.QuickListPopupAction<CR>
+vmap <leader>gs :action Vcs.QuickListPopupAction<CR>
