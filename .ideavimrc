@@ -50,6 +50,14 @@ vmap <leader>wc <c-w>c
 vmap <leader>wm :action HideAllWindows<CR>
 
 " ============================================================================
+" expand and collapse
+" ============================================================================
+nmap zO :action ExpandAllRegions<CR>
+nmap zo :action ExpandRegion<CR>
+nmap zc :action CollapseRegion<CR>
+nmap zC :action CollapseAllRegions<CR>
+
+" ============================================================================
 " IDE actions
 " ============================================================================
 
@@ -86,3 +94,6 @@ noremap <CR> :
 
 " Reload .ideavimrc
 nnoremap <leader>r :source ~/.ideavimrc<CR>
+
+" check the action list
+nmap <leader>al :actionlist<CR>
