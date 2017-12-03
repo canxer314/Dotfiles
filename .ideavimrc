@@ -47,7 +47,7 @@ vmap <leader>wj <c-w>j
 vmap <leader>wv <c-w>v
 vmap <leader>ws <c-w>s
 vmap <leader>wc <c-w>c
-vmap <leader>wm :action HideAllWindows<CR>
+vmap <leader>wm :<Backspace><Backspace><Backspace><Backspace><Backspace>action HideAllWindows<CR>
 
 " ============================================================================
 " expand and collapse
@@ -78,15 +78,15 @@ nmap <c-i>           :action Forward<cr>
 nmap <tab>           :action Forward<cr>
 nmap <delete>        <C-d>
 
-vmap <leader><Space> :action GotoAction<CR>
-vmap <leader>c       :action GotoClass<CR>
-vmap <leader>ff      :action GotoFile<CR>
-vmap <leader>bb      :action RecentFiles<CR>
-vmap <leader>e       :action ShowErrorDescription<cr>
-vmap ,=              :action ReformatCode<CR>
-vmap <c-o>           :action Back<cr>
-vmap <c-i>           :action Forward<cr>
-vmap <tab>           :action Forward<cr>
+vmap <leader><Space> :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoAction<CR>
+vmap <leader>c       :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoClass<CR>
+vmap <leader>ff      :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoFile<CR>
+vmap <leader>bb      :<Backspace><Backspace><Backspace><Backspace><Backspace>action RecentFiles<CR>
+vmap <leader>e       :<Backspace><Backspace><Backspace><Backspace><Backspace>action ShowErrorDescription<cr>
+vmap ,=              :<Backspace><Backspace><Backspace><Backspace><Backspace>action ReformatCode<CR>
+vmap <c-o>           :<Backspace><Backspace><Backspace><Backspace><Backspace>action Back<cr>
+vmap <c-i>           :<Backspace><Backspace><Backspace><Backspace><Backspace>action Forward<cr>
+vmap <tab>           :<Backspace><Backspace><Backspace><Backspace><Backspace>action Forward<cr>
 vmap <delete>        <C-d>
 
 " Enter the command-line mode
@@ -95,20 +95,28 @@ vmap <CR> :
 
 " Reload .ideavimrc
 nmap <leader>r :source ~/.ideavimrc<CR>
-vmap <leader>r :source ~/.ideavimrc<CR>
+vmap <leader>r :<Backspace><Backspace><Backspace><Backspace><Backspace>source ~/.ideavimrc<CR>
 
 " check the action list
 nmap <leader>al :actionlist<CR>
-vmap <leader>al :actionlist<CR>
+vmap <leader>al :a<Backspace><Backspace><Backspace><Backspace><Backspace>ctionlist<CR>
 
 " git
 nmap <leader>gs :action Vcs.QuickListPopupAction<CR>
-vmap <leader>gs :action Vcs.QuickListPopupAction<CR>
+vmap <leader>gs :<Backspace><Backspace><Backspace><Backspace><Backspace>action Vcs.QuickListPopupAction<CR>
 
 " search in project
 nmap <leader>sp :action FindInPath<CR>
-vmap <leader>sp :action FindInPath<CR>
+vmap <leader>sp :<Backspace><Backspace><Backspace><Backspace><Backspace>action FindInPath<CR>
 
 " replace in project
 nmap <leader>rp :action ReplaceInPath<CR>
-vmap <leader>rp :action FindInPath<CR>
+vmap <leader>rp :<Backspace><Backspace><Backspace><Backspace><Backspace>action FindInPath<CR>
+
+" select occurrence
+nmap mn :action SelectNextOccurrence<CR>
+nmap mp :action UnselectPreviousOccurrence<CR>
+nmap ma :action SelectAllOccurrences<CR>
+vmap mn :<Backspace><Backspace><Backspace><Backspace><Backspace>action SelectNextOccurrence<CR>
+vmap mp :<Backspace><Backspace><Backspace><Backspace><Backspace>action UnselectPreviousOccurrence<CR>
+vmap ma :<Backspace><Backspace><Backspace><Backspace><Backspace>action SelectAllOccurrences<CR>
