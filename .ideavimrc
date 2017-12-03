@@ -10,10 +10,7 @@ set vim-surround
 
 " ============================================================================
 " emacs keymaping for cursor movement{{{
-" You have to unbind C-g before it works
 " ============================================================================
-nmap <c-g> <Esc>
-vmap <c-g> <Esc>
 nmap <c-a> ^
 nmap <c-e> $
 vmap <c-a> ^
@@ -112,11 +109,3 @@ vmap <leader>sp :<Backspace><Backspace><Backspace><Backspace><Backspace>action F
 " replace in project
 nmap <leader>rp :action ReplaceInPath<CR>
 vmap <leader>rp :<Backspace><Backspace><Backspace><Backspace><Backspace>action FindInPath<CR>
-
-" select occurrence
-nmap mn :action SelectNextOccurrence<CR>
-nmap mp :action UnselectPreviousOccurrence<CR>
-nmap ma :action SelectAllOccurrences<CR>
-vmap mn :<Backspace><Backspace><Backspace><Backspace><Backspace>action SelectNextOccurrence<CR>
-vmap mp :<Backspace><Backspace><Backspace><Backspace><Backspace>action UnselectPreviousOccurrence<CR>
-vmap ma :<Backspace><Backspace><Backspace><Backspace><Backspace>action SelectAllOccurrences<CR>
