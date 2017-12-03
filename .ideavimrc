@@ -109,3 +109,11 @@ vmap <leader>sp :<Backspace><Backspace><Backspace><Backspace><Backspace>action F
 " replace in project
 nmap <leader>rp :action ReplaceInPath<CR>
 vmap <leader>rp :<Backspace><Backspace><Backspace><Backspace><Backspace>action FindInPath<CR>
+
+" select occurrence, they do not work when editing
+nmap mn :action SelectNextOccurrence<CR>
+nmap mp :action UnselectPreviousOccurrence<CR>
+nmap ma :action SelectAllOccurrences<CR>
+vmap mn :<Backspace><Backspace><Backspace><Backspace><Backspace>action SelectNextOccurrence<CR>
+vmap mp :<Backspace><Backspace><Backspace><Backspace><Backspace>action UnselectPreviousOccurrence<CR>
+vmap ma :<Backspace><Backspace><Backspace><Backspace><Backspace>action SelectAllOccurrences<CR>
