@@ -10,7 +10,10 @@ set vim-surround
 
 " ============================================================================
 " emacs keymaping for cursor movement{{{
+" You have to unbind C-g before it works
 " ============================================================================
+nmap <c-g> <Esc>
+vmap <c-g> <Esc>
 nmap <c-a> ^
 nmap <c-e> $
 vmap <c-a> ^
