@@ -108,3 +108,7 @@ vmap <leader>gs :action Vcs.QuickListPopupAction<CR>
 " search in project
 nmap <leader>sp :action FindInPath<CR>
 vmap <leader>sp :action FindInPath<CR>
+
+" replace in project
+nmap <leader>rp :action ReplaceInPath<CR>
+vmap <leader>rp :action FindInPath<CR>
