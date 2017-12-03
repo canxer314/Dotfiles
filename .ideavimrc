@@ -104,3 +104,7 @@ vmap <leader>al :actionlist<CR>
 " git
 nmap <leader>gs :action Vcs.QuickListPopupAction<CR>
 vmap <leader>gs :action Vcs.QuickListPopupAction<CR>
+
+" search in project
+nmap <leader>sp :action FindInPath<CR>
+vmap <leader>sp :action FindInPath<CR>
