@@ -6,7 +6,7 @@ set clipboard=unnamedplus,unnamed
 
 let mapleader = " "
 
-set vim-surround
+set surround
 
 " ============================================================================
 " emacs keymaping for cursor movement{{{
