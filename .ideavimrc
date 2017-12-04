@@ -67,6 +67,7 @@ nmap <leader><Space> :action GotoAction<CR>
 nmap <leader>c       :action GotoClass<CR>
 nmap <leader>ff      :action GotoFile<CR>
 nmap <leader>bb      :action RecentFiles<CR>
+nmap <leader>bu      :action ReopenClosedTab<CR>
 nmap <leader>d       :action CloseContent<CR>
 nmap gd              :action GotoDeclaration<cr>
 nmap gh              :action QuickJavaDoc<CR>
