@@ -21,6 +21,7 @@ vmap <c-a> ^
 vmap <c-e> $
 imap <c-e> <Esc>A
 imap <c-a> <Esc>I
+imap <c-d> <del>
 inoremap <c-p> <up>
 inoremap <c-n> <down>
 " command line
