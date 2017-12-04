@@ -14,6 +14,7 @@ set surround
 " ============================================================================
 nmap <c-g> <Esc>
 vmap <c-g> <Esc>
+imap <c-g> <Esc>a
 nmap <c-a> ^
 nmap <c-e> $
 vmap <c-a> ^
