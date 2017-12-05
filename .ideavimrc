@@ -67,6 +67,7 @@ nmap <leader><Space> :action GotoAction<CR>
 nmap <leader>c       :action GotoClass<CR>
 nmap <leader>ff      :action GotoFile<CR>
 nmap <leader>bb      :action RecentFiles<CR>
+nmap <leader>bi      :action ActivateStructureToolWindow<CR>
 nmap <leader>bu      :action ReopenClosedTab<CR>
 nmap <leader>d       :action CloseContent<CR>
 nmap gd              :action GotoDeclaration<cr>
@@ -85,6 +86,8 @@ vmap <leader><Space> :<Backspace><Backspace><Backspace><Backspace><Backspace>act
 vmap <leader>c       :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoClass<CR>
 vmap <leader>ff      :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoFile<CR>
 vmap <leader>bb      :<Backspace><Backspace><Backspace><Backspace><Backspace>action RecentFiles<CR>
+vmap <leader>bu      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ReopenClosedTab<CR>
+vmap <leader>bi      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateStructureToolWindow<CR>
 vmap <leader>e       :<Backspace><Backspace><Backspace><Backspace><Backspace>action ShowErrorDescription<cr>
 vmap ,=              :<Backspace><Backspace><Backspace><Backspace><Backspace>action ReformatCode<CR>
 vmap <c-o>           :<Backspace><Backspace><Backspace><Backspace><Backspace>action Back<cr>
