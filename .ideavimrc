@@ -66,6 +66,7 @@ nmap zC :action CollapseAllRegions<CR>
 nmap <leader><Space> :action GotoAction<CR>
 nmap <leader>c       :action GotoClass<CR>
 nmap <leader>ff      :action GotoFile<CR>
+nmap <leader>ft      :action ActivateProjectToolWindow<CR>
 nmap <leader>bb      :action RecentFiles<CR>
 nmap <leader>bi      :action ActivateStructureToolWindow<CR>
 nmap <leader>bu      :action ReopenClosedTab<CR>
@@ -85,6 +86,7 @@ nmap <delete>        <C-d>
 vmap <leader><Space> :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoAction<CR>
 vmap <leader>c       :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoClass<CR>
 vmap <leader>ff      :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoFile<CR>
+vmap <leader>ft      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateProjectToolWindow<CR>
 vmap <leader>bb      :<Backspace><Backspace><Backspace><Backspace><Backspace>action RecentFiles<CR>
 vmap <leader>bu      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ReopenClosedTab<CR>
 vmap <leader>bi      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateStructureToolWindow<CR>
