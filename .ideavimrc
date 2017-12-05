@@ -70,7 +70,7 @@ nmap <leader>ft      :action ActivateProjectToolWindow<CR>
 nmap <leader>bb      :action RecentFiles<CR>
 nmap <leader>bi      :action ActivateStructureToolWindow<CR>
 nmap <leader>bu      :action ReopenClosedTab<CR>
-nmap <leader>d       :action CloseContent<CR>
+nmap <leader>'       :action ActivateTerminalToolWindow<CR>
 nmap gd              :action GotoDeclaration<cr>
 nmap gh              :action QuickJavaDoc<CR>
 nmap gs              :action GotoSymbol<cr>
@@ -91,6 +91,7 @@ vmap <leader>bb      :<Backspace><Backspace><Backspace><Backspace><Backspace>act
 vmap <leader>bu      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ReopenClosedTab<CR>
 vmap <leader>bi      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateStructureToolWindow<CR>
 vmap <leader>e       :<Backspace><Backspace><Backspace><Backspace><Backspace>action ShowErrorDescription<cr>
+vmap <leader>'       :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateTerminalToolWindow<CR>
 vmap ,=              :<Backspace><Backspace><Backspace><Backspace><Backspace>action ReformatCode<CR>
 vmap <c-o>           :<Backspace><Backspace><Backspace><Backspace><Backspace>action Back<cr>
 vmap <c-i>           :<Backspace><Backspace><Backspace><Backspace><Backspace>action Forward<cr>
@@ -112,6 +113,8 @@ vmap <leader>al :a<Backspace><Backspace><Backspace><Backspace><Backspace>ctionli
 " git
 nmap <leader>gs :action Vcs.QuickListPopupAction<CR>
 vmap <leader>gs :<Backspace><Backspace><Backspace><Backspace><Backspace>action Vcs.QuickListPopupAction<CR>
+nmap <leader>gS :action ActivateVersionControlToolWindow<CR>
+vmap <leader>gS :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateVersionControlToolWindow<CR>
 
 " search in project
 nmap <leader>sp :action FindInPath<CR>
