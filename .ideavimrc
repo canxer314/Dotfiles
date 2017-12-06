@@ -75,6 +75,7 @@ nmap <leader>rd      :action Debug<CR>
 nmap <leader>rD      :action DebugClass<CR>
 nmap <leader>rr      :action Run<CR>
 nmap <leader>rR      :action RunClass<CR>
+nmap <leader>im      :action ImplementMethods<CR>
 nmap <leader>ee      :action ShowErrorDescription<cr>
 nmap <leader>'       :action ActivateTerminalToolWindow<CR>
 nmap gd              :action GotoDeclaration<cr>
@@ -96,6 +97,7 @@ vmap <leader>rd      :<Backspace><Backspace><Backspace><Backspace><Backspace>act
 vmap <leader>rD      :<Backspace><Backspace><Backspace><Backspace><Backspace>action DebugClass<CR>
 vmap <leader>rr      :<Backspace><Backspace><Backspace><Backspace><Backspace>action Run<CR>
 vmap <leader>rR      :<Backspace><Backspace><Backspace><Backspace><Backspace>action RunClass<CR>
+vmap <leader>im      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ImplementMethods<CR>
 vmap <leader>ee      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ShowErrorDescription<cr>
 vmap <leader>'       :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateTerminalToolWindow<CR>
 vmap ,=              :<Backspace><Backspace><Backspace><Backspace><Backspace>action ReformatCode<CR>
