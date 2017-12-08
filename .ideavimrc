@@ -70,6 +70,7 @@ nmap <leader>ft      :action ActivateProjectToolWindow<CR>
 nmap <leader>fs      :action SaveAll<CR>
 nmap <leader>fd      :action DashLauncherAction<CR>
 nmap <leader>bb      :action RecentFiles<CR>
+nmap <CR>            :action RecentFiles<CR>
 nmap <leader>bi      :action ActivateStructureToolWindow<CR>
 nmap <leader>bp      :action FileStructurePopup<cr>
 nmap <leader>bu      :action ReopenClosedTab<CR>
@@ -115,10 +116,6 @@ nmap <tab>           :action Forward<cr>
 nmap <delete>        <C-d>
 vmap <tab>           :<Backspace><Backspace><Backspace><Backspace><Backspace>action Forward<cr>
 vmap <delete>        <C-d>
-
-" Enter the command-line mode
-nmap <CR> :
-vmap <CR> :
 
 " Reload .ideavimrc
 nmap <leader>R :source ~/.ideavimrc<CR>

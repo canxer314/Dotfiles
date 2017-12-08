@@ -121,6 +121,10 @@ function! UserConfig()
     cnoremap <C-e> <End>
     "}}}
 
+    " recent files
+    nmap <CR> <space>bb
+    vmap <CR> <space>bb
+
     " Prompt for a command to run
     map <Leader>vp :VimuxPromptCommand<CR>
     " Run last command executed by VimuxRunCommand
