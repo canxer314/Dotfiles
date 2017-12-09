@@ -65,7 +65,7 @@ nmap zC :action CollapseAllRegions<CR>
 
 nmap <leader><Space> :action GotoAction<CR>
 nmap <leader>cc      :action GotoClass<CR>
-nmap <leader>ff      :action GotoFile<CR>
+nmap <leader>ff      :action SearchEverywhere<CR>
 nmap <leader>ft      :action SelectInProjectView<CR>
 nmap <leader>fs      :action SaveAll<CR>
 nmap <leader>fd      :action DashLauncherAction<CR>
@@ -91,9 +91,9 @@ nmap <c-i>           :action Forward<cr>
 
 vmap <leader><Space> :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoAction<CR>
 vmap <leader>cc      :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoClass<CR>
-vmap <leader>ff      :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoFile<CR>
+vmap <leader>ff      :<Backspace><Backspace><Backspace><Backspace><Backspace>action SearchEverywhere<CR>
 vmap <leader>ft      :<Backspace><Backspace><Backspace><Backspace><Backspace>action SelectInProjectView<CR>
-vmap <leader>fs      :<Backspace><Backspace><Backspace><Backspace><Backspace>actio SaveAll<CR>
+vmap <leader>fs      :<Backspace><Backspace><Backspace><Backspace><Backspace>action SaveAll<CR>
 vmap <leader>fd      :<Backspace><Backspace><Backspace><Backspace><Backspace>action DashLauncherAction<CR>
 vmap <leader>bb      :<Backspace><Backspace><Backspace><Backspace><Backspace>action RecentFiles<CR>
 vmap <leader>bu      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ReopenClosedTab<CR>
