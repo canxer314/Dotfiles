@@ -69,6 +69,7 @@ nmap <leader>ff      :action SearchEverywhere<CR>
 nmap <leader>ft      :action SelectInProjectView<CR>
 nmap <leader>fs      :action SaveAll<CR>
 nmap <leader>fd      :action DashLauncherAction<CR>
+nmap <leader>fb      :action ShowBookmarks<CR>
 nmap <leader>bb      :action RecentFiles<CR>
 nmap <CR>            :action RecentFiles<CR>
 nmap <leader>bi      :action ActivateStructureToolWindow<CR>
@@ -77,6 +78,7 @@ nmap <leader>bu      :action ReopenClosedTab<CR>
 nmap <leader>dd      :action Debug<CR>
 nmap <leader>dD      :action DebugClass<CR>
 nmap <leader>tt      :action ToggleLineBreakpoint<CR>
+nmap <leader>tb      :action ToggleBookmark<CR>
 nmap <leader>rr      :action Run<CR>
 nmap <leader>rR      :action RunClass<CR>
 nmap <leader>im      :action ImplementMethods<CR>
@@ -95,6 +97,7 @@ vmap <leader>ff      :<Backspace><Backspace><Backspace><Backspace><Backspace>act
 vmap <leader>ft      :<Backspace><Backspace><Backspace><Backspace><Backspace>action SelectInProjectView<CR>
 vmap <leader>fs      :<Backspace><Backspace><Backspace><Backspace><Backspace>action SaveAll<CR>
 vmap <leader>fd      :<Backspace><Backspace><Backspace><Backspace><Backspace>action DashLauncherAction<CR>
+vmap <leader>fb      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ShowBookmarks<CR>
 vmap <leader>bb      :<Backspace><Backspace><Backspace><Backspace><Backspace>action RecentFiles<CR>
 vmap <leader>bu      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ReopenClosedTab<CR>
 vmap <leader>bi      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateStructureToolWindow<CR>
@@ -102,6 +105,7 @@ vmap <leader>bp      :<Backspace><Backspace><Backspace><Backspace><Backspace>act
 vmap <leader>dd      :<Backspace><Backspace><Backspace><Backspace><Backspace>action Debug<CR>
 vmap <leader>dD      :<Backspace><Backspace><Backspace><Backspace><Backspace>action DebugClass<CR>
 vmap <leader>tt      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ToggleLineBreakpoint<CR>
+vmap <leader>tb      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ToggleBookmark<CR>
 vmap <leader>rr      :<Backspace><Backspace><Backspace><Backspace><Backspace>action Run<CR>
 vmap <leader>rR      :<Backspace><Backspace><Backspace><Backspace><Backspace>action RunClass<CR>
 vmap <leader>im      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ImplementMethods<CR>
