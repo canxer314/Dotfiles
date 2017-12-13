@@ -72,6 +72,7 @@ nmap <leader>fd      :action DashLauncherAction<CR>
 nmap <leader>fb      :action ShowBookmarks<CR>
 nmap <leader>bb      :action RecentFiles<CR>
 nmap <CR>            :action RecentFiles<CR>
+nmap <leader><tab>   :action RecentFiles<CR>
 nmap <leader>bi      :action ActivateStructureToolWindow<CR>
 nmap <leader>ji      :action FileStructurePopup<CR>
 nmap <leader>bp      :action FileStructurePopup<cr>
@@ -103,6 +104,7 @@ vmap <leader>fd      :<Backspace><Backspace><Backspace><Backspace><Backspace>act
 vmap <leader>fb      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ShowBookmarks<CR>
 vmap <leader>bb      :<Backspace><Backspace><Backspace><Backspace><Backspace>action RecentFiles<CR>
 vmap <CR>            :<Backspace><Backspace><Backspace><Backspace><Backspace>action RecentFiles<CR>
+vmap <leader><tab>   :<Backspace><Backspace><Backspace><Backspace><Backspace>action RecentFiles<CR>
 vmap <leader>bu      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ReopenClosedTab<CR>
 vmap <leader>bi      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateStructureToolWindow<CR>
 vmap <leader>ji      :<Backspace><Backspace><Backspace><Backspace><Backspace>action FileStructurePopup<CR>
