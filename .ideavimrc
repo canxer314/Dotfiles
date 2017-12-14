@@ -1,10 +1,10 @@
 set gdefault
 set smartcase
 
-" Integrate with system clipboard
-set clipboard=unnamedplus,unnamed
-
 let mapleader = " "
+
+" Do not use system clipboard
+set clipboard-=unnamedplus,unnamed
 
 set surround
 

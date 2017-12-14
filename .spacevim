@@ -66,6 +66,12 @@ endfunction
 
 " Put your costom configurations here, e.g., change the colorscheme.
 function! UserConfig()
+
+    " Do not use system clipboard
+    set clipboard-=unnamedplus,unnamed
+    vmap <M-c> "+y
+    vmap <C-c> "+y
+
     set mouse=a
     "let os = GetRunningOS()
 
