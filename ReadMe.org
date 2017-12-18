@@ -67,6 +67,15 @@
 
        - prefix + alt + u: remove/uninstall plugins not on the plugin list
 
+*** fzf
+    - Homebrew or Linuxbrew
+      #+BEGIN_SRC shell
+      brew install fzf
+
+      # To install useful key bindings and fuzzy completion:
+      $(brew --prefix)/opt/fzf/install
+      #+END_SRC
+
 *** NVM
     Use nvm as node version manager.
     #+BEGIN_SRC shell
