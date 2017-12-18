@@ -8,6 +8,9 @@ set clipboard-=unnamedplus,unnamed
 
 set surround
 
+" Allow backspace and cursor keys to cross line boundaries
+set whichwrap+=<,>,h,l
+
 " ============================================================================
 " emacs keymaping for cursor movement{{{
 " You have to unbind C-g before it works

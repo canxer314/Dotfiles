@@ -113,6 +113,9 @@ function! UserConfig()
     nmap <enter> :.cc<Cr> " oepn error
     nmap <leader>ri :copen<Cr> " resume error buffer
 
+    " Allow backspace and cursor keys to cross line boundaries
+    set whichwrap+=<,>,h,l
+
     " emacs keymaping for cursor movement{{{
     nmap <c-g> <Esc>
     vmap <c-g> <Esc>
