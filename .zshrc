@@ -122,3 +122,5 @@ alias bu='brew upgrade | brew cleanup | brew cask cleanup'
 alias rv='reveal-md --highlight-theme github --theme simple -w'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
