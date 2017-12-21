@@ -3,13 +3,17 @@ set smartcase
 
 let mapleader = " "
 
-" Do not use system clipboard
-set clipboard-=unnamedplus,unnamed
+" use system clipboard
+set clipboard=unnamedplus,unnamed
 
 set surround
 
 " Allow backspace and cursor keys to cross line boundaries
 set whichwrap+=<,>,h,l
+
+" black hole register
+vmap <backspace> "_d
+vmap <del> "_d
 
 " ============================================================================
 " emacs keymaping for cursor movement{{{

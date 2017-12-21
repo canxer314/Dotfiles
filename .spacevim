@@ -66,12 +66,6 @@ endfunction
 
 " Put your costom configurations here, e.g., change the colorscheme.
 function! UserConfig()
-
-    " Do not use system clipboard
-    set clipboard-=unnamedplus,unnamed
-    vmap <M-c> "+y
-    vmap <C-c> "+y
-
     set mouse=a
     "let os = GetRunningOS()
 
@@ -115,6 +109,10 @@ function! UserConfig()
 
     " Allow backspace and cursor keys to cross line boundaries
     set whichwrap+=<,>,h,l
+
+    " black hole register
+    vmap <backspace> "_d
+    vmap <del> "_d
 
     " emacs keymaping for cursor movement{{{
     nmap <c-g> <Esc>
