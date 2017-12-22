@@ -9,6 +9,9 @@ export ZSH=~/.oh-my-zsh
 
 export PATH="/usr/local/sbin:$PATH"
 
+# Node 8
+export PATH="/usr/local/opt/node@8/bin:$PATH"
+
 # Rust package manager
 export PATH="$HOME/.cargo/bin:$PATH"
 
