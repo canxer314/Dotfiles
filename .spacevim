@@ -62,6 +62,12 @@ function! UserInit()
     " deoplete plugin
     Plug 'zchee/deoplete-jedi'
     Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+
+    " prettier
+    " post install (yarn install | npm install) then load plugin only for editing supported files
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown'] }
 endfunction
 
 " Put your costom configurations here, e.g., change the colorscheme.
