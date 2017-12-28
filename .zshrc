@@ -49,6 +49,7 @@ antigen bundle nvm
 antigen bundle bower
 antigen bundle Vifon/deer
 antigen bundle zsh-users/zsh-completions
+antigen bundle soimort/you-get
 
 # Syntax highlighting bundle.
 # don't enable this theme, it doesn't work well with ansi-term in emacs
@@ -123,6 +124,7 @@ alias sf='screenfetch'
 alias bu='brew upgrade | brew cleanup | brew cask cleanup'
 alias rv='reveal-md --highlight-theme github --theme simple -w'
 alias yd='youtube-dl --write-auto-sub --ignore-errors'
+alias yg='you-get'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
