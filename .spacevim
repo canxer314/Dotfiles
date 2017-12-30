@@ -69,6 +69,9 @@ Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown'] }
 
+    " lsp
+    Plug 'autozimu/LanguageClient-neovim', {'tag': 'binary-*-x86_64-apple-darwin'}
+
     " leader guide
     Plug 'hecal3/vim-leader-guide'
 endfunction
@@ -122,6 +125,20 @@ function! UserConfig()
     " black hole register
     vmap <backspace> "_d
     vmap <del> "_d
+
+    " lsp config
+    " Required for operations modifying multiple buffers like rename.
+    set hidden
+
+    let g:LanguageClient_serverCommands = {
+        \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+        \ 'javascript': ['javascript-typescript-stdio'],
+        \ 'javascript.jsx': ['javascript-typescript-stdio'],
+        \ }
+
+    nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+    nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+    nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 
     " emacs keymaping for cursor movement{{{
     nmap <c-g> <Esc>
