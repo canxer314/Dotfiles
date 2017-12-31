@@ -45,3 +45,5 @@
 	required = true
 [github]
 	user = ztlevi
+[credential]
+	helper = osxkeychain
