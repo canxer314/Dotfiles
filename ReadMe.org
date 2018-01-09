@@ -106,6 +106,10 @@
          brew install node@8
          brew cask install anaconda
        #+END_SRC
+    5. Mac quick look ([[https://github.com/sindresorhus/quick-look-plugins][Preview]])
+       #+BEGIN_SRC shell
+         brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package quicklookase qlvideo
+       #+END_SRC
 
 ** Mac Keybindings
 
