@@ -34,6 +34,10 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+# Go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
 # Set the global node modules path to /usr/local/bin
 # Fix permissions using: sudo chown -R $(whoami) /usr/local
 export npm_config_prefix=/usr/local
