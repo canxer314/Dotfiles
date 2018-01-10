@@ -68,6 +68,10 @@ echo "Install Sumblimious"
 rm ~/.sublimious
 ln -s ~/Dotfiles/.sublimious ~/.sublimious
 
+echo "Install Atom Proton"
+rm ~/.proton
+ln -s ~/Dotfiles/.proton ~/.proton
+
 if [[ $CURRENT_OS == 'OS X' ]]; then
     echo "OS X configurations here!"
 elif [[ $CURRENT_OS == 'Linux' ]]; then
