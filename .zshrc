@@ -127,6 +127,7 @@ alias bu='brew upgrade | brew cleanup | brew cask cleanup'
 alias rv='reveal-md --highlight-theme github --theme simple -w'
 alias yd='youtube-dl --write-auto-sub --ignore-errors'
 alias yg='you-get'
+alias jp='jupyter notebook --NotebookApp.iopub_data_rate_limit=10000000'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

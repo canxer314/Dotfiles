@@ -64,7 +64,6 @@
   [
     ;; :pigments
     :teletype
-    :autocomplete-python-jedi
   ]
 
   ;; Packages that you want to disable.
