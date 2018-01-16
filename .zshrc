@@ -109,13 +109,10 @@ alias se="sudo -E emacs"
 alias ke="pkill -SIGUSR2 -i emacs"
 alias edebug="emacs --debug-init"
 alias etime="emacs --timed-requires --profile"
-alias rn="react-native"
-alias ri="react-native run-ios"
-alias ra="react-native run-android"
-alias rni="rm -rf ios/build/; kill $(lsof -t -i:8081); react-native run-ios"
 alias t="tmux"
 alias p="python"
 alias p3="python3"
+alias pe="pipenv"
 alias arec="asciinema rec --max-wait=2" # -t to specify title
 alias ar="antigen reset"
 alias h="hexo"
@@ -125,6 +122,11 @@ alias rm='trash'
 alias sf='screenfetch'
 alias bu='brew upgrade | brew cleanup | brew cask cleanup'
 alias rv='reveal-md --highlight-theme github --theme simple -w'
+alias rn="react-native"
+alias ri="react-native run-ios"
+alias ra="react-native run-android"
+alias rni="rm -rf ios/build/; kill $(lsof -t -i:8081); react-native run-ios"
+alias rir="react-native run-ios --configuration release --device"
 alias yd='youtube-dl --write-auto-sub --ignore-errors'
 alias yg='you-get'
 alias jp='jupyter notebook --NotebookApp.iopub_data_rate_limit=10000000'
@@ -132,3 +134,9 @@ alias jp='jupyter notebook --NotebookApp.iopub_data_rate_limit=10000000'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ztlevi/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/ztlevi/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/ztlevi/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/ztlevi/google-cloud-sdk/completion.zsh.inc'; fi
