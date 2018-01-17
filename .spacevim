@@ -147,9 +147,15 @@ function! UserConfig()
     vmap <c-e> $
     inoremap <c-p> <up>
     inoremap <c-n> <down>
-    " command line
-    cnoremap <C-a> <Home>
-    cnoremap <C-e> <End>
+    " command line mode
+    cmap <C-p> <Up>
+    cmap <C-n> <Down>
+    cmap <C-b> <Left>
+    cmap <C-f> <Right>
+    cmap <C-a> <Home>
+    cmap <C-e> <End>
+    cnoremap <C-d> <Del>
+    cnoremap <C-h> <BS>
     "}}}
 
     " recent files
