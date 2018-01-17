@@ -170,9 +170,9 @@ function! UserConfig()
       set guioptions-=T  " no toolbar
       set lines=60 columns=108 linespace=0
       if has('gui_win32')
-        set guifont=Ubuntu_Mono:h20:cANSI
+        set guifont=Operator\ Mono\ Lig:h18:cANSI
       else
-        set guifont=Ubuntu\ Mono:h20
+        set guifont=Operator\ Mono\ Lig:h18
       endif
     endif
 endfunction
