@@ -114,8 +114,10 @@ function! UserConfig()
     xmap gs <plug>(GrepperOperator)
 
     " Search
-    nmap <enter> :.cc<Cr> " oepn error
-    nmap <leader>ri :copen<Cr> " resume error buffer
+    " oepn error
+    nmap <tab> :.cc<CR>
+    " resume error buffer
+    nmap <leader>ri :copen<CR>
 
     " Allow backspace and cursor keys to cross line boundaries
     set whichwrap+=<,>,h,l

@@ -90,6 +90,7 @@ bindkey '\ek' deer # shortcut is Alt-k
 # User configuration
 
 if [[ $CURRENT_OS == 'OS X' ]]; then
+    alias grep="ggrep"
     alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
     alias oi="open . -a iterm"
     if [ -d '/Applications/ForkLift.app' ]; then
