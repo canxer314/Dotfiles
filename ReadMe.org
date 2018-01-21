@@ -67,13 +67,18 @@
 
        - prefix + alt + u: remove/uninstall plugins not on the plugin list
 
+*** Grep, Rg, Pt, Ag
+    #+BEGIN_SRC shell
+      brew install grep ripgrep the_silver_searcher pt
+    #+END_SRC
+
 *** fzf
     - Homebrew or Linuxbrew
       #+BEGIN_SRC shell
-      brew install fzf
+        brew install fzf
 
-      # To install useful key bindings and fuzzy completion:
-      $(brew --prefix)/opt/fzf/install
+        # To install useful key bindings and fuzzy completion:
+        $(brew --prefix)/opt/fzf/install
       #+END_SRC
 
 *** Node, anaconda3, NVM
