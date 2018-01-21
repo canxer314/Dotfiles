@@ -52,7 +52,9 @@ function! UserInit()
     " let g:spacevim_leader = "<\Space>"
     " let g:spacevim_localleader = ','
 
+    " ===================================================
     " Install private plugins
+    " ===================================================
     " Plug 'extr0py/oni'
     Plug 'mileszs/ack.vim'
     Plug 'benmills/vimux'
@@ -78,6 +80,20 @@ function! UserConfig()
     set mouse=a
     "let os = GetRunningOS()
 
+    " ===================================================
+    " UI
+    " ===================================================
+    " set GUI font
+    if has('gui_running')
+      set guioptions-=T  " no toolbar
+      set lines=60 columns=108 linespace=0
+      if has('gui_win32')
+        set guifont=Operator\ Mono\ Lig:h18:cANSI
+      else
+        set guifont=Operator\ Mono\ Lig:h18
+      endif
+    endif
+
     " airline settting
     " let g:lightline = {
     "   \ 'colorscheme': 'PaperColor',
@@ -101,11 +117,15 @@ function! UserConfig()
       set termguicolors
     endif
 
+    " ===================================================
     " AutoFormat
+    " ===================================================
     noremap <F3> :Autoformat<CR>
     let g:formatdef_remark_markdown = '"remark --silent --no-color --setting listItemIndent:1 "'
 
+    " ===================================================
     " Search / Quickfix
+    " ===================================================
     " Jump to candidate
     autocmd BufReadPost quickfix map <C-j> :.cc<CR>
     autocmd BufReadPost quickfix map <tab> :.cc<CR>
@@ -126,7 +146,9 @@ function! UserConfig()
     nmap <leader>ri :call ToggleQuickFix()<CR>
     nmap <F6> :call ToggleQuickFix()<CR>
 
-    " ====== fzf start ======
+    " ===================================================
+    " fzf start
+    " ===================================================
     nmap <Leader><space> :Commands<CR>
     vmap <Leader><space> :Commands<CR>
     map <C-p> :Files<CR>
@@ -171,7 +193,9 @@ function! UserConfig()
     " Likewise, Files command with preview window
     command! -bang -nargs=? -complete=dir Files
       \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
-    " ====== fzf end ======
+    " ===================================================
+    " fzf end
+    " =================================================== 
 
     " Allow backspace and cursor keys to cross line boundaries
     set whichwrap+=<,>,h,l
@@ -180,7 +204,9 @@ function! UserConfig()
     vmap <backspace> "_d
     vmap <del> "_d
 
+    " ===================================================
     " lsp config
+    " =================================================== 
     " Required for operations modifying multiple buffers like rename.
     set hidden
 
@@ -194,7 +220,9 @@ function! UserConfig()
     nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
     nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 
-    " emacs keymaping for cursor movement{{{
+    " =================================================== 
+    " emacs keymaping for cursor movement
+    " =================================================== 
     nmap <c-g> <Esc>
     vmap <c-g> <Esc>
     nmap <c-a> ^
@@ -212,8 +240,10 @@ function! UserConfig()
     cmap <C-e> <End>
     cnoremap <C-d> <Del>
     cnoremap <C-h> <BS>
-    "}}}
 
+    " =================================================== 
+    " Tmux
+    " =================================================== 
     " Prompt for a command to run
     map <Leader>vp :VimuxPromptCommand<CR>
     " Run last command executed by VimuxRunCommand
@@ -223,14 +253,4 @@ function! UserConfig()
     " Zoom the tmux runner pane
     map <Leader>vz :VimuxZoomRunner<CR>
 
-    " set GUI font
-    if has('gui_running')
-      set guioptions-=T  " no toolbar
-      set lines=60 columns=108 linespace=0
-      if has('gui_win32')
-        set guifont=Operator\ Mono\ Lig:h18:cANSI
-      else
-        set guifont=Operator\ Mono\ Lig:h18
-      endif
-    endif
 endfunction
