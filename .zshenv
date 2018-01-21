@@ -9,14 +9,11 @@ export ZSH=~/.oh-my-zsh
 
 export PATH="/usr/local/sbin:$PATH"
 
-# Node 8
-export PATH="/usr/local/opt/node@8/bin:$PATH"
-
 # Rust package manager
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# NVM
-export NVM_DIR="$HOME/.nvm"
+# Node 8
+export PATH="/usr/local/opt/node@8/bin:$PATH"
 
 # Anaconda
 export PATH=/usr/local/anaconda3/bin:"$PATH"
@@ -37,10 +34,6 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # Go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
-
-# Set the global node modules path to /usr/local/bin
-# Fix permissions using: sudo chown -R $(whoami) /usr/local
-export npm_config_prefix=/usr/local
 
 export EDITOR=vim
 

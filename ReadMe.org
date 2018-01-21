@@ -76,16 +76,27 @@
       $(brew --prefix)/opt/fzf/install
       #+END_SRC
 
-*** NVM
-    Use nvm as node version manager.
+*** Node, anaconda3, NVM
     #+BEGIN_SRC shell
-      curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
-      nvm install 6
-      nvm use 6
-
-      # set the system as default node
-      nvm alias default system
+      brew install node@8
+      brew cask install anaconda
     #+END_SRC
+
+    - Optional:
+      Use nvm as node version manager.
+      #+BEGIN_SRC shell
+        nvm install 8
+      #+END_SRC
+
+      #+BEGIN_SRC shell
+        nvm use 8
+
+        # set the node8 as default node
+        nvm alias default 8
+        # OR
+        # set the system as default node
+        nvm alias default system
+      #+END_SRC
 
 *** Other Dependencies
     1. System package manager dependencies:
@@ -101,12 +112,7 @@
          cd ~/Dotfiles
          ./install.sh
        #+END_SRC
-    4. node and anaconda3
-       #+BEGIN_SRC shell
-         brew install node@8
-         brew cask install anaconda
-       #+END_SRC
-    5. Mac quick look ([[https://github.com/sindresorhus/quick-look-plugins][Preview]])
+    4. Mac quick look ([[https://github.com/sindresorhus/quick-look-plugins][Preview]])
        #+BEGIN_SRC shell
          brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package quicklookase qlvideo
        #+END_SRC

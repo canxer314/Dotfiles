@@ -22,10 +22,6 @@ else
     VER=$(lsb_release -sr)
 fi
 
-# Source NVM
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # Update bundles with `antigen reset`
 source ~/Dotfiles/antigen/antigen.zsh
 # call antigen update on your terminal and it will update the oh-my-zsh repository
@@ -46,6 +42,7 @@ antigen bundle gulp
 antigen bundle node
 antigen bundle npm
 antigen bundle nvm
+antigen bundle lukechilds/zsh-nvm
 antigen bundle bower
 antigen bundle Vifon/deer
 antigen bundle zsh-users/zsh-completions
@@ -57,7 +54,8 @@ antigen bundle soimort/you-get
 
 # Load the theme.
 # antigen theme candy
-antigen theme bureau
+# antigen theme bureau
+antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 # antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
 
 if [[ $CURRENT_OS == 'OS X' ]]; then
