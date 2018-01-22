@@ -30,30 +30,39 @@ antigen use oh-my-zsh
 #antigen bundle robbyrussell/oh-my-zsh lib/
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
+# Git plugin
 antigen bundle git
+antigen bundle git-extras
+antigen bundle tig
+
 antigen bundle tmux
-antigen bundle ruby
+antigen bundle command-not-found
 antigen bundle autojump
 antigen bundle textmate
-antigen bundle pip
 antigen bundle lein
-antigen bundle command-not-found
 antigen bundle gulp
+
+# Ruby
+antigen bundle ruby
+antigen bundle rbenv
+
+antigen bundle pip
+
+# Node plugin
 antigen bundle node
 antigen bundle npm
 antigen bundle nvm
 antigen bundle lukechilds/zsh-nvm
+
+# ZSH
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-syntax-highlighting
+
 antigen bundle bower
 antigen bundle Vifon/deer
-antigen bundle zsh-users/zsh-completions
 antigen bundle soimort/you-get
 
-# Syntax highlighting bundle.
-# don't enable this theme, it doesn't work well with ansi-term in emacs
-# antigen bundle zsh-users/zsh-syntax-highlighting
-
 # Load the theme.
-# antigen theme candy
 # antigen theme bureau
 antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 # antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
