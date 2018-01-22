@@ -97,8 +97,11 @@ bindkey '\ek' deer # shortcut is Alt-k
 # User configuration
 
 if [[ $CURRENT_OS == 'OS X' ]]; then
-    alias grep="ggrep"
+    if exists ggrep; then alias grep="ggrep"; fi
+    if exists brew; then alias bu='brew upgrade | brew cleanup | brew cask cleanup'; fi
+
     alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
+    alias e.="open -a emacs ."
     alias oi="open . -a iterm"
     if [ -d '/Applications/ForkLift.app' ]; then
         alias of="open -a ForkLift ."
@@ -108,37 +111,47 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
 elif [[ $CURRENT_OS == 'Linux' ]]; then
 fi
 
-alias vim="nvim"
+exists() { type "$1" > /dev/null 2>&1; }
+
+if exists nvim; then alias vim="nvim"; fi
 alias v="vim"
 alias sv="sudo -E vim"
 alias e="emacs"
-alias e.="open -a emacs ."
 alias se="sudo -E emacs"
 alias ke="pkill -SIGUSR2 -i emacs"
 alias edebug="emacs --debug-init"
 alias etime="emacs --timed-requires --profile"
-alias t="tmux"
+
+# Tmux
+if exists antigen; then alias ar="antigen reset"; fi
+if exists tmux; then alias t="tmux"; fi
 # tmux new-session -s bind to `ts`
-alias p="python"
-alias p3="python3"
-alias pe="pipenv"
-alias arec="asciinema rec --max-wait=2" # -t to specify title
-alias ar="antigen reset"
-alias h="hexo"
-alias ng="npm list -g --depth=0"
-alias nl="npm list --depth=0"
-alias rm='trash'
-alias sf='screenfetch'
-alias bu='brew upgrade | brew cleanup | brew cask cleanup'
-alias rv='reveal-md --highlight-theme github --theme simple -w'
-alias rn="react-native"
-alias ri="react-native run-ios"
-alias ra="react-native run-android"
-alias rni="rm -rf ios/build/; kill $(lsof -t -i:8081); react-native run-ios"
-alias rir="react-native run-ios --configuration release --device"
-alias yd='youtube-dl --write-auto-sub --ignore-errors'
-alias yg='you-get'
-alias jp='jupyter notebook --NotebookApp.iopub_data_rate_limit=10000000'
+
+if exists python; then alias p="python"; fi
+if exists python3; then alias p3="python3"; fi
+if exists pipenv; then alias pe="pipenv"; fi
+
+if exists npm; then
+    alias ng="npm list -g --depth=0"
+    alias nl="npm list --depth=0"
+fi
+
+if exists react-native; then
+    alias rn="react-native"
+    alias ri="react-native run-ios"
+    alias ra="react-native run-android"
+    alias rni="rm -rf ios/build/; kill $(lsof -t -i:8081); react-native run-ios"
+    alias rir="react-native run-ios --configuration release --device"
+fi
+
+if exists trash; then alias rm="trash"; fi
+if exists hexo; then alias h="hexo"; fi
+if exists jupyter; then alias jp='jupyter notebook --NotebookApp.iopub_data_rate_limit=10000000'; fi
+if exists reveal-md; then alias rv='reveal-md --highlight-theme github --theme simple -w'; fi
+if exists asciinema; then alias arec="asciinema rec --max-wait=2"; fi # -t to specify title
+if exists screenfetch; then alias sf="screenfetch"; fi
+if exists youtube-dl; then alias yd='youtube-dl --write-auto-sub --ignore-errors'; fi
+if exists you-get; then alias yg='you-get'; fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
