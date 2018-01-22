@@ -96,6 +96,8 @@ bindkey '\ek' deer # shortcut is Alt-k
 
 # User configuration
 
+exists() { type "$1" > /dev/null 2>&1; }
+
 if [[ $CURRENT_OS == 'OS X' ]]; then
     if exists ggrep; then alias grep="ggrep"; fi
     if exists brew; then alias bu='brew upgrade | brew cleanup | brew cask cleanup'; fi
@@ -110,8 +112,6 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
     fi
 elif [[ $CURRENT_OS == 'Linux' ]]; then
 fi
-
-exists() { type "$1" > /dev/null 2>&1; }
 
 if exists nvim; then alias vim="nvim"; fi
 alias v="vim"
@@ -136,6 +136,7 @@ if exists npm; then
     alias nl="npm list --depth=0"
 fi
 
+# React Native
 if exists react-native; then
     alias rn="react-native"
     alias ri="react-native run-ios"
@@ -144,6 +145,7 @@ if exists react-native; then
     alias rir="react-native run-ios --configuration release --device"
 fi
 
+if exists ccat; then alias cat="ccat"; fi
 if exists trash; then alias rm="trash"; fi
 if exists hexo; then alias h="hexo"; fi
 if exists jupyter; then alias jp='jupyter notebook --NotebookApp.iopub_data_rate_limit=10000000'; fi
