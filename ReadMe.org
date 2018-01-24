@@ -1,4 +1,4 @@
-* Ting Zhou's Configuration for space-vim, ZSH, Dotfiles and Atom
+* Ting Zhou's Configuration for space-vim, ZSH, Dotfiles
 
 ** Installation
 
