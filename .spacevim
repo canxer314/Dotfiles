@@ -119,7 +119,8 @@ function! UserConfig()
     " ===================================================
     " AutoFormat
     " ===================================================
-    noremap <F3> :Autoformat<CR>
+    nmap <leader>m= :Autoformat<CR>
+    vmap <leader>m= :Autoformat<CR>
     let g:formatdef_remark_markdown = '"remark --silent --no-color --setting listItemIndent:1 "'
 
     " ===================================================

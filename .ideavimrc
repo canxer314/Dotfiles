@@ -99,6 +99,7 @@ nmap gd              :action GotoDeclaration<cr>
 nmap gh              :action QuickJavaDoc<CR>
 nmap gs              :action GotoSymbol<cr>
 nmap ,=              :action ReformatCode<CR>
+nmap <leader>m=      :action ReformatCode<CR>
 nmap <c-o>           :action Back<cr>
 nmap <c-i>           :action Forward<cr>
 
@@ -126,6 +127,7 @@ vmap <leader>im      :<Backspace><Backspace><Backspace><Backspace><Backspace>act
 vmap <leader>ee      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ShowErrorDescription<cr>
 vmap <leader>'       :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateTerminalToolWindow<CR>
 vmap ,=              :<Backspace><Backspace><Backspace><Backspace><Backspace>action ReformatCode<CR>
+vmap <leader>m=      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ReformatCode<CR>
 vmap <c-o>           :<Backspace><Backspace><Backspace><Backspace><Backspace>action Back<cr>
 vmap <c-i>           :<Backspace><Backspace><Backspace><Backspace><Backspace>action Forward<cr>
 
