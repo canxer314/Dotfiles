@@ -93,22 +93,17 @@ function! UserConfig()
       endif
     endif
 
-    " airline settting
-    " let g:lightline = {
-    "   \ 'colorscheme': 'PaperColor',
-    "   \ }
-
     " theme
     colorscheme one
+    set background=dark
     let g:one_allow_italics = 1 " I love italic for comments
-    set background=light " for the light version
 
     " airline setting
     " If you enable airline layer and have installed the powerline fonts, set it here.
-    let g:airline_theme='one'
-    let g:airline_powerline_fonts = 0
-    let g:airline_left_sep = ''
-    let g:airline_right_sep = ''
+    let g:airline_theme='papercolor'
+    let g:airline_powerline_fonts = 1
+    " let g:airline_left_sep = ''
+    " let g:airline_right_sep = ''
 
     set noundofile
 
@@ -138,7 +133,7 @@ function! UserConfig()
         try
           lopen 10
           let g:qwindow = 1
-        catch 
+        catch
           echo "No Errors found!"
         endtry
       endif
@@ -195,7 +190,7 @@ function! UserConfig()
       \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
     " ===================================================
     " fzf end
-    " =================================================== 
+    " ===================================================
 
     " Allow backspace and cursor keys to cross line boundaries
     set whichwrap+=<,>,h,l
@@ -206,7 +201,7 @@ function! UserConfig()
 
     " ===================================================
     " lsp config
-    " =================================================== 
+    " ===================================================
     " Required for operations modifying multiple buffers like rename.
     set hidden
 
@@ -220,9 +215,9 @@ function! UserConfig()
     nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
     nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 
-    " =================================================== 
+    " ===================================================
     " emacs keymaping for cursor movement
-    " =================================================== 
+    " ===================================================
     nmap <c-g> <Esc>
     vmap <c-g> <Esc>
     nmap <c-a> ^
@@ -241,9 +236,9 @@ function! UserConfig()
     cnoremap <C-d> <Del>
     cnoremap <C-h> <BS>
 
-    " =================================================== 
+    " ===================================================
     " Tmux
-    " =================================================== 
+    " ===================================================
     " Prompt for a command to run
     map <Leader>vp :VimuxPromptCommand<CR>
     " Run last command executed by VimuxRunCommand
