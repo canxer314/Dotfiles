@@ -28,53 +28,49 @@ cd ~/Dotfiles
 
 echo "Install eslint configurations..."
 rm ~/.eslintrc
-ln -s ~/Dotfiles/.eslintrc ~/.eslintrc
+ln -s ~/Dotfiles/eslintrc ~/.eslintrc
 
 echo "Install eslint configurations..."
 rm ~/.pylintrc
-ln -s ~/Dotfiles/.pylintrc ~/.pylintrc
+ln -s ~/Dotfiles/pylintrc ~/.pylintrc
 
 echo "Install ctags configurations..."
 rm ~/.ctags
-ln -s ~/Dotfiles/.ctags ~/.ctags
-
-echo "Install ignore configurations for search tools..."
-rm ~/.ignore
-ln -s ~/Dotfiles/.ignore ~/.ignore
+ln -s ~/Dotfiles/ctags ~/.ctags
 
 echo "Install gitconfig configurations..."
 rm ~/.gitconfig
-ln -s ~/Dotfiles/.gitconfig ~/.gitconfig
+ln -s ~/Dotfiles/gitconfig ~/.gitconfig
 
 echo "Install global gitignore file..."
 rm ~/.gitignore_global
-ln -s ~/Dotfiles/.gitignore_global ~/.gitignore_global
+ln -s ~/Dotfiles/gitignore_global ~/.gitignore_global
 
 echo "Install jsbeautify configurations..."
 rm ~/.jsbeautifyrc
-ln -s ~/Dotfiles/.jsbeautifyrc ~/.jsbeautifyrc
+ln -s ~/Dotfiles/jsbeautifyrc ~/.jsbeautifyrc
 
 echo "Install zsh configurations..."
 rm ~/.zshrc
 rm ~/.zshenv
-ln -s ~/Dotfiles/.zshrc ~/.zshrc
-ln -s ~/Dotfiles/.zshenv ~/.zshenv
+ln -s ~/Dotfiles/zshrc ~/.zshrc
+ln -s ~/Dotfiles/zshenv ~/.zshenv
 
 echo "Install tmux setting"
 rm ~/.tmux.conf
-ln -s ~/Dotfiles/.tmux.conf ~/.tmux.conf
+ln -s ~/Dotfiles/tmux.conf ~/.tmux.conf
 
 echo "Install ideaVim setting"
 rm ~/.ideavimrc
-ln -s ~/Dotfiles/.ideavimrc ~/.ideavimrc
+ln -s ~/Dotfiles/ideavimrc ~/.ideavimrc
 
 echo "Install Sumblimious"
 rm ~/.sublimious
-ln -s ~/Dotfiles/.sublimious ~/.sublimious
+ln -s ~/Dotfiles/sublimious ~/.sublimious
 
 echo "Install Atom Proton"
 rm ~/.proton
-ln -s ~/Dotfiles/.proton ~/.proton
+ln -s ~/Dotfiles/proton ~/.proton
 
 if [[ $CURRENT_OS == 'OS X' ]]; then
     echo "OS X configurations here!"
@@ -82,7 +78,7 @@ elif [[ $CURRENT_OS == 'Linux' ]]; then
     echo "Linux configurations here!"
     echo "Install Xmodmap key tweak for linux"
     rm ~/.Xmodmap
-    ln -s ~/Dotfiles/.Xmodmap ~/.Xmodmap
+    ln -s ~/Dotfiles/Xmodmap ~/.Xmodmap
 fi
 
 # echo "update submodules"

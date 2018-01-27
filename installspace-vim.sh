@@ -18,9 +18,8 @@ bash <(curl -fsSL https://raw.githubusercontent.com/liuchengxu/space-vim/master/
 
 echo "Install space-vim setting"
 rm ~/.spacevim
-ln -s ~/Dotfiles/.spacevim ~/.spacevim
+ln -s ~/Dotfiles/spacevim ~/.spacevim
 
 echo "Install python support for neovim"
 pip2 install --user --upgrade neovim
 pip3 install --user --upgrade neovim
-
