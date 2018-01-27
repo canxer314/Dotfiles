@@ -38,6 +38,10 @@ echo "Install ctags configurations..."
 rm ~/.ctags
 ln -s ~/Dotfiles/.ctags ~/.ctags
 
+echo "Install ignore configurations for search tools..."
+rm ~/.ignore
+ln -s ~/Dotfiles/.ignore ~/.ignore
+
 echo "Install gitconfig configurations..."
 rm ~/.gitconfig
 ln -s ~/Dotfiles/.gitconfig ~/.gitconfig
