@@ -9,6 +9,16 @@
      git clone https://github.com/ztlevi/Dotfiles.git ~/Dotfiles
    #+END_SRC
 
+*** Homebrew
+    #+BEGIN_SRC shell
+      /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    #+END_SRC
+
+    Install necessary utilities:
+    #+BEGIN_SRC shell
+      brew install git curl wget
+    #+END_SRC
+
 *** space-vim
 
     1. Install *git, vim/neovim, curl* first.
@@ -121,7 +131,18 @@
        #+BEGIN_SRC shell
          brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package quicklookase qlvideo
        #+END_SRC
+    5. Cask applications
+       #+BEGIN_SRC shell
+         brew cask install typora slack skype dropbox neteasemusic obs iina firefox google-chrome \
+              iterm2 virtualbox anaconda gitbook-editor java vimr cakebrew keycastr intel-power-gadget
+       #+END_SRC
 
+       Brew cask upgrade:
+       #+BEGIN_SRC shell
+         brew tap buo/cask-upgrade
+         # Upgrade with
+         brew cu
+       #+END_SRC
 ** Mac Keybindings
 
    Settings are described in /Mac\_keybindings/ReadMe.md/
