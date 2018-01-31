@@ -46,13 +46,17 @@ antigen bundle gulp
 antigen bundle ruby
 antigen bundle rbenv
 
+# Python
+antigen bundle python
 antigen bundle pip
+antigen bundle django
 
 # Node plugin
 antigen bundle node
 antigen bundle npm
 antigen bundle nvm
 antigen bundle lukechilds/zsh-nvm
+antigen bundle react-native
 
 # ZSH
 antigen bundle zsh-users/zsh-completions
@@ -98,6 +102,7 @@ bindkey '\ek' deer # shortcut is Alt-k
 
 exists() { type "$1" > /dev/null 2>&1; }
 
+# OS setting
 if [[ $CURRENT_OS == 'OS X' ]]; then
     if exists ggrep; then alias grep="ggrep"; fi
     if exists brew; then alias bu='brew upgrade | brew cleanup | brew cask cleanup'; fi
@@ -113,6 +118,7 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
 elif [[ $CURRENT_OS == 'Linux' ]]; then
 fi
 
+# Vim & Emacs
 if exists nvim; then alias vim="nvim"; fi
 alias v="vim"
 alias sv="sudo -E vim"
@@ -132,17 +138,13 @@ if exists python3; then alias p3="python3"; fi
 if exists pipenv; then alias pe="pipenv"; fi
 
 if exists npm; then
-    alias ng="npm list -g --depth=0"
-    alias nl="npm list --depth=0"
+    alias npmgL0="npm list -g --depth=0"
 fi
 
 # React Native
 if exists react-native; then
-    alias rn="react-native"
-    alias ri="react-native run-ios"
-    alias ra="react-native run-android"
-    alias rni="rm -rf ios/build/; kill $(lsof -t -i:8081); react-native run-ios"
-    alias rir="react-native run-ios --configuration release --device"
+    alias rnioskill="rm -rf ios/build/; kill $(lsof -t -i:8081); react-native run-ios"
+    alias rniosR="react-native run-ios --configuration release --device"
 fi
 
 if exists ccat; then alias cat="ccat"; fi
