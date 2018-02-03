@@ -134,7 +134,7 @@
     5. Cask applications
        #+BEGIN_SRC shell
          brew cask install typora slack skype dropbox neteasemusic obs iina firefox google-chrome \
-              iterm2 virtualbox anaconda gitbook-editor java vimr cakebrew keycastr intel-power-gadget
+              iterm2 visual-studio-code virtualbox anaconda gitbook-editor java vimr cakebrew keycastr intel-power-gadget
        #+END_SRC
 
        Brew cask upgrade:
