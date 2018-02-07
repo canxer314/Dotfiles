@@ -47,7 +47,8 @@ nmap <leader>wj <c-w>j
 nmap <leader>wv <c-w>v
 nmap <leader>ws <c-w>s
 nmap <leader>wc <c-w>c
-nmap <leader>wm :action ToggleDistractionFreeMode<CR>
+nmap <leader>wm :action HideAllWindows<CR>
+nmap <leader>wz :action ToggleDistractionFreeMode<CR>
 
 vmap <leader>wh <c-w>h
 vmap <leader>wl <c-w>l
@@ -56,7 +57,8 @@ vmap <leader>wj <c-w>j
 vmap <leader>wv <c-w>v
 vmap <leader>ws <c-w>s
 vmap <leader>wc <c-w>c
-vmap <leader>wm :<Backspace><Backspace><Backspace><Backspace><Backspace>action ToggleDistractionFreeMode<CR>
+vmap <leader>wm :<Backspace><Backspace><Backspace><Backspace><Backspace>action HideAllWindows<CR>
+vmap <leader>wz :<Backspace><Backspace><Backspace><Backspace><Backspace>action ToggleDistractionFreeMode<CR>
 
 " ============================================================================
 " expand and collapse
