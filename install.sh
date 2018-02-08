@@ -50,6 +50,10 @@ echo "Install jsbeautify configurations..."
 rm ~/.jsbeautifyrc
 ln -s ~/Dotfiles/jsbeautifyrc ~/.jsbeautifyrc
 
+echo "Install prettier configuration..."
+rm ~/.prettierrc
+ln -s ~/Dotfiles/prettierrc ~/.prettierrc
+
 echo "Install zsh configurations..."
 rm ~/.zshrc
 rm ~/.zshenv
