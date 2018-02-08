@@ -134,7 +134,8 @@
     5. Cask applications
        #+BEGIN_SRC shell
          brew cask install typora slack skype dropbox neteasemusic obs iina firefox google-chrome kap \
-              iterm2 visual-studio-code virtualbox anaconda gitbook-editor java vimr cakebrew keycastr intel-power-gadget
+              cakebrew keycastr intel-power-gadget karabiner-elements \
+              iterm2 visual-studio-code virtualbox anaconda gitbook-editor java vimr
        #+END_SRC
 
        Brew cask upgrade:
@@ -142,6 +143,12 @@
          brew tap buo/cask-upgrade
          # Upgrade with
          brew cu
+       #+END_SRC
+    6. Latex
+       #+BEGIN_SRC shell
+         brew cask install basictex
+         sudo tlmgr update --self
+         sudo tlmgr install latexmk multirow
        #+END_SRC
 ** Mac Keybindings
 
