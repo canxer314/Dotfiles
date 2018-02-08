@@ -133,7 +133,7 @@
        #+END_SRC
     5. Cask applications
        #+BEGIN_SRC shell
-         brew cask install typora slack skype dropbox neteasemusic obs iina firefox google-chrome \
+         brew cask install typora slack skype dropbox neteasemusic obs iina firefox google-chrome kap \
               iterm2 visual-studio-code virtualbox anaconda gitbook-editor java vimr cakebrew keycastr intel-power-gadget
        #+END_SRC
 
