@@ -116,7 +116,7 @@
 *** Other Dependencies
     1. System package manager dependencies:
        #+BEGIN_SRC shell
-         brew install screenfetch trash asciinema
+         brew install screenfetch trash asciinema tree
        #+END_SRC
     2. NPM dependencies here, and you will need to install python.
        #+BEGIN_SRC shell
