@@ -120,7 +120,9 @@
        #+END_SRC
     2. NPM dependencies here, and you will need to install python.
        #+BEGIN_SRC shell
-         npm i -g npm yarn prettier live-server eslint tern typescript tslint js-beautify hexo-cli reveal-md phantomjs
+         npm i -g npm yarn prettier live-server hexo-cli reveal-md phantomjs \
+            eslint babel-eslint eslint-plugin-react eslint-plugin-import eslint-plugin-html \
+            typescript tslint typescript-formatter
        #+END_SRC
     3. Put the dotfiles in the home directory:
        #+BEGIN_SRC shell
