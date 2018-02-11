@@ -46,6 +46,10 @@ echo "Install global gitignore file..."
 rm ~/.gitignore_global
 ln -s ~/Dotfiles/gitignore_global ~/.gitignore_global
 
+echo "Install ignore configurations for search tools..."
+rm ~/.ignore
+ln -s ~/Dotfiles/ignore ~/.ignore
+
 echo "Install jsbeautify configurations..."
 rm ~/.jsbeautifyrc
 ln -s ~/Dotfiles/jsbeautifyrc ~/.jsbeautifyrc
