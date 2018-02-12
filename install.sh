@@ -72,10 +72,6 @@ echo "Install ideaVim setting"
 rm ~/.ideavimrc
 ln -s ~/Dotfiles/ideavimrc ~/.ideavimrc
 
-echo "Install Sumblimious"
-rm ~/.sublimious
-ln -s ~/Dotfiles/sublimious ~/.sublimious
-
 echo "Install Atom Proton"
 rm ~/.proton
 ln -s ~/Dotfiles/proton ~/.proton
