@@ -37,6 +37,7 @@ function! Layers()
     " Lang
     Layer 'java'
     Layer 'javascript'
+    Layer 'typescript'
     Layer 'html'
     Layer 'markdown'
     Layer 'python'
