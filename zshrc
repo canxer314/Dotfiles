@@ -170,5 +170,6 @@ if [ -f '/Users/ztlevi/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/ztl
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/ztlevi/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/ztlevi/google-cloud-sdk/completion.zsh.inc'; fi
 
-
-. /Users/ztlevi/torch/install/bin/torch-activate
+if [ -f '/Users/ztlevi/torch/install/bin/torch-activate' ]; then
+    . /Users/ztlevi/torch/install/bin/torch-activate
+fi
