@@ -157,6 +157,8 @@ if exists screenfetch; then alias sf="screenfetch"; fi
 if exists youtube-dl; then alias yd='youtube-dl --write-auto-sub --ignore-errors'; fi
 if exists you-get; then alias yg='you-get'; fi
 if exists prettier; then alias pall="prettier --write \"**/*.js\""; fi
+alias rr='source ~/.zshrc'
+alias uu='cd ~/.spacemacs.d/ && git pull && cd ~/Dotfiles/ && git pull'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -167,3 +169,6 @@ if [ -f '/Users/ztlevi/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/ztl
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/ztlevi/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/ztlevi/google-cloud-sdk/completion.zsh.inc'; fi
+
+
+. /Users/ztlevi/torch/install/bin/torch-activate
