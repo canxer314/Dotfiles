@@ -159,6 +159,8 @@ if exists you-get; then alias yg='you-get'; fi
 if exists prettier; then alias pall="prettier --write \"**/*.js\""; fi
 alias rr='source ~/.zshrc'
 alias uu='cd ~/.spacemacs.d/ && git pull && cd ~/Dotfiles/ && git pull'
+alias macBackup='~/Dotfiles/macBackup.sh'
+alias macInstall='~/Dotfiles/macInstall.sh'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
