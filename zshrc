@@ -150,7 +150,7 @@ fi
 if exists ccat; then alias cat="ccat"; fi
 if exists trash; then alias rm="trash"; fi
 if exists hexo; then alias h="hexo"; fi
-if exists jupyter; then alias jp='jupyter notebook --NotebookApp.iopub_data_rate_limit=10000000'; fi
+if exists jupyter; then alias jp='jupyter lab --NotebookApp.iopub_data_rate_limit=10000000'; fi
 if exists reveal-md; then alias rv='reveal-md --highlight-theme github --theme white -w'; fi
 if exists asciinema; then alias arec="asciinema rec --max-wait=2"; fi # -t to specify title
 if exists screenfetch; then alias sf="screenfetch"; fi
