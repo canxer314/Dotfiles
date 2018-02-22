@@ -36,6 +36,7 @@ antigen bundle git-extras
 antigen bundle tig
 
 antigen bundle tmux
+antigen bundle heroku
 antigen bundle command-not-found
 antigen bundle autojump
 antigen bundle textmate
