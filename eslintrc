@@ -3,10 +3,11 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:import/errors",
-    "plugin:import/warnings"
+    "plugin:import/warnings",
+    "plugin:prettier/recommended"
   ],
   "parser": "babel-eslint",
-  "plugins": ["react", "html"],
+  "plugins": ["babel", "react", "import", "prettier"],
   "env": {
     "browser": true,
     "es6": true,
@@ -35,8 +36,6 @@
     "no-multi-spaces": [0],
     "no-shadow": [0],
     "no-unused-vars": [1],
-    "no-use-before-define": [2, "nofunc"],
-    "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error"
+    "no-use-before-define": [2, "nofunc"]
   }
 }

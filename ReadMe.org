@@ -127,7 +127,8 @@
     2. NPM dependencies here, and you will need to install python.
        #+BEGIN_SRC shell
          npm i -g npm yarn prettier live-server hexo-cli reveal-md phantomjs \
-             eslint babel-eslint eslint-plugin-react eslint-plugin-import eslint-plugin-html \
+             eslint babel-eslint eslint-plugin-react eslint-plugin-import \
+             eslint-plugin-prettier eslint-config-prettier \
              typescript tslint
        #+END_SRC
     3. Pip
