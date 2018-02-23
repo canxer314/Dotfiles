@@ -128,7 +128,7 @@
        #+BEGIN_SRC shell
          npm i -g npm yarn prettier live-server hexo-cli reveal-md phantomjs \
              eslint babel-eslint eslint-plugin-react eslint-plugin-import eslint-plugin-html \
-             typescript tslint typescript-formatter
+             typescript tslint
        #+END_SRC
     3. Pip
        Make sure your pip is the one you want to use. Options are from anaconda, python2 or python3. Check it with ~which -a pip ipython~
