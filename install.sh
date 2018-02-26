@@ -78,6 +78,9 @@ ln -s ~/Dotfiles/proton ~/.proton
 
 if [[ $CURRENT_OS == 'OS X' ]]; then
     echo "OS X configurations here!"
+    echo "Install DefaultKeyBinding.dict for mac"
+    rm ~/Library/Keybindings/DefaultKeyBinding.dict
+    ln -s ~/Dotfiles/Mac_Keybindings/DefaultKeyBinding.dict ~/Library/Keybindings/DefaultKeyBinding.dict
 elif [[ $CURRENT_OS == 'Linux' ]]; then
     echo "Linux configurations here!"
     echo "Install Xmodmap key tweak for linux"
