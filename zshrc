@@ -166,6 +166,7 @@ alias mac='~/Dotfiles/macInstallandBackup.sh'
 alias slack='(/Applications/Slack.app/Contents/MacOS/Slack --disable-gpu &> /dev/null &)'
 alias gitkraken='(/Applications/GitKraken.app/Contents/MacOS/gitkraken --disable-gpu &> /dev/null &)'
 alias code='code --disable-gpu'
+alias insomnia='(/Applications/Insomnia.app/Contents/MacOS/insomnia --disable-gpu &)'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
