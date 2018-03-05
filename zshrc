@@ -159,7 +159,7 @@ if exists youtube-dl; then alias yd='youtube-dl --write-auto-sub --ignore-errors
 if exists you-get; then alias yg='you-get'; fi
 if exists prettier; then alias pall="prettier --write \"**/*.js\""; fi
 alias rr='source ~/.zshrc'
-alias uu='cd ~/.spacemacs.d/ && git pull && cd ~/Dotfiles/ && git pull'
+alias uu='cd ~/.spacemacs.d/ && git pull && cd - && cd ~/Dotfiles/ && git pull && cd -'
 alias mac='~/Dotfiles/macInstallandBackup.sh'
 
 # disable gpu for some applicatoins on Hackintosh
