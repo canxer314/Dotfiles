@@ -1,4 +1,4 @@
-* Ting Zhou's Configuration for space-vim, ZSH, Dotfiles
+* Personal Configuration for space-vim, ZSH, dotfiles
 
 ** Installation
 
@@ -26,13 +26,16 @@
     #+END_SRC
 
 *** space-vim
+    #+CAPTION: space-vim
+    #+ATTR_HTML: :alt space-vim :style width:100%
+    [[./screenshots/space-vim.jpg]]
 
     1. Install *git, vim/neovim, curl* first.
-       1. vim
+       - vim
           ~vim --version~ to check your vim has +clipboard and +python/python3 support
           - For Mac: ~brew install macvim --with-override-system-vim~
           - For Linux, install *gvim* instead of vim (with +clipboard support)
-       2. neovim
+       - neovim
           Python support script is already written in /installspace-vim.sh/. Make sure you have Python 2 or 3 installed.
           - For Mac: ~brew install neovim~
 
@@ -44,6 +47,9 @@
     3. Update the plugin with =:PlugUpdate=
 
 *** ZSH
+    #+CAPTION: terminal
+    #+ATTR_HTML: :alt terminal :style width:100%
+    [[./screenshots/terminal.jpg]]
 
     1. Install zsh first, instructions [[https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH][here]].
        #+BEGIN_SRC shell
@@ -56,7 +62,7 @@
          sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
        #+END_SRC
 
-    3. The instructions is in OhMyZSH.org
+    3. Some instructions is in /OhMyZSH.org/
 
 *** Tmux
     1. Install Tumx using system package manager like homebrew, apt-get, pacman.
