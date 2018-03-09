@@ -175,3 +175,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 if [ -f '/Users/ztlevi/torch/install/bin/torch-activate' ]; then
     . /Users/ztlevi/torch/install/bin/torch-activate
 fi
+
+# for Remacs
+# https://github.com/Wilfred/remacs#requirements
+export PATH="/usr/local/opt/texinfo/bin:$PATH"
