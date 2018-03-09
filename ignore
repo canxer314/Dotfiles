@@ -2,6 +2,6 @@
 .hg/
 .svn/
 
-.vscode/
-
 node_modules/
+
+/TAGS
