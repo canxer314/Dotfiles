@@ -22,7 +22,7 @@ export PATH=/usr/local/anaconda3/bin:"$PATH"
 HOMEBREW_NO_GITHUB_API=1
 
 # Java
-export JAVA_HOME=`/usr/libexec/java_home -v 9`
+export JAVA_HOME=`/usr/libexec/java_home -v 10`
 export JRE_HOME=$JAVA_HOME/jre
 export CLASSPATH=$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
 
