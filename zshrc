@@ -162,12 +162,6 @@ alias rr='source ~/.zshrc'
 alias uu='cd ~/.spacemacs.d/ && git pull && cd - && cd ~/Dotfiles/ && git pull && cd -'
 alias mac='~/Dotfiles/macInstallandBackup.sh'
 
-# disable gpu for some applicatoins on Hackintosh
-alias slack='(/Applications/Slack.app/Contents/MacOS/Slack --disable-gpu &> /dev/null &)'
-alias gitkraken='(/Applications/GitKraken.app/Contents/MacOS/gitkraken --disable-gpu &> /dev/null &)'
-alias code='code --disable-gpu'
-alias insomnia='(/Applications/Insomnia.app/Contents/MacOS/insomnia --disable-gpu &)'
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
