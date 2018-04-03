@@ -24,7 +24,6 @@ function! Layers()
     Layer 'fzf'
     Layer 'syntax-checking'
     Layer 'text-align'
-    Layer 'deoplete'
     Layer 'unite'
     Layer 'better-defaults', {'exclude': 'dominikduda/vim_current_word'}
     Layer 'file-manager'
@@ -61,18 +60,20 @@ function! UserInit()
     Plug 'rakr/vim-one'
     Plug 'Chiel92/vim-autoformat'
 
-    " deoplete plugin
-    Plug 'zchee/deoplete-jedi'
-    Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-
     " prettier
     " post install (yarn install | npm install) then load plugin only for editing supported files
     Plug 'prettier/vim-prettier', {
       \ 'do': 'yarn install',
       \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown'] }
 
-    " lsp
-    Plug 'autozimu/LanguageClient-neovim', {'tag': 'binary-*-x86_64-apple-darwin'}
+    " LSP
+    Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+
+    Plug 'roxma/nvim-completion-manager'
+
 endfunction
 
 " Put your costom configurations here, e.g., change the colorscheme.
@@ -204,8 +205,9 @@ function! UserConfig()
     vmap <del> "_d
 
     " ===================================================
-    " lsp config
+    " LSP config
     " ===================================================
+    " Some serverCommands options: https://spacevim.org/layers/language-server-protocol/
     " Required for operations modifying multiple buffers like rename.
     set hidden
 
@@ -213,6 +215,7 @@ function! UserConfig()
         \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
         \ 'javascript': ['javascript-typescript-stdio'],
         \ 'javascript.jsx': ['javascript-typescript-stdio'],
+        \ 'python': ['pyls'],
         \ }
 
     nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
