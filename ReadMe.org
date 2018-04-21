@@ -32,12 +32,12 @@
 
     1. Install *git, vim/neovim, curl* first.
        - vim
-          ~vim --version~ to check your vim has +clipboard and +python/python3 support
-          - For Mac: ~brew install macvim --with-override-system-vim~
-          - For Linux, install *gvim* instead of vim (with +clipboard support)
+         ~vim --version~ to check your vim has +clipboard and +python/python3 support
+         - For Mac: ~brew install macvim --with-override-system-vim~
+         - For Linux, install *gvim* instead of vim (with +clipboard support)
        - neovim
-          Python support script is already written in /installspace-vim.sh/. Make sure you have Python 2 or 3 installed.
-          - For Mac: ~brew install neovim~
+         Python support script is already written in /installspace-vim.sh/. Make sure you have Python 2 or 3 installed.
+         - For Mac: ~brew install neovim~
 
     2. Install space-vim:
        #+BEGIN_SRC shell
@@ -140,7 +140,12 @@
     3. Pip
        Make sure your pip is the one you want to use. Options are from anaconda, python2 or python3. Check it with ~which -a pip ipython~
        #+BEGIN_SRC shell
-         pip install jupyterlab yapf python-language-server
+         pip3 install jupyterlab yapf 'python-language-server[all]'
+       #+END_SRC
+
+       *Note*: (optional) If you are using Python 2.7 and want to enable multiprocessing:
+       #+BEGIN_SRC shell
+         pip2 install futures
        #+END_SRC
 
        Note: For all methods of installation, if you are using a version of Jupyter Notebook earlier than 5.3, then you must also run the following command after installation to enable the JupyterLab server extension:
