@@ -122,7 +122,7 @@ fi
 # Vim & Emacs
 if exists nvim; then alias vim="nvim"; fi
 alias v="vim"
-alias sv="sudo -E vim"
+alias sv="sudo nvim"
 alias e="emacs"
 alias se="sudo -E emacs"
 alias ke="pkill -SIGUSR2 -i emacs"
