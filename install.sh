@@ -26,6 +26,10 @@ fi
 echo "cd to Dotfiles directory"
 cd ~/Dotfiles
 
+echo "Install npmrc"
+rm ~/.npmrc
+ln -s ~/Dotfiles/npmrc ~/.npmrc
+
 echo "Install eslint configurations..."
 rm ~/.eslintrc
 ln -s ~/Dotfiles/eslintrc ~/.eslintrc

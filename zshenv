@@ -12,8 +12,8 @@ export PATH="/usr/local/sbin:$PATH"
 # Rust package manager
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# Node 8
-export PATH="/usr/local/opt/node@8/bin:$PATH"
+# Npm global packages
+export PATH=~/.npm-global/bin:$PATH
 
 # Anaconda
 export PATH=/usr/local/anaconda3/bin:"$PATH"

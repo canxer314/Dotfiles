@@ -104,8 +104,9 @@
       #+END_SRC
 
 *** Node, anaconda3, NVM
+    Use [[https://nodejs.org/en/download/][Node Installer]] to install node.js.
+
     #+BEGIN_SRC shell
-      brew install node@8
       brew cask install anaconda
     #+END_SRC
 
@@ -206,7 +207,4 @@
 ** Notes
 
    1. Xmodmap file is used for key tweak on linux.
-   2. Fix npm permission.
-      #+BEGIN_SRC shell
-        sudo chown -R $(whoami) /usr/local
-      #+END_SRC
+   2. NPM global packages' path is set to be ~/.npm-global
