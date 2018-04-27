@@ -103,12 +103,8 @@
         $(brew --prefix)/opt/fzf/install
       #+END_SRC
 
-*** Node, anaconda3, NVM
+*** Node, NVM
     Use [[https://nodejs.org/en/download/][Node Installer]] to install node.js.
-
-    #+BEGIN_SRC shell
-      brew cask install anaconda
-    #+END_SRC
 
     - Optional:
       Use nvm as node version manager.
@@ -168,7 +164,7 @@
        #+BEGIN_SRC shell
          brew cask install typora slack skype dropbox neteasemusic obs iina firefox google-chrome kap \
               cakebrew keycastr intel-power-gadget karabiner-elements \
-              iterm2 jetbrains-toolbox visual-studio-code virtualbox anaconda gitbook-editor java vimr
+              iterm2 jetbrains-toolbox visual-studio-code virtualbox gitbook-editor java vimr
        #+END_SRC
 
        Brew cask upgrade:

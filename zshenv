@@ -15,9 +15,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # Npm global packages
 export PATH=~/.npm-global/bin:$PATH
 
-# Anaconda
-export PATH=/usr/local/anaconda3/bin:"$PATH"
-
 # No github credentials
 HOMEBREW_NO_GITHUB_API=1
 
