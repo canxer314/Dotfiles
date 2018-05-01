@@ -137,7 +137,7 @@
     3. Pip
        Make sure your pip is the one you want to use. Options are from anaconda, python2 or python3. Check it with ~which -a pip ipython~
        #+BEGIN_SRC shell
-         pip3 install jupyterlab yapf 'python-language-server[all]'
+         pip3 install pipenv jupyterlab yapf 'python-language-server[all]'
        #+END_SRC
 
        *Note*: (optional) If you are using Python 2.7 and want to enable multiprocessing:
