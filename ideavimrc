@@ -1,3 +1,5 @@
+" find intellij actions by `:actionlist`
+
 set gdefault
 set smartcase
 
@@ -72,6 +74,8 @@ nmap zC :action CollapseAllRegions<CR>
 " IDE actions
 " ============================================================================
 
+nmap <leader>al      :actionlist<CR>
+nmap <leader>aa      :action $SelectAll<CR>
 nmap <leader><Space> :action GotoAction<CR>
 nmap <leader>cc      :action GotoClass<CR>
 nmap <leader>ff      :action SearchEverywhere<CR>
@@ -105,6 +109,8 @@ nmap <leader>m=      :action ReformatCode<CR>
 nmap <c-o>           :action Back<cr>
 nmap <c-i>           :action Forward<cr>
 
+vmap <leader>al      :<Backspace><Backspace><Backspace><Backspace><Backspace>actionlist<CR>
+vmap <leader>aa      :<Backspace><Backspace><Backspace><Backspace><Backspace>action $SelectAll<CR>
 vmap <leader><Space> :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoAction<CR>
 vmap <leader>cc      :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoClass<CR>
 vmap <leader>ff      :<Backspace><Backspace><Backspace><Backspace><Backspace>action SearchEverywhere<CR>
