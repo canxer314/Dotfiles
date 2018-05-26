@@ -162,9 +162,14 @@
        #+END_SRC
     6. Cask applications
        #+BEGIN_SRC shell
+         # Install jdk8
+         brew tap caskroom/versions
+         brew cask install java8
+
+         # Install Others
          brew cask install typora slack skype dropbox neteasemusic obs iina firefox google-chrome kap \
               cakebrew keycastr intel-power-gadget karabiner-elements \
-              iterm2 jetbrains-toolbox visual-studio-code virtualbox gitbook-editor java vimr
+              iterm2 jetbrains-toolbox visual-studio-code virtualbox gitbook-editor vimr
        #+END_SRC
 
        Brew cask upgrade:

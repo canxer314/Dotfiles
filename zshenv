@@ -19,7 +19,7 @@ export PATH=~/.npm-global/bin:$PATH
 HOMEBREW_NO_GITHUB_API=1
 
 # Java
-export JAVA_HOME=`/usr/libexec/java_home -v 10`
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export JRE_HOME=$JAVA_HOME/jre
 export CLASSPATH=$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
 export PATH=$JAVA_HOME/bin:$PATH
