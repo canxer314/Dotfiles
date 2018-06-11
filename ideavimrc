@@ -79,7 +79,8 @@ nmap <leader>aa      :action $SelectAll<CR>
 nmap <leader><Space> :action GotoAction<CR>
 nmap <leader>cc      :action GotoClass<CR>
 nmap <leader>ff      :action SearchEverywhere<CR>
-nmap <leader>ft      :action SelectInProjectView<CR>
+nmap <leader>ft      :action ActivateProjectToolWindow<CR>
+nmap <leader>fT      :action SelectInProjectView<CR>
 nmap <leader>fs      :action SaveAll<CR>
 nmap <leader>fd      :action SmartSearchAction<CR>
 nmap <leader>fb      :action ShowBookmarks<CR>
@@ -114,7 +115,8 @@ vmap <leader>aa      :<Backspace><Backspace><Backspace><Backspace><Backspace>act
 vmap <leader><Space> :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoAction<CR>
 vmap <leader>cc      :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoClass<CR>
 vmap <leader>ff      :<Backspace><Backspace><Backspace><Backspace><Backspace>action SearchEverywhere<CR>
-vmap <leader>ft      :<Backspace><Backspace><Backspace><Backspace><Backspace>action SelectInProjectView<CR>
+vmap <leader>ft      :<Backspace><Backspace><Backspace><Backspace><Backspace>:action ActivateProjectToolWindow<CR>
+vmap <leader>fT      :<Backspace><Backspace><Backspace><Backspace><Backspace>action SelectInProjectView<CR>
 vmap <leader>fs      :<Backspace><Backspace><Backspace><Backspace><Backspace>action SaveAll<CR>
 vmap <leader>fd      :<Backspace><Backspace><Backspace><Backspace><Backspace>action SmartSearchAction<CR>
 vmap <leader>fb      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ShowBookmarks<CR>
