@@ -41,6 +41,8 @@ ln -s ~/Dotfiles/pylintrc ~/.pylintrc
 echo "Install Aspell personal dictionary"
 rm ~/.aspell.en.pws
 ln -s ~/Dotfiles/aspell.en.pws ~/.aspell.en.pws
+rm ~/.aspell.en.prepl
+ln -s ~/Dotfiles/aspell.en.prepl ~/.aspell.en.prepl
 
 echo "Install ctags configurations..."
 rm ~/.ctags

@@ -122,6 +122,11 @@
         nvm alias default system
       #+END_SRC
 
+*** Aspell personal dictionary
+    1. Follow the [[http://aspell.net/man-html/Format-of-the-Personal-and-Replacement-Dictionaries.html#Format-of-the-Personal-and-Replacement-Dictionaries][link]]
+    2. ~.aspell.lang.pws~: The second part of simply a word list with one word per line.
+    3. ~.aspell.lang.prepl~: The second part simply a list of replacements with one replacement per line with each replacement pair has the following format: ~misspelled_word correction~
+
 *** Other Dependencies
     1. System package manager dependencies:
        #+BEGIN_SRC shell
