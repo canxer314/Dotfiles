@@ -8,7 +8,7 @@
 # install git
 # brew install git
 
-UNAME=`uname`
+UNAME=$(uname)
 
 # Fallback info
 CURRENT_OS='Linux'
@@ -24,7 +24,7 @@ else
 fi
 
 echo "cd to Dotfiles directory"
-cd ~/Dotfiles
+cd ~/Dotfiles || exit
 
 echo "Install npmrc"
 rm ~/.npmrc
@@ -37,6 +37,10 @@ ln -s ~/Dotfiles/eslintrc ~/.eslintrc
 echo "Install eslint configurations..."
 rm ~/.pylintrc
 ln -s ~/Dotfiles/pylintrc ~/.pylintrc
+
+echo "Install Aspell personal dictionary"
+rm ~/.aspell.en.pws
+ln -s ~/Dotfiles/aspell.en.pws ~/.aspell.en.pws
 
 echo "Install ctags configurations..."
 rm ~/.ctags
