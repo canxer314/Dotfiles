@@ -60,6 +60,10 @@ echo "Install ignore configurations for search tools..."
 rm ~/.ignore
 ln -s ~/Dotfiles/ignore ~/.ignore
 
+echo "Install P4 ignore file..."
+rm ~/.p4ignore
+ln -s ~/Dotfiles/p4ignore ~/.p4ignore
+
 echo "Install jsbeautify configurations..."
 rm ~/.jsbeautifyrc
 ln -s ~/Dotfiles/jsbeautifyrc ~/.jsbeautifyrc
