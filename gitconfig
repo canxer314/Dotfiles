@@ -14,6 +14,7 @@
 	ps = push
 	pl = pull
 	cl	= clone
+    clr = clone --recurse-submodules -j8
 	br	= branch
 	bv = branch -vv
 	ba = branch -ra
@@ -24,10 +25,10 @@
 	unst = reset HEAD
 	throw	= reset --hard HEAD
 	throwh	= reset --hard HEAD^
-	clr	= clean -fdx -f
+	clf	= clean -fdx -f
 	last	= log -1
 	glog	= log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	slog	= log --pretty=oneline	
+	slog	= log --pretty=oneline
 	accept-ours = "!f() { git checkout --ours -- \"${@:-.}\"; git add -u \"${@:-.}\"; }; f"
 	accept-theirs = "!f() { git checkout --theirs -- \"${@:-.}\"; git add -u \"${@:-.}\"; }; f"
 	tagcommit = !sh -c 'git rev-list $0 | head -n 1'
