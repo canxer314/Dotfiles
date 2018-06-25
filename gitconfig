@@ -48,3 +48,5 @@
 	user = ztlevi
 [credential]
 	helper = osxkeychain
+[magithub]
+	cache = always
