@@ -81,6 +81,8 @@
        Linux: ~pacman -S xsel~
 
     3. Key bindings
+       - tmux-resurrect: prefix + Ctrl-s - save, prefix + Ctrl-r - restore
+
        - prefix: I set it to C-x
 
        - prefix + I: Installs new plugins from GitHub or any other git repository. Refreshes TMUX environment
