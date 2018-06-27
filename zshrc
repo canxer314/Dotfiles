@@ -159,9 +159,15 @@ if exists screenfetch; then alias sf="screenfetch"; fi
 if exists youtube-dl; then alias yd='youtube-dl --write-auto-sub --ignore-errors'; fi
 if exists you-get; then alias yg='you-get'; fi
 if exists prettier; then alias pall="prettier --write \"**/*.js\""; fi
-alias rr='source ~/.zshrc'
 alias uu='cd ~/.spacemacs.d/ && git pull && cd - && cd ~/Dotfiles/ && git pull && cd -'
 alias mac='~/Dotfiles/macInstallandBackup.sh'
+
+function reload_source() {
+    LASTDIR=`pwd`
+    source ~/.zshrc
+    cd $LASTDIR
+}
+alias rr='reload_source'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
