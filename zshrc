@@ -159,8 +159,17 @@ if exists screenfetch; then alias sf="screenfetch"; fi
 if exists youtube-dl; then alias yd='youtube-dl --write-auto-sub --ignore-errors'; fi
 if exists you-get; then alias yg='you-get'; fi
 if exists prettier; then alias pall="prettier --write \"**/*.js\""; fi
-alias uu='cd ~/.spacemacs.d/ && git pull && cd - && cd ~/Dotfiles/ && git pull && cd -'
 alias mac='~/Dotfiles/macInstallandBackup.sh'
+
+function update_git_repo() {
+    LASTDIR=`pwd`
+    echo "Update my Spacemacs repo"
+    cd ~/.spacemacs.d/ && git pull
+    echo "Update my Dotfiles repo"
+    cd ~/Dotfiles/ && git pull
+    cd $LASTDIR
+}
+alias uu='update_git_repo'
 
 function reload_source() {
     LASTDIR=`pwd`
