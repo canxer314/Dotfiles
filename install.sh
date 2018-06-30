@@ -75,8 +75,10 @@ ln -s ~/Dotfiles/prettierrc ~/.prettierrc
 echo "Install zsh configurations..."
 rm ~/.zshrc
 rm ~/.zshenv
+rm ~/.zprofile
 ln -s ~/Dotfiles/zshrc ~/.zshrc
 ln -s ~/Dotfiles/zshenv ~/.zshenv
+ln -s ~/Dotfiles/zprofile ~/.zprofile
 
 echo "Install tmux setting"
 rm ~/.tmux.conf

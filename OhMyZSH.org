@@ -1,4 +1,8 @@
 * ZSH
+** ZSH ENV
+   1. ZSH load env via this order: zshenv -> zprofile -> zshrc. And it will inject ~/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:~ into your system PATH at the beginning of zprofile (or the end of zshenv).
+   2. System PATH changes should go to profile.
+
 ** Dependences
    1. npm, node
    2. ccat https://github.com/jingweno/ccat
@@ -29,7 +33,7 @@
    | C-j              | Select pane Down                       |
    | C-k              | Select pane Up                         |
    | C-l              | Select pane Right                      |
-   
+
    alias ta='tmux attach -t'
    alias tad='tmux attach -d -t'
    alias ts='tmux new-session -s'

@@ -1,46 +1,8 @@
 alias g="git"
 alias cl="clear"
 
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
-
-export PATH="/usr/local/sbin:$PATH"
-
-# Rust package manager
-export PATH="$HOME/.cargo/bin:$PATH"
-
-# Npm global packages
-export PATH=~/.npm-global/bin:$PATH
-
 # No github credentials
 HOMEBREW_NO_GITHUB_API=1
-
-# Java
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-export JRE_HOME=$JAVA_HOME/jre
-export CLASSPATH=$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
-export PATH=$JAVA_HOME/bin:$PATH
-
-# Android
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# Go
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
-
-export EDITOR=vim
-
-# Compilation flags
-export ARCHFLAGS="-arch x86_64"
-
-# ssh
-export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-export MANPATH="/usr/local/man:$MANPATH"
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
@@ -53,7 +15,7 @@ CASE_SENSITIVE="true"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=7
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
