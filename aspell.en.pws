@@ -4,6 +4,7 @@ arg
 args
 attr
 auth
+calc
 ctrl
 eval
 func
@@ -25,3 +26,5 @@ cepheid
 cvo
 mbo
 svo
+analyte
+analytes
