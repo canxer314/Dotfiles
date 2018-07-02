@@ -108,6 +108,7 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
     if exists ggrep; then alias grep="ggrep"; fi
     if exists brew; then alias bu='brew upgrade | brew cleanup | brew cask cleanup'; fi
 
+    export PATH=/Applications/Emacs.app/Contents/MacOS:$PATH
     alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
     alias e.="open -a emacs ."
     alias oi="open . -a iterm"
