@@ -117,6 +117,7 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
     else
         alias of="open ."
     fi
+    alias stat="stat -x"
 elif [[ $CURRENT_OS == 'Linux' ]]; then
 fi
 
