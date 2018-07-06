@@ -155,7 +155,10 @@ if exists ccat; then alias cat="ccat"; fi
 if exists trash; then alias rm="trash"; fi
 if exists hexo; then alias h="hexo"; fi
 if exists jupyter; then alias jp='jupyter lab --NotebookApp.iopub_data_rate_limit=10000000'; fi
-if exists reveal-md; then alias rv='reveal-md --highlight-theme github --theme white'; fi
+if exists reveal-md; then
+    alias rv='reveal-md --highlight-theme github --theme white --watch'
+    alias rvs='reveal-md --highlight-theme github --theme white --static html'
+; fi
 if exists asciinema; then alias arec="asciinema rec --max-wait=2"; fi # -t to specify title
 if exists screenfetch; then alias sf="screenfetch"; fi
 if exists youtube-dl; then alias yd='youtube-dl --write-auto-sub --ignore-errors'; fi
