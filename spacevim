@@ -84,7 +84,13 @@ function! UserInit()
     \ 'do': 'bash install.sh',
     \ }
 
-    Plug 'roxma/nvim-completion-manager'
+    if has('nvim')
+      Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    else
+      Plug 'Shougo/deoplete.nvim'
+      Plug 'roxma/nvim-yarp'
+      Plug 'roxma/vim-hug-neovim-rpc'
+    endif
 
 endfunction
 
@@ -233,6 +239,8 @@ function! UserConfig()
     " ===================================================
     " LSP config
     " ===================================================
+    let g:deoplete#enable_at_startup = 1
+
     " Some serverCommands options: https://spacevim.org/layers/language-server-protocol/
     " Required for operations modifying multiple buffers like rename.
     set hidden
