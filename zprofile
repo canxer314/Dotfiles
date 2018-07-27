@@ -24,7 +24,9 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Go
+export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export PATH=$PATH:$HOME/go/bin
 
 export EDITOR=vim
 
