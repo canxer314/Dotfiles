@@ -26,23 +26,23 @@ echo "=============== Finish installing mac's apps ==============="
 
 # ================================= Mac App Uninstall ==============================
 # Uninstall unused apps
-brew cask uninstall xquartz eclipse-jee --force
+brew cask uninstall xquartz eclipse-jee android-studio --force
 
 
 # ================================= Mac App Backup ==============================
 echo ""
 echo "=============== Start to backup mac's app ==============="
 # All Apps
-ls -lh /Applications > ~/Dropbox/AppList/All_AppList
+{ ls -lh /Applications ; cat ~/Dropbox/AppList/All_AppList } && rm ~/Dropbox/AppList/All_AppList | sort | uniq -ud > ~/Dropbox/AppList/All_AppList
 
 # MAS Apps
-/usr/local/bin/mas list > ~/Dropbox/AppList/MAS_AppList
+{ /usr/local/bin/mas list ; cat ~/Dropbox/AppList/MAS_AppList } && rm ~/Dropbox/AppList/MAS_AppList | sort | uniq -ud > ~/Dropbox/AppList/MAS_AppList
 
 # brew Apps
-/usr/local/bin/brew list > ~/Dropbox/AppList/Brew_AppList
+{ /usr/local/bin/brew list ; cat ~/Dropbox/AppList/Brew_AppList } && rm ~/Dropbox/AppList/Brew_AppList | sort | uniq -ud > ~/Dropbox/AppList/Brew_AppList
 
 # brew cask Apps
-/usr/local/bin/brew cask list > ~/Dropbox/AppList/BrewCask_AppList
+{ /usr/local/bin/brew cask list ; cat ~/Dropbox/AppList/BrewCask_AppList } && rm ~/Dropbox/AppList/BrewCask_AppList | sort | uniq -ud > ~/Dropbox/AppList/BrewCask_AppList
 
 echo ""
 echo "=============== Finish backup mac's app ==============="
