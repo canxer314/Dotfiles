@@ -26,7 +26,7 @@ echo "=============== Finish installing mac's apps ==============="
 
 # ================================= Mac App Uninstall ==============================
 # Uninstall unused apps
-brew cask uninstall xquartz eclipse-jee android-studio --force
+brew cask uninstall xquartz eclipse-jee android-studio gitkraken --force
 
 
 # ================================= Mac App Backup ==============================

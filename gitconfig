@@ -51,3 +51,8 @@
 	helper = osxkeychain
 [magithub]
 	cache = always
+	online = false
+[magithub "status"]
+	includeStatusHeader = false
+	includePullRequestsSection = false
+	includeIssuesSection = false

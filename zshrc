@@ -172,6 +172,7 @@ function update_git_repo() {
     cd ~/.spacemacs.d/ && git pull
     echo "Update my Dotfiles repo"
     cd ~/Dotfiles/ && git pull
+    ./install.sh
     cd $LASTDIR
 }
 alias uu='update_git_repo'
