@@ -165,7 +165,7 @@ if exists asciinema; then alias arec="asciinema rec --max-wait=2"; fi # -t to sp
 if exists screenfetch; then alias sf="screenfetch"; fi
 if exists youtube-dl; then alias yd='youtube-dl --write-auto-sub --ignore-errors'; fi
 if exists you-get; then alias yg='you-get'; fi
-if exists prettier; then alias pall="prettier --write \"**/*.js\""; fi
+if exists prettier; then alias pall='prettier --write "**/*.js" --write "**/*.ts" --write "**/*.css"'; fi
 alias mac='~/Dotfiles/macInstallandBackup.sh'
 
 function update_git_repo() {
