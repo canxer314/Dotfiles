@@ -1,0 +1,9 @@
+1. Download app from anywhere
+   #+BEGIN_SRC shell
+     sudo spctl --master-disable
+   #+END_SRC
+
+2. How to remove the Dock autohide animation
+   #+BEGIN_SRC shell
+     defaults write com.apple.dock autohide-time-modifier -int 0;killall Dock
+   #+END_SRC
