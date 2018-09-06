@@ -108,8 +108,8 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
     if exists ggrep; then alias grep="ggrep"; fi
     if exists brew; then alias bu='brew upgrade | brew cleanup | brew cask cleanup'; fi
 
-    export PATH=/Applications/Emacs.app/Contents/MacOS/bin:$PATH
     alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
+    alias emacsclient="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
     alias e.="open -a /Applications/Emacs.app/Contents/MacOS/Emacs ."
     alias bi="open . -a iterm"
     if [ -d '/Applications/ForkLift.app' ]; then
