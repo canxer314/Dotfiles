@@ -110,12 +110,12 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
 
     export PATH=/Applications/Emacs.app/Contents/MacOS/bin:$PATH
     alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
-    alias e.="open -a emacs ."
-    alias oi="open . -a iterm"
+    alias e.="open -a /Applications/Emacs.app/Contents/MacOS/Emacs ."
+    alias bi="open . -a iterm"
     if [ -d '/Applications/ForkLift.app' ]; then
-        alias of="open -a ForkLift ."
+        alias bf="open -a ForkLift ."
     else
-        alias of="open ."
+        alias bf="open ."
     fi
     alias stat="stat -x"
 elif [[ $CURRENT_OS == 'Linux' ]]; then
