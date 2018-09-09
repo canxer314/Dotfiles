@@ -133,6 +133,8 @@ alias ke="pkill -SIGUSR2 -i emacs"
 alias edebug="emacs --debug-init"
 alias etime="emacs --timed-requires --profile"
 
+if exists code; then alias c.="code ."; fi
+
 # Tmux
 if exists antigen; then alias ar="antigen reset"; fi
 if exists tmux; then alias t="tmux"; fi
