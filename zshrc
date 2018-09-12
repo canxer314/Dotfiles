@@ -22,9 +22,9 @@ else
     VER=$(lsb_release -sr)
 fi
 
+# call `antigen update` on your terminal and it will update the oh-my-zsh repository
 # Update bundles with `antigen reset`
 source ~/Dotfiles/antigen/antigen.zsh
-# call antigen update on your terminal and it will update the oh-my-zsh repository
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 #antigen bundle robbyrussell/oh-my-zsh lib/
