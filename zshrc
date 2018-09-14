@@ -132,6 +132,7 @@ alias magit="emacsclient -n -e \(magit-status\)"
 alias ke="pkill -SIGUSR2 -i emacs"
 alias edebug="emacs --debug-init"
 alias etime="emacs --timed-requires --profile"
+alias eupdate="emacs --daemon -f configuration-layer/update-packages"
 
 if exists code; then alias c.="code ."; fi
 
