@@ -132,7 +132,7 @@ alias magit="emacsclient -n -e \(magit-status\)"
 alias ke="pkill -SIGUSR2 -i emacs"
 alias edebug="emacs --debug-init"
 alias etime="emacs --timed-requires --profile"
-alias eupdate="emacs --daemon -f configuration-layer/update-packages"
+alias seupdate="emacs --daemon -f configuration-layer/update-packages-no-confirm || emacs --daemon"
 alias doom="mv ~/.emacs.d ~/.emacs.d-spacemacs && mv ~/.emacs.d-doom ~/.emacs.d"
 alias spacemacs="mv ~/.emacs.d ~/.emacs.d-doom && mv ~/.emacs.d-spacemacs ~/.emacs.d"
 
