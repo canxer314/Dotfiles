@@ -108,8 +108,15 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
     if exists ggrep; then alias grep="ggrep"; fi
     if exists brew; then alias bu='brew upgrade | brew cleanup | brew cask cleanup'; fi
 
-    alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
-    alias emacsclient="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
+    # Emacs-plus
+    if [ -d '/usr/local/opt/emacs-plus' ]; then
+        alias emacs="/usr/local/opt/emacs-plus"
+        alias emacsclient="/usr/local/bin/emacsclient"
+    # Emacs-mac
+    else
+        alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
+        alias emacsclient="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
+    fi
     alias e.="open -a /Applications/Emacs.app/Contents/MacOS/Emacs ."
     alias bi="open . -a iterm"
     if [ -d '/Applications/ForkLift.app' ]; then
