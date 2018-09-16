@@ -110,7 +110,7 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
 
     # Emacs-plus
     if [ -d '/usr/local/opt/emacs-plus' ]; then
-        alias emacs="/usr/local/opt/emacs-plus"
+        alias emacs="/usr/local/opt/emacs-plus/bin/emacs"
         alias emacsclient="/usr/local/bin/emacsclient"
     # Emacs-mac
     else
