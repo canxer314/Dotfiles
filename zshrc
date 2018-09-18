@@ -159,12 +159,6 @@ if exists npm; then
     alias npmgL0="npm list -g --depth=0"
 fi
 
-# React Native
-if exists react-native; then
-    alias rnioskill="rm -rf ios/build/; kill $(lsof -t -i:8081); react-native run-ios"
-    alias rniosR="react-native run-ios --configuration release --device"
-fi
-
 if exists ccat; then alias cat="ccat"; fi
 if exists trash; then alias rm="trash"; fi
 if exists hexo; then alias h="hexo"; fi
