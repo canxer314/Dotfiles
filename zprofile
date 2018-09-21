@@ -6,6 +6,9 @@ export ZSH=~/.oh-my-zsh
 
 export PATH="/usr/local/sbin:$PATH"
 
+# doom
+export PATH="$HOME/.emacs.d/bin:$PATH"
+
 # Rust package manager
 export PATH="$HOME/.cargo/bin:$PATH"
 
