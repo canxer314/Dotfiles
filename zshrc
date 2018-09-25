@@ -139,8 +139,21 @@ alias magit="emacsclient -n -e \(magit-status\)"
 alias ke="pkill -SIGUSR2 -i emacs"
 alias edebug="emacs --debug-init"
 alias etime="emacs --timed-requires --profile"
-alias use-doom="mv ~/.emacs.d ~/.emacs.d-spacemacs && mv ~/.emacs.d-doom ~/.emacs.d"
-alias use-spacemacs="mv ~/.emacs.d ~/.emacs.d-doom && mv ~/.emacs.d-spacemacs ~/.emacs.d"
+
+function use-doom(){
+    if [ -d "$HOME/.emacs.d-doom" ];then
+        mv ~/.emacs.d ~/.emacs.d-spacemacs && mv ~/.emacs.d-doom ~/.emacs.d;
+    else
+        echo "~/.emacs.d-doom does not exist, use doom failed."
+    fi
+}
+function use-spacemacs(){
+    if [ -d "$HOME/.emacs.d-spacemacs" ];then
+        mv ~/.emacs.d ~/.emacs.d-doom && mv ~/.emacs.d-spacemacs ~/.emacs.d;
+    else
+        echo "~/.emacs.d-spacemacs does not exist, use spacemacs failed."
+    fi
+}
 
 function update_spacemacs_packages(){
     emacs --daemon -f configuration-layer/update-packages-no-confirm
@@ -171,7 +184,7 @@ if exists jupyter; then alias jp='jupyter lab --NotebookApp.iopub_data_rate_limi
 if exists reveal-md; then
     alias rv='reveal-md --highlight-theme github --theme white --watch'
     alias rvs='reveal-md --highlight-theme github --theme white --static revealjs_output'
-; fi
+fi
 if exists asciinema; then alias arec="asciinema rec --max-wait=2"; fi # -t to specify title
 if exists screenfetch; then alias sf="screenfetch"; fi
 if exists youtube-dl; then alias yd='youtube-dl --write-auto-sub --ignore-errors'; fi
