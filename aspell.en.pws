@@ -6,6 +6,7 @@ attr
 auth
 calc
 ctrl
+dao
 eval
 func
 funcs
@@ -17,6 +18,7 @@ msg
 mssql
 npm
 rgba
+saga
 sql
 url
 util
