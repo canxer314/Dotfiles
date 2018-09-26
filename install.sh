@@ -84,6 +84,10 @@ echo "Install tmux setting"
 rm ~/.tmux.conf
 ln -s ~/Dotfiles/tmux.conf ~/.tmux.conf
 
+echo "Install ezmacsync"
+rm ~/.ezmacsyncrc
+ln -s ~/Dotfiles/ezmacsyncrc ~/.ezmacsyncrc
+
 echo "Install ideaVim setting"
 rm ~/.ideavimrc
 ln -s ~/Dotfiles/ideavimrc ~/.ideavimrc
