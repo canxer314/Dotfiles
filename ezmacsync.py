@@ -64,7 +64,7 @@ if __name__ == "__main__":
     brew_ignore_set = set(
         map(lambda app: app.lower(), ignore_lists['brewRemoveList']))
     brew_apps = filter(lambda app: app.lower()
-                                   not in brew_ignore_set, brew_apps)
+                       not in brew_ignore_set, brew_apps)
     synced_lists['brewAppList'] = brew_apps
 
     # backup brew cask apps
@@ -84,12 +84,10 @@ if __name__ == "__main__":
     mas_apps = subprocess.check_output(
         '/usr/local/bin/mas list', shell=True).strip('\n').split('\n')
 
-
     def split_mas_app(app):
         i1 = app.find(' ')
         i2 = app.find('(')
         return (app[:i1], app[i1 + 1:i2 - 1])
-
 
     mas_apps = map(split_mas_app, mas_apps)
     mas_apps_local = list(mas_apps)
@@ -98,7 +96,7 @@ if __name__ == "__main__":
     mas_ignore_set = set(
         map(lambda app: app.lower(), ignore_lists['masRemoveList']))
     mas_apps = filter(lambda app: app[1].lower()
-                                  not in mas_ignore_set, mas_apps)
+                      not in mas_ignore_set, mas_apps)
     synced_lists['masAppList'] = mas_apps
 
     with open(synced_lists_file, 'w+') as f:
@@ -113,14 +111,16 @@ if __name__ == "__main__":
                       ' '.join(synced_lists['brewAppList']) + '\n'
     if ignore_lists['brewRemoveList']:
         install_script += 'brew uninstall ' + \
-                          ' '.join(ignore_lists['brewRemoveList']) + ' --force\n'
+                          ' '.join(
+                              ignore_lists['brewRemoveList']) + ' --force\n'
 
     # brew cask apps install script
     install_script += 'brew cask install ' + \
                       ' '.join(synced_lists['brewCaskAppList']) + '\n'
     if ignore_lists['brewCaskRemoveList']:
         install_script += 'brew cask uninstall ' + \
-                          ' '.join(ignore_lists['brewCaskRemoveList']) + ' --force\n'
+                          ' '.join(
+                              ignore_lists['brewCaskRemoveList']) + ' --force\n'
 
     # mas apps install script
     for app in synced_lists['masAppList']:
@@ -134,6 +134,6 @@ if __name__ == "__main__":
     mas_apps_need_removal = map(lambda app: app[1], mas_apps_need_removal)
     if mas_apps_need_removal:
         print('\nYou might need to remove {} manually.'.format(
-            ' '.join(mas_apps_need_removal)))
+            ','.join(mas_apps_need_removal)))
 
     print('\n================ Install End =================')
