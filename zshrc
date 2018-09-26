@@ -190,7 +190,7 @@ if exists screenfetch; then alias sf="screenfetch"; fi
 if exists youtube-dl; then alias yd='youtube-dl --write-auto-sub --ignore-errors'; fi
 if exists you-get; then alias yg='you-get'; fi
 if exists prettier; then alias pall='prettier --write "**/*.js" --write "**/*.ts" --write "**/*.css"'; fi
-alias mac=./ezmacsync.py
+alias mac=~/Dotfiles/ezmacsync.py
 
 function update_git_repo() {
     LASTDIR=`pwd`
