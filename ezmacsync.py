@@ -52,7 +52,9 @@ if __name__ == "__main__":
 
     # backup /Applications
     print('Backup /Applications...')
-    all_apps = list(set(os.listdir('/Applications'))
+    all_apps = filter(lambda app: not app.startswith('.'),
+                      os.listdir('/Applications'))
+    all_apps = list(set(all_apps)
                     | set(synced_lists["allAppList"]))
     synced_lists["allAppList"] = all_apps
 
