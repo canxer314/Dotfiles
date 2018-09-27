@@ -19,7 +19,6 @@
     "Microsoft Remote Desktop",
     "Wire"
   ],
-  "brewTapRemoveList":[],
   "brewRemoveList":[
     "ant",
     "automake",
@@ -85,5 +84,6 @@
     "Insomnia",
     "calibre",
     "intel-power-gadget"
-  ]
+  ],
+  "brewTapRemoveList":[]
 }
