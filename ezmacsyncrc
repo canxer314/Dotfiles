@@ -19,6 +19,7 @@
     "Microsoft Remote Desktop",
     "Wire"
   ],
+  "brewTapRemoveList":[],
   "brewRemoveList":[
     "ant",
     "automake",
