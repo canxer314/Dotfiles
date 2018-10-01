@@ -115,6 +115,9 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
     else
         export PATH=/usr/local/opt/emacs-mac/bin:$PATH
     fi
+    if [ -d /Applications/Emacs.app ]; then
+        alias emacs=/Applications/Emacs.app/Contents/MacOS/emacs
+    fi
     alias e.="open -a emacs ."
     alias bi="open -a iterm ."
     if [ -d '/Applications/ForkLift.app' ]; then
