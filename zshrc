@@ -110,15 +110,13 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
 
     # Emacs-plus
     if [ -d '/usr/local/opt/emacs-plus' ]; then
-        alias emacs="/usr/local/opt/emacs-plus/bin/emacs"
-        alias emacsclient="/usr/local/bin/emacsclient"
+        export PATH=/usr/local/opt/emacs-plus/bin:$PATH
     # Emacs-mac
     else
-        alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
-        alias emacsclient="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
+        export PATH=/usr/local/opt/emacs-mac/bin:$PATH
     fi
-    alias e.="open -a /Applications/Emacs.app/Contents/MacOS/Emacs ."
-    alias bi="open . -a iterm"
+    alias e.="open -a emacs ."
+    alias bi="open -a iterm ."
     if [ -d '/Applications/ForkLift.app' ]; then
         alias bf="open -a ForkLift ."
     else
