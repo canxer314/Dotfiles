@@ -206,6 +206,8 @@ alias uu='update_git_repo'
 
 function reload_source() {
     LASTDIR=`pwd`
+    source ~/.zprofile
+    source ~/.zshenv
     source ~/.zshrc
     cd $LASTDIR
 }
