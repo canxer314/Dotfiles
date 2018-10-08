@@ -156,12 +156,6 @@ function use-spacemacs(){
     fi
 }
 
-function update_spacemacs_packages(){
-    emacs --daemon -f configuration-layer/update-packages-no-confirm
-    emacs --daemon
-}
-alias seupdate="update_spacemacs_packages"
-
 if exists code; then alias c.="code ."; fi
 
 # Tmux
@@ -195,7 +189,7 @@ alias mac=~/Dotfiles/ezmacsync.py
 
 function update_git_repo() {
     LASTDIR=`pwd`
-    echo "Update my Spacemacs repo"
+    echo "Update my Doom Emacs repo"
     cd ~/.spacemacs.d/ && git pull
     echo "Update my Dotfiles repo"
     cd ~/Dotfiles/ && git pull
