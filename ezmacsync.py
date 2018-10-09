@@ -145,6 +145,13 @@ if __name__ == "__main__":
 
     print('================ Install Start =================')
     install_script = ''
+    # brew tap install
+    for tap in synced_lists['brewTapList']:
+        install_script += 'brew tap '+ tap + '\n'
+    if ignore_lists['brewTapRemoveList']:
+        for tap in ignore_lists['brewTapRemoveList']:
+            install_script += 'brew untap '+ tap + '\n'
+
     # brew apps install script
     install_script += 'brew install ' + \
                       ' '.join(synced_lists['brewAppList']) + '\n'

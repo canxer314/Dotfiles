@@ -9,5 +9,9 @@
   ],
   "brewRemoveList":[],
   "brewCaskRemoveList":[],
-  "brewTapRemoveList":[]
+  "brewTapRemoveList":[
+    "homebrew/dupes",
+    "homebrew/php",
+    "homebrew/versions"
+  ]
 }
