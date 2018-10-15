@@ -77,7 +77,7 @@ nmap zm :action CollapseAllRegions<CR>
 nmap <CR>            :action RecentFiles<CR>
 nmap <c-i>           :action Forward<CR>
 nmap <c-o>           :action Back<CR>
-nmap <leader>oE      :action ActivateTerminalToolWindow<CR>
+nmap <leader>oS      :action ActivateTerminalToolWindow<CR>
 nmap <leader><Space> :action GotoAction<CR>
 nmap <leader><tab>   :action RecentFiles<CR>
 nmap <leader>aa      :action $SelectAll<CR>
@@ -111,7 +111,7 @@ nmap gs              :action StepOver<CR>
 vmap <CR>            :<Backspace><Backspace><Backspace><Backspace><Backspace>action RecentFiles<CR>
 vmap <c-i>           :<Backspace><Backspace><Backspace><Backspace><Backspace>action Forward<CR>
 vmap <c-o>           :<Backspace><Backspace><Backspace><Backspace><Backspace>action Back<CR>
-vmap <leader>oE      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateTerminalToolWindow<CR>
+vmap <leader>oS      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateTerminalToolWindow<CR>
 vmap <leader><Space> :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoAction<CR>
 vmap <leader><tab>   :<Backspace><Backspace><Backspace><Backspace><Backspace>action RecentFiles<CR>
 vmap <leader>aa      :<Backspace><Backspace><Backspace><Backspace><Backspace>action $SelectAll<CR>
@@ -165,8 +165,8 @@ nmap <leader>gG :action ActivateVersionControlToolWindow<CR>
 vmap <leader>gG :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateVersionControlToolWindow<CR>
 
 " search in project
-nmap <leader>/p :action FindInPath<CR>
-vmap <leader>/p :<Backspace><Backspace><Backspace><Backspace><Backspace>action FindInPath<CR>
+nmap <leader>// :action FindInPath<CR>
+vmap <leader>// :<Backspace><Backspace><Backspace><Backspace><Backspace>action FindInPath<CR>
 
 " replace in project
 nmap <leader>rp :action ReplaceInPath<CR>
