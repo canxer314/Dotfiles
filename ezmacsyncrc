@@ -8,7 +8,7 @@
     "MainStage 3"
   ],
   "brewRemoveList":[],
-  "brewCaskRemoveList":[],
+  "brewCaskRemoveList":["emacs-mac-spacemacs-icon"],
   "brewTapRemoveList":[
     "homebrew/dupes",
     "homebrew/php",
