@@ -9,6 +9,9 @@ export PATH="/usr/local/sbin:$PATH"
 # doom
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
+# Sqlite
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
+
 # Rust package manager
 export PATH="$HOME/.cargo/bin:$PATH"
 
