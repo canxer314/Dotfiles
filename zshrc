@@ -118,16 +118,25 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
         alias emacs=/Applications/Emacs.app/Contents/MacOS/emacs
     fi
     alias e.="open -a emacs ."
-    alias bi="open -a iterm ."
+    alias ot="open -a iterm ."
     if [ -d '/Applications/ForkLift.app' ]; then
-        alias bf="open -a ForkLift ."
+        alias oo="open -a ForkLift ."
     else
-        alias bf="open ."
+        alias oo="open ."
     fi
     alias stat="stat -x"
 elif [[ $CURRENT_OS == 'Linux' ]]; then
     alias xx="xmodmap ~/.Xmodmap"
-
+    if [ -f "/usr/bin/konsole" ]; then
+        alias ot="/usr/bin/konsole ."
+    else
+        alias ot="/usr/bin/gnome-terminal"
+    fi
+    if [ -f "/usr/bin/xdg-open" ];then
+        alias oo="/usr/bin/xdg-open ."
+    else
+        alias oo="/usr/bin/gvfs-open ."
+    fi
 fi
 
 # Vim & Emacs
