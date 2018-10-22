@@ -137,6 +137,7 @@ elif [[ $CURRENT_OS == 'Linux' ]]; then
     else
         alias oo="/usr/bin/gvfs-open ."
     fi
+    alias e.="emacsclient ."
 fi
 
 # Vim & Emacs
