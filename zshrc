@@ -5,6 +5,7 @@ export TERM="xterm-256color"
 # disable C-d close window
 set -o ignoreeof
 
+export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
 UNAME=`uname`
@@ -77,8 +78,6 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
     antigen bundle gem
     antigen bundle osx
 elif [[ $CURRENT_OS == 'Linux' ]]; then
-    # None so far...
-
     if [[ $DISTRO == 'CentOS' ]]; then
         antigen bundle centos
     elif [[ $DISTRO == 'Arch' ]]; then
@@ -127,6 +126,8 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
     fi
     alias stat="stat -x"
 elif [[ $CURRENT_OS == 'Linux' ]]; then
+    alias xx="xmodmap ~/.Xmodmap"
+
 fi
 
 # Vim & Emacs
