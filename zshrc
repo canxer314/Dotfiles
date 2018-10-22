@@ -190,7 +190,7 @@ alias mac=~/Dotfiles/ezmacsync.py
 function update_git_repo() {
     LASTDIR=`pwd`
     echo "Update my Doom Emacs repo"
-    cd ~/.spacemacs.d/ && git pull
+    cd ~/.doom.d/ && git pull
     echo "Update my Dotfiles repo"
     cd ~/Dotfiles/ && git pull
     ./install.sh > /dev/null
