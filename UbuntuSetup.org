@@ -7,7 +7,7 @@ Get the [[https://www.opendesktop.org/p/1214931/][Flat Remix GTK theme]], and ic
 Update apt with ~sudo apt-get update~
 1. Presiqusites
    #+BEGIN_SRC shell
-sudo apt install curl wget pandoc
+sudo apt install curl wget
    #+END_SRC
 
 2. Nodejs (LTS): [[https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions][Tutorial]]
@@ -64,6 +64,7 @@ sudo add-apt-repository ppa:webupd8team/java
 sudo apt update; sudo apt install oracle-java8-installer
 sudo apt install oracle-java8-set-default
    #+END_SRC
+9. Pandoc: https://github.com/jgm/pandoc/releases/
 
 * Ubuntu Applications
 1. Gnome-terminal: Use login shell, Go to ~Edit~ -> ~Preferences~ -> ~Profiles~ -> ~Command~ ->
