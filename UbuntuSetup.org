@@ -7,7 +7,7 @@ Get the [[https://www.opendesktop.org/p/1214931/][Flat Remix GTK theme]], and ic
 Update apt with ~sudo apt-get update~
 1. Presiqusites
    #+BEGIN_SRC shell
-sudo apt install curl wget
+sudo apt install curl wget pandoc
    #+END_SRC
 
 2. Nodejs (LTS): [[https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions][Tutorial]]
