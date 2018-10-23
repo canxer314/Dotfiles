@@ -39,3 +39,4 @@ Thumbs.db
 TAGS
 .idea
 .mypy_cache
+cmake-build-debug
