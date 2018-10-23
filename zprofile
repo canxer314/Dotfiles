@@ -16,9 +16,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=~/.npm-global/bin:$PATH
 
 # Java
-if [ -d "/usr/libexec/java_home" ]; then # for MacOS
+if [[ $CURRENT_OS == 'OS X' ]]; then
     export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-elif [ -f "/usr/bin/javac" ]; then # for Linux
+elif [[ $CURRENT_OS == 'Linux' ]]; then
     export JAVA_HOME=$(dirname $(dirname $(readlink -e /usr/bin/javac)))
 fi
 export JRE_HOME=$JAVA_HOME/jre

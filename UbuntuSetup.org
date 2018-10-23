@@ -66,8 +66,10 @@ sudo apt install oracle-java8-set-default
    #+END_SRC
 
 * Ubuntu Applications
-1. GNOME Tweaks
-2. Diodon: Clipboard
+1. Gnome-terminal: Use login shell, Go to ~Edit~ -> ~Preferences~ -> ~Profiles~ -> ~Command~ ->
+   Check ~Run command as a login shell~
+2. GNOME Tweaks
+3. Diodon: Clipboard
 
 * Scheenshot & Record
 ** Take Screenshot

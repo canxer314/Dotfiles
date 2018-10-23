@@ -9,21 +9,6 @@ set -o ignoreeof
 export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
-UNAME=`uname`
-
-# Fallback info
-CURRENT_OS='Linux'
-DISTRO=''
-VER=''
-
-if [[ $UNAME == 'Darwin' ]]; then
-    CURRENT_OS='OS X'
-else
-    # Determine Linux distro
-    DISTRO=$(lsb_release -si)
-    VER=$(lsb_release -sr)
-fi
-
 # call `antigen update` on your terminal and it will update the oh-my-zsh repository
 # Update bundles with `antigen reset`
 source ~/Dotfiles/antigen/antigen.zsh

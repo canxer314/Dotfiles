@@ -1,6 +1,21 @@
 alias g="git"
 alias cl="clear"
 
+UNAME=`uname`
+
+# Fallback info
+CURRENT_OS='Linux'
+DISTRO=''
+VER=''
+
+if [[ $UNAME == 'Darwin' ]]; then
+    CURRENT_OS='OS X'
+else
+    # Determine Linux distro
+    DISTRO=$(lsb_release -si)
+    VER=$(lsb_release -sr)
+fi
+
 # No github credentials
 HOMEBREW_NO_GITHUB_API=1
 
