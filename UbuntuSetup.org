@@ -37,10 +37,12 @@ sudo apt install git
 curl -LO https://github.com/BurntSushi/ripgrep/releases/download/0.10.0/ripgrep_0.10.0_amd64.deb
 sudo dpkg -i ripgrep_0.10.0_amd64.deb
    #+END_SRC
-6. Cmake
+6. Cmake & Ninja
    #+BEGIN_SRC shell
 curl https://cmake.org/files/v3.12/cmake-3.12.3-Linux-x86_64.sh -o ~/Downloads/cmake.sh
 sudo sh ~/Downloads/cmake.sh --prefix=/usr/local/ --exclude-subdir
+
+sudo apt install ninja-build
    #+END_SRC
 7. GCC
    Install the gcc-7 packages:

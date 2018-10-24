@@ -2,219 +2,231 @@
 
 ** Installation
 
-   The root directory should be *~/Dotfiles/*
+The root directory should be *~/Dotfiles/*
 
-   1. Clone the repository to local machine:
+1. Clone the repository to local machine:
    #+BEGIN_SRC shell
-     git clone https://github.com/ztlevi/Dotfiles.git ~/Dotfiles
+git clone https://github.com/ztlevi/Dotfiles.git ~/Dotfiles
    #+END_SRC
 
-   2. Put the dotfiles in the home directory:
+2. Put the dotfiles in the home directory:
    #+BEGIN_SRC shell
-     cd ~/Dotfiles
-     ./install.sh
+cd ~/Dotfiles
+./install.sh
    #+END_SRC
 
 *** Homebrew
-    #+BEGIN_SRC shell
-      /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    #+END_SRC
+#+BEGIN_SRC shell
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#+END_SRC
 
-    Install necessary utilities:
-    #+BEGIN_SRC shell
-      brew install git curl wget
-    #+END_SRC
+Install necessary utilities:
+#+BEGIN_SRC shell
+brew install git curl wget
+#+END_SRC
 
 *** space-vim
-    #+CAPTION: space-vim
-    #+ATTR_HTML: :alt space-vim :style width:100%
-    [[./screenshots/space-vim.jpg]]
+#+CAPTION: space-vim
+#+ATTR_HTML: :alt space-vim :style width:100%
+[[./screenshots/space-vim.jpg]]
 
-    1. Install *git, vim/neovim, curl* first.
-       - vim
-         ~vim --version~ to check your vim has +clipboard and +python/python3 support
-         - For Mac: ~brew install macvim --with-override-system-vim~
-         - For Linux, install *gvim* instead of vim (with +clipboard support)
-       - neovim
-         Python support script is already written in /installspace-vim.sh/. Make sure you have Python 2 or 3 installed.
-         - For Mac: ~brew install neovim~
+1. Install *git, vim/neovim, curl* first.
+   - vim
+     ~vim --version~ to check your vim has +clipboard and +python/python3 support
+     - For Mac: ~brew install macvim --with-override-system-vim~
+     - For Linux, install *gvim* instead of vim (with +clipboard support)
+   - neovim
+     Python support script is already written in /installspace-vim.sh/. Make sure you have Python 2 or 3 installed.
+     - For Mac: ~brew install neovim~
 
-    2. Install space-vim:
-       #+BEGIN_SRC shell
-         cd ~/Dotfiles
-         ./installspace-vim.sh
-       #+END_SRC
-    3. Update the plugin with =:PlugUpdate=
-    4. *Note*: Python3 must be enabled before updating remote plugins
-       If Deoplete was installed prior to Python support being added to Neovim, ~:UpdateRemotePlugins~ should be executed manually in order to enable auto-completion.
+2. Install space-vim:
+   #+BEGIN_SRC shell
+cd ~/Dotfiles
+./installspace-vim.sh
+   #+END_SRC
+3. Update the plugin with =:PlugUpdate=
+4. *Note*: Python3 must be enabled before updating remote plugins
+   If Deoplete was installed prior to Python support being added to Neovim, ~:UpdateRemotePlugins~ should be executed manually in order to enable auto-completion.
 
 *** ZSH
-    #+CAPTION: terminal
-    #+ATTR_HTML: :alt terminal :style width:100%
-    [[./screenshots/terminal.jpg]]
+#+CAPTION: terminal
+#+ATTR_HTML: :alt terminal :style width:100%
+[[./screenshots/terminal.jpg]]
 
-    1. Install zsh first, instructions [[https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH][here]].
-       #+BEGIN_SRC shell
-         # set zsh as default
-         chsh -s $(which zsh)
-       #+END_SRC
+1. Install zsh first, instructions [[https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH][here]].
+   #+BEGIN_SRC shell
+# set zsh as default
+chsh -s $(which zsh)
+   #+END_SRC
 
-    2. Install oh-my-zsh:
-       #+BEGIN_SRC shell
-         sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-       #+END_SRC
+2. Install oh-my-zsh:
+   #+BEGIN_SRC shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+   #+END_SRC
 
-    3. Some instructions is in /OhMyZSH.org/
+3. Some instructions is in /OhMyZSH.org/
 
 *** Tmux
-    1. Install Tumx using system package manager like homebrew, apt-get, pacman.
+1. Install Tumx using system package manager like homebrew, apt-get, pacman.
 
-       #+BEGIN_SRC shell
-         brew install tmux
-       #+END_SRC
+   #+BEGIN_SRC shell
+brew install tmux
+   #+END_SRC
 
-    2. Furthermore, to install Tmux Package Manager:
-       #+BEGIN_SRC shell
-         git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-       #+END_SRC
+2. Furthermore, to install Tmux Package Manager:
+   #+BEGIN_SRC shell
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+   #+END_SRC
 
-       Notes: *tmux-yank* package requirements [[https://github.com/tmux-plugins/tmux-yank][here]].
-       Mac: ~brew install reattach-to-user-namespace~
-       Linux: ~pacman -S xsel~
+   Notes: *tmux-yank* package requirements [[https://github.com/tmux-plugins/tmux-yank][here]].
+   Mac: ~brew install reattach-to-user-namespace~
+   Linux: ~pacman -S xsel~
 
-    3. Key bindings
-       - tmux-resurrect: prefix + Ctrl-s - save, prefix + Ctrl-r - restore
+3. Key bindings
+   - tmux-resurrect: prefix + Ctrl-s - save, prefix + Ctrl-r - restore
 
-       - prefix: I set it to C-x
+   - prefix: I set it to C-x
 
-       - prefix + I: Installs new plugins from GitHub or any other git repository. Refreshes TMUX environment
+   - prefix + I: Installs new plugins from GitHub or any other git repository. Refreshes TMUX environment
 
-       - prefix + U: updates plugin(s)
+   - prefix + U: updates plugin(s)
 
-       - prefix + alt + u: remove/uninstall plugins not on the plugin list
+   - prefix + alt + u: remove/uninstall plugins not on the plugin list
 
 *** Grep, Rg, Pt, Ag
-    #+BEGIN_SRC shell
-      brew install grep ripgrep the_silver_searcher pt
-    #+END_SRC
+#+BEGIN_SRC shell
+brew install grep ripgrep the_silver_searcher pt
+#+END_SRC
 
 *** fzf
-    - Homebrew or Linuxbrew
-      #+BEGIN_SRC shell
-        brew install fzf
+- Homebrew or Linuxbrew
+  #+BEGIN_SRC shell
+brew install fzf
 
-        # To install useful key bindings and fuzzy completion:
-        $(brew --prefix)/opt/fzf/install
-      #+END_SRC
+# To install useful key bindings and fuzzy completion:
+$(brew --prefix)/opt/fzf/install
+  #+END_SRC
 
 *** Node, NVM
-    Use [[https://nodejs.org/en/download/][Node Installer]] to install node.js.
+Use [[https://nodejs.org/en/download/][Node Installer]] to install node.js.
 
-    - Optional:
-      Use nvm as node version manager.
-      #+BEGIN_SRC shell
-        nvm install 8
-      #+END_SRC
+- Optional:
+  Use nvm as node version manager.
+  #+BEGIN_SRC shell
+nvm install 8
+  #+END_SRC
 
-      #+BEGIN_SRC shell
-        nvm use 8
+  #+BEGIN_SRC shell
+nvm use 8
 
-        # set the node8 as default node
-        nvm alias default 8
-        # OR
-        # set the system as default node
-        nvm alias default system
-      #+END_SRC
+# set the node8 as default node
+nvm alias default 8
+# OR
+# set the system as default node
+nvm alias default system
+  #+END_SRC
 
 *** Aspell personal dictionary
-    1. Follow the [[http://aspell.net/man-html/Format-of-the-Personal-and-Replacement-Dictionaries.html#Format-of-the-Personal-and-Replacement-Dictionaries][link]]
-    2. ~.aspell.lang.pws~: The second part of simply a word list with one word per line.
-    3. ~.aspell.lang.prepl~: The second part simply a list of replacements with one replacement per line with each replacement pair has the following format: ~misspelled_word correction~
+1. Follow the [[http://aspell.net/man-html/Format-of-the-Personal-and-Replacement-Dictionaries.html#Format-of-the-Personal-and-Replacement-Dictionaries][link]]
+2. ~.aspell.lang.pws~: The second part of simply a word list with one word per line.
+3. ~.aspell.lang.prepl~: The second part simply a list of replacements with one replacement per line with each replacement pair has the following format: ~misspelled_word correction~
 
 *** Other Dependencies
-    1. System package manager dependencies:
-       #+BEGIN_SRC shell
-         brew install screenfetch trash asciinema tree pandoc
-       #+END_SRC
-    2. NPM dependencies here, and you will need to install python.
-       #+BEGIN_SRC shell
-         npm i -g npm yarn prettier live-server hexo-cli reveal-md phantomjs \
-             eslint babel-eslint eslint-plugin-babel eslint-plugin-react \
-             eslint-plugin-import eslint-plugin-prettier eslint-config-prettier \
-             typescript tslint
-       #+END_SRC
-    3. Pip
-       Make sure your pip is the one you want to use. Options are from anaconda, python2 or python3. Check it with ~which -a pip ipython~
-       #+BEGIN_SRC shell
-         pip3 install pipenv jupyterlab yapf 'python-language-server[all]'
-       #+END_SRC
+1. System package manager dependencies:
+   #+BEGIN_SRC shell
+brew install screenfetch trash asciinema tree pandoc
+   #+END_SRC
 
-       *Note*: (optional) If you are using Python 2.7 and want to enable multiprocessing:
-       #+BEGIN_SRC shell
-         pip2 install futures
-       #+END_SRC
+2. NPM dependencies here, and you will need to install python.
+   #+BEGIN_SRC shell
+npm i -g npm yarn prettier live-server hexo-cli reveal-md phantomjs \
+    eslint babel-eslint eslint-plugin-babel eslint-plugin-react \
+    eslint-plugin-import eslint-plugin-prettier eslint-config-prettier \
+    typescript tslint
+   #+END_SRC
 
-       Note: For all methods of installation, if you are using a version of Jupyter Notebook earlier than 5.3, then you must also run the following command after installation to enable the JupyterLab server extension:
+3. Pip
+   Make sure your pip is the one you want to use. Options are from anaconda, python2 or python3. Check it with ~which -a pip ipython~
+   #+BEGIN_SRC shell
+pip3 install pipenv jupyterlab yapf 'python-language-server[all]'
+   #+END_SRC
 
-       #+BEGIN_SRC shell
-         jupyter serverextension enable --py jupyterlab --sys-prefix
-       #+END_SRC
-    4. Latex
-       #+BEGIN_SRC shell
-         brew cask install basictex
-         sudo tlmgr update --self
-         sudo tlmgr install latexmk multirow
-       #+END_SRC
-    5. Mac quick look ([[https://github.com/sindresorhus/quick-look-plugins][Preview]])
-       #+BEGIN_SRC shell
-         brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package quicklookase qlvideo
-       #+END_SRC
-    6. Cask applications
-       #+BEGIN_SRC shell
-         # Install jdk8
-         brew tap caskroom/versions
-         brew cask install java8
+   *Note*: (optional) If you are using Python 2.7 and want to enable multiprocessing:
+   #+BEGIN_SRC shell
+pip2 install futures
+   #+END_SRC
 
-         # Install Others
-         brew cask install typora slack skype dropbox neteasemusic obs iina firefox google-chrome kap \
-              cakebrew keycastr intel-power-gadget karabiner-elements \
-              iterm2 jetbrains-toolbox visual-studio-code virtualbox gitbook-editor vimr
-       #+END_SRC
+   Note: For all methods of installation, if you are using a version of Jupyter Notebook earlier than 5.3, then you must also run the following command after installation to enable the JupyterLab server extension:
 
-       Brew cask upgrade:
-       #+BEGIN_SRC shell
-         brew tap buo/cask-upgrade
-         # Upgrade with
-         brew cu
-       #+END_SRC
+   #+BEGIN_SRC shell
+jupyter serverextension enable --py jupyterlab --sys-prefix
+   #+END_SRC
+
+4. C++
+   #+BEGIN_SRC shell
+brew install cmake ninja clang-format
+   #+END_SRC
+
+5. Latex
+   #+BEGIN_SRC shell
+brew cask install basictex
+sudo tlmgr update --self
+sudo tlmgr install latexmk multirow
+   #+END_SRC
+
+6. Mac quick look ([[https://github.com/sindresorhus/quick-look-plugins][Preview]])
+   #+BEGIN_SRC shell
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package quicklookase qlvideo
+   #+END_SRC
+
+7. Cask applications
+   #+BEGIN_SRC shell
+# Install jdk8
+brew tap caskroom/versions
+brew cask install java8
+
+# Install Others
+brew cask install typora slack skype dropbox neteasemusic obs iina firefox google-chrome kap \
+    cakebrew keycastr intel-power-gadget karabiner-elements \
+    iterm2 jetbrains-toolbox visual-studio-code virtualbox gitbook-editor vimr
+   #+END_SRC
+
+   Brew cask upgrade:
+   #+BEGIN_SRC shell
+brew tap buo/cask-upgrade
+# Upgrade with
+brew cu
+   #+END_SRC
 ** Mac Keybindings
 
-   Settings are described in /Mac\_keybindings/ReadMe.md/
+Settings are described in /Mac\_keybindings/ReadMe.md/
 
 ** Homebrew Backup
-   - Backup
-     #+BEGIN_SRC shell
-       brew bundle dump --force --file="~/Library/Mobile Documents/com~apple~CloudDocs/PackageManagerLists/Brewfile"
-     #+END_SRC
-   - Restore
-     #+BEGIN_SRC shell
-       brew bundle --file="~/Library/Mobile Documents/com~apple~CloudDocs/PackageManagerLists/Brewfile"
-     #+END_SRC
-   - Clean up
-     #+BEGIN_SRC shell
-       brew bundle cleanup --file="~/Library/Mobile Documents/com~apple~CloudDocs/PackageManagerLists/Brewfile"
-     #+END_SRC
+- Backup
+  #+BEGIN_SRC shell
+brew bundle dump --force --file="~/Library/Mobile Documents/com~apple~CloudDocs/PackageManagerLists/Brewfile"
+  #+END_SRC
+
+- Restore
+  #+BEGIN_SRC shell
+brew bundle --file="~/Library/Mobile Documents/com~apple~CloudDocs/PackageManagerLists/Brewfile"
+  #+END_SRC
+
+- Clean up
+  #+BEGIN_SRC shell
+brew bundle cleanup --file="~/Library/Mobile Documents/com~apple~CloudDocs/PackageManagerLists/Brewfile"
+  #+END_SRC
 
 ** Fonts
 
-   1. Roboto Mono for Powerline
-   2. Ubuntu Mono and the one for Powerline
-   3. Source Code Pro for Powerline
-   4. Operator Mono and Lig
-   5. Monofur for Powerline
-   6. Menlo - Regular
+1. Roboto Mono for Powerline
+2. Ubuntu Mono and the one for Powerline
+3. Source Code Pro for Powerline
+4. Operator Mono and Lig
+5. Monofur for Powerline
+6. Menlo - Regular
 
 ** Notes
 
-   1. Xmodmap file is used for key tweak on linux.
-   2. NPM global packages' path is set to be ~/.npm-global
+1. Xmodmap file is used for key tweak on linux.
+2. NPM global packages' path is set to be ~/.npm-global
