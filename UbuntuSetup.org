@@ -5,68 +5,33 @@ Get the [[https://www.opendesktop.org/p/1214931/][Flat Remix GTK theme]], and ic
 
 * Libraries
 Update apt with ~sudo apt-get update~
-1. Presiqusites
+
+1. Install [[http://linuxbrew.sh/][Linuxbrew]]:
    #+BEGIN_SRC shell
-sudo apt install curl wget
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+
+sudo apt-get install build-essential curl file git
    #+END_SRC
 
-2. Nodejs (LTS): [[https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions][Tutorial]]
+2. Use Linuxbrew to install dependencies
+   #+BEGIN_SRC shell
+brew install git curl wget ripgrep python3 node@8 gcc@7 cmake ninja clang-format tmux
+ln -s $(which gcc-7) /home/linuxbrew/.linuxbrew/bin/gcc
+ln -s $(which g++-7) /home/linuxbrew/.linuxbrew/bin/g++
+   #+END_SRC
+
+3. Nodejs (LTS): [[https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions][Tutorial]]
    #+BEGIN_SRC shell
 wget -qO- https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
    #+END_SRC
-3. python
-   #+BEGIN_SRC shell
-sudo apt install python3-pip
-   #+END_SRC
-4. Git
-   #+BEGIN_SRC shell
-sudo apt-get purge runit
-sudo apt-get purge git-all
-sudo apt-get purge git
-sudo apt-get autoremove
-sudo apt update
-sudo apt install git
-   #+END_SRC
-5. Ripgrep
-   If you're a **Debian** user (or a user of a Debian derivative like **Ubuntu**),
-   then ripgrep can be installed using a binary `.deb` file provided in each
-   [[https://github.com/BurntSushi/ripgrep/releases][ripgrep release]].
 
-   #+BEGIN_SRC shell
-curl -LO https://github.com/BurntSushi/ripgrep/releases/download/0.10.0/ripgrep_0.10.0_amd64.deb
-sudo dpkg -i ripgrep_0.10.0_amd64.deb
-   #+END_SRC
-6. Cmake & Ninja
-   #+BEGIN_SRC shell
-curl https://cmake.org/files/v3.12/cmake-3.12.3-Linux-x86_64.sh -o ~/Downloads/cmake.sh
-sudo sh ~/Downloads/cmake.sh --prefix=/usr/local/ --exclude-subdir
-
-sudo apt install ninja-build
-   #+END_SRC
-7. GCC
-   Install the gcc-7 packages:
-   #+BEGIN_SRC shell
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-sudo apt update
-sudo apt install g++-7 -y
-   #+END_SRC
-
-   Set it up so the symbolic links gcc, g++ point to the newer version:
-   #+BEGIN_SRC shell
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 60 \
-    --slave /usr/bin/g++ g++ /usr/bin/g++-7
-sudo update-alternatives --config gcc
-gcc --version
-g++ --version
-   #+END_SRC
-8. Java:[[http://tipsonubuntu.com/2016/07/31/install-oracle-java-8-9-ubuntu-16-04-linux-mint-18/][Tutorial]]
+4. Java: [[http://tipsonubuntu.com/2016/07/31/install-oracle-java-8-9-ubuntu-16-04-linux-mint-18/][Tutorial]]
    #+BEGIN_SRC shell
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt update; sudo apt install oracle-java8-installer
 sudo apt install oracle-java8-set-default
    #+END_SRC
-9. Pandoc: https://github.com/jgm/pandoc/releases/
 
 * Ubuntu Applications
 1. Gnome-terminal: Use login shell, Go to ~Edit~ -> ~Preferences~ -> ~Profiles~ -> ~Command~ ->

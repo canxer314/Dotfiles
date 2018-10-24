@@ -1,4 +1,3 @@
-# If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export PATH="/usr/local/sbin:$PATH"
@@ -13,12 +12,12 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Npm global packages
-export PATH=~/.npm-global/bin:$PATH
+export PATH=$HOME/.npm-global/bin:$PATH
 
 # Java
-if [[ $CURRENT_OS == 'OS X' ]]; then
+if [[ -f /usr/libexec/java_home ]]; then
     export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-elif [[ $CURRENT_OS == 'Linux' ]]; then
+elif [[ -f /usr/bin/javac ]]; then
     export JAVA_HOME=$(dirname $(dirname $(readlink -e /usr/bin/javac)))
 fi
 export JRE_HOME=$JAVA_HOME/jre
@@ -52,4 +51,11 @@ export PATH="/usr/local/opt/texinfo/bin:$PATH"
 # System based environments
 if [ -f "$HOME/Dotfiles/zprofile-sys" ]; then
     source "$HOME/Dotfiles/zprofile-sys"
+fi
+
+# Linuxbrew
+if [[ $DISTRO == 'Ubuntu' ]]; then
+    export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+    export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
+    export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
 fi
