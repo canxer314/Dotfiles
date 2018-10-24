@@ -16,8 +16,7 @@ sudo apt-get install build-essential curl file git
 2. Use Linuxbrew to install dependencies
    #+BEGIN_SRC shell
 brew install git curl wget ripgrep python3 node@8 gcc@7 cmake ninja clang-format tmux
-ln -s $(which gcc-7) /home/linuxbrew/.linuxbrew/bin/gcc
-ln -s $(which g++-7) /home/linuxbrew/.linuxbrew/bin/g++
+brew link gcc@7
    #+END_SRC
 
 3. Nodejs (LTS): [[https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions][Tutorial]]
