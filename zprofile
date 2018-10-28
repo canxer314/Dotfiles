@@ -14,8 +14,8 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # Npm global packages
 export PATH=$HOME/.npm-global/bin:$PATH
 
-# Anaconda
-export PATH=/usr/local/anaconda3/bin:"$PATH"
+# Miniconda
+export PATH=$PATH:/usr/local/miniconda3/bin
 
 # Java
 if [[ -f /usr/libexec/java_home ]]; then

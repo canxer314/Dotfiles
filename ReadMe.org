@@ -185,6 +185,9 @@ brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize we
 brew tap caskroom/versions
 brew cask install java8
 
+# miniconda
+brew cask install miniconda
+
 # Install Others
 brew cask install typora slack skype dropbox neteasemusic obs iina firefox google-chrome kap \
     cakebrew keycastr intel-power-gadget karabiner-elements \
