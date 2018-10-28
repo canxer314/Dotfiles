@@ -41,6 +41,11 @@ export EDITOR=vim
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
 
+# Zlib flags
+export LDFLAGS="-L/usr/local/opt/zlib/lib"
+export CPPFLAGS="-I/usr/local/opt/zlib/include"
+export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
+
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
