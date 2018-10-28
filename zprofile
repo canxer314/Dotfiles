@@ -14,6 +14,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # Npm global packages
 export PATH=$HOME/.npm-global/bin:$PATH
 
+# Anaconda
+export PATH=/usr/local/anaconda3/bin:"$PATH"
+
 # Java
 if [[ -f /usr/libexec/java_home ]]; then
     export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
