@@ -129,7 +129,7 @@ function! UserConfig()
 
     " theme
     colorscheme one
-    set background=dark
+    set background=light
     let g:one_allow_italics = 1 " I love italic for comments
 
     " airline setting
@@ -148,11 +148,11 @@ function! UserConfig()
     " ===================================================
     " AutoFormat
     " ===================================================
-    nmap <leader>op :Prettier<CR>
-    vmap <leader>op :Prettier<CR>
+    nmap <leader>cp :Prettier<CR>
+    vmap <leader>cp :Prettier<CR>
 
-    nmap <leader>m= :Autoformat<CR>
-    vmap <leader>m= :Autoformat<CR>
+    nmap <leader>cf :Autoformat<CR>
+
     let g:formatdef_remark_markdown = '"remark --silent --no-color --setting listItemIndent:1 "'
 
     " ===================================================
@@ -175,7 +175,7 @@ function! UserConfig()
         endtry
       endif
     endfunction
-    nmap <leader>ri :call ToggleQuickFix()<CR>
+    nmap <leader>' :call ToggleQuickFix()<CR>
     nmap <F6> :call ToggleQuickFix()<CR>
 
     " ===================================================
@@ -215,12 +215,8 @@ function! UserConfig()
     let $FZF_DEFAULT_OPTS = '--bind ctrl-c:select-all'
 
     " Search with RG
-    nnoremap <leader>sp :Rg<CR>
-    vnoremap <leader>sp :Rg<CR>
-
-    " Recent files
-    nmap <CR> :Buffers<CR>
-    vmap <CR> :Buffers<CR>
+    nnoremap <leader>// :Rg<CR>
+    vnoremap <leader>// :Rg<CR>
 
     " Likewise, Files command with preview window
     command! -bang -nargs=? -complete=dir Files
@@ -254,6 +250,7 @@ function! UserConfig()
 
     nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
     nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+    nnoremap <silent> gD :call LanguageClient_textDocument_references()<CR>
     nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 
     " ===================================================
