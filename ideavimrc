@@ -95,7 +95,7 @@ nmap <leader>fd      :action SmartSearchAction<CR>
 nmap <leader>ft      :action ActivateProjectToolWindow<CR>
 nmap <leader>im      :action ImplementMethods<CR>
 nmap <leader>/i      :action FileStructurePopup<CR>
-nmap <leader>m=      :action ReformatCode<CR>
+nmap <leader>cf      :action ReformatCode<CR>
 nmap <leader>rR      :action RunClass<CR>
 nmap <leader>rr      :action Run<CR>
 nmap <leader>ss      :action Stop<CR>
@@ -131,7 +131,7 @@ vmap <leader>fs      :<Backspace><Backspace><Backspace><Backspace><Backspace>act
 vmap <leader>ft      :<Backspace><Backspace><Backspace><Backspace><Backspace>:action ActivateProjectToolWindow<CR>
 vmap <leader>im      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ImplementMethods<CR>
 vmap <leader>/i      :<Backspace><Backspace><Backspace><Backspace><Backspace>action FileStructurePopup<CR>
-vmap <leader>m=      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ReformatCode<CR>
+vmap <leader>cf      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ReformatCode<CR>
 vmap <leader>rR      :<Backspace><Backspace><Backspace><Backspace><Backspace>action RunClass<CR>
 vmap <leader>rr      :<Backspace><Backspace><Backspace><Backspace><Backspace>action Run<CR>
 vmap <leader>ss      :<Backspace><Backspace><Backspace><Backspace><Backspace>action Stop<CR>
