@@ -162,22 +162,23 @@ function! UserConfig()
     " Jump to candidate
     autocmd BufReadPost quickfix map <C-j> :.cc<CR>
     autocmd BufReadPost quickfix map <tab> :.cc<CR>
-    " Toggle Quick Fix
-    function! ToggleQuickFix()
-      if exists("g:qwindow")
-        lclose
-        unlet g:qwindow
-      else
-        try
-          lopen 10
-          let g:qwindow = 1
-        catch
-          echo "No Errors found!"
-        endtry
-      endif
-    endfunction
-    nmap <leader>' :call ToggleQuickFix()<CR>
-    nmap <F6> :call ToggleQuickFix()<CR>
+
+    " From https://github.com/drmingdrmer/vim-toggle-quickfix
+    if exists("g:__QUICKFIX_TOGGLE_jfklds__")
+        finish
+    endif
+    let g:__QUICKFIX_TOGGLE_jfklds__ = 1
+    fun! s:QuickfixToggle() "{{{
+        let nr = winnr("$")
+        cwindow
+        let nr2 = winnr("$")
+        if nr == nr2
+            cclose
+        endif
+    endfunction "}}}
+    nnoremap <silent> <Plug>window:quickfix:toggle :call <SID>QuickfixToggle()<CR>
+
+    nmap <leader>' <Plug>window:quickfix:toggle
 
     " ===================================================
     " fzf start
