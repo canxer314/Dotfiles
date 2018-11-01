@@ -164,7 +164,7 @@ jupyter serverextension enable --py jupyterlab --sys-prefix
 
 4. C++
    #+BEGIN_SRC shell
-brew install cmake ninja clang-format
+brew install gcc@7 cmake ninja clang-format
    #+END_SRC
 
 5. Latex
