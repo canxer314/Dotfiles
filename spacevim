@@ -179,6 +179,13 @@ function! UserConfig()
     nmap <leader>' <Plug>window:quickfix:toggle
 
     " ===================================================
+    " Error
+    " ===================================================
+    nmap <leader>en :call ale#loclist_jumping#Jump('after', 0)<CR>
+    nmap <leader>ep :call ale#loclist_jumping#Jump('before', 0)<CR>
+    nmap <leader>ed :call ale#cursor#ShowCursorDetail()<CR>
+
+    " ===================================================
     " fzf start
     " ===================================================
     nmap <Leader><space> :Commands<CR>
