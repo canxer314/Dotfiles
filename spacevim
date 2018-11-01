@@ -98,8 +98,6 @@ endfunction
 " Put your costom configurations here, e.g., change the colorscheme.
 function! UserConfig()
     set nocompatible              " be iMproved, required
-    filetype off                  " required
-
     set number
     set noswapfile
     set smartcase
