@@ -46,6 +46,7 @@ function! Layers()
     Layer 'which-key'
 
     " Lang
+    Layer 'c-c++'
     Layer 'java'
     Layer 'javascript'
     Layer 'typescript'
@@ -208,7 +209,7 @@ function! UserConfig()
       cc
     endfunction
     let g:fzf_action = {
-      \ 'ctrl-e': function('s:build_quickfix_list'),
+      \ 'ctrl-o': function('s:build_quickfix_list'),
       \ 'ctrl-t': 'tab split',
       \ 'ctrl-x': 'split',
       \ 'ctrl-v': 'vsplit' }
@@ -242,11 +243,18 @@ function! UserConfig()
     set hidden
 
     let g:LanguageClient_serverCommands = {
+        \ 'c': ['ccls', '--log-file=/tmp/cc.log'],
+        \ 'cpp': ['ccls', '--log-file=/tmp/cc.log'],
+        \ 'cuda': ['ccls', '--log-file=/tmp/cc.log'],
+        \ 'objc': ['ccls', '--log-file=/tmp/cc.log'],
         \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
         \ 'javascript': ['javascript-typescript-stdio'],
         \ 'javascript.jsx': ['javascript-typescript-stdio'],
         \ 'python': ['pyls'],
         \ }
+
+    " https://github.com/autozimu/LanguageClient-neovim/issues/379 LSP snippet is not supported
+    let g:LanguageClient_hasSnippetSupport = 0
 
     nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
     nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
