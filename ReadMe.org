@@ -93,9 +93,9 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
    - prefix + alt + u: remove/uninstall plugins not on the plugin list
 
-*** Grep, Rg, Pt, Ag
+*** Grep, Rg
 #+BEGIN_SRC shell
-brew install grep ripgrep the_silver_searcher pt
+brew install grep ripgrep
 #+END_SRC
 
 *** fzf
@@ -148,7 +148,7 @@ npm i -g npm yarn prettier live-server hexo-cli reveal-md phantomjs \
 3. Pip
    Make sure your pip is the one you want to use. Options are from anaconda, python2 or python3. Check it with ~which -a pip ipython~
    #+BEGIN_SRC shell
-pip3 install pipenv jupyterlab yapf 'python-language-server[all]'
+pip3 install pipenv jupyterlab 'python-language-server[all]'
    #+END_SRC
 
    *Note*: (optional) If you are using Python 2.7 and want to enable multiprocessing:
