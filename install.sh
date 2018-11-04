@@ -92,9 +92,7 @@ echo "Install ideaVim setting"
 rm ~/.ideavimrc
 ln -s ~/Dotfiles/ideavimrc ~/.ideavimrc
 
-echo "Install Atom Proton"
 rm ~/.proton
-ln -s ~/Dotfiles/proton ~/.proton
 
 if [[ $CURRENT_OS == 'OS X' ]]; then
     echo "OS X configurations here!"
