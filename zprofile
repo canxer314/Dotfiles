@@ -36,6 +36,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Go
 export GOPATH=$HOME/go
+export GOROOT=$(go env GOROOT)
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export PATH=$PATH:$HOME/go/bin
 
