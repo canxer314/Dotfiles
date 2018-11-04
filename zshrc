@@ -11,7 +11,7 @@ source $ZSH/oh-my-zsh.sh
 
 # call `antigen update` on your terminal and it will update the oh-my-zsh repository
 # Update bundles with `antigen reset`
-source ~/Dotfiles/antigen/antigen.zsh
+source ~/Dotfiles/antigen.zsh
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 #antigen bundle robbyrussell/oh-my-zsh lib/
@@ -201,6 +201,7 @@ function reload_source() {
     source ~/.zshenv
     source ~/.zshrc
     cd $LASTDIR
+    zsh --login
 }
 alias rr='reload_source'
 
