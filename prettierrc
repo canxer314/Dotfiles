@@ -2,7 +2,8 @@
   "printWidth": 100,
   "singleQuote": true,
   "trailingComma": "es5",
-   "overrides": [
+  "proseWrap": "always",
+  "overrides": [
     {
       "files": "*.html",
       "options": { "parser": "parse5" }
