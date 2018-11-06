@@ -170,7 +170,6 @@ if exists npm; then
 fi
 
 if exists ccat; then alias cat="ccat"; fi
-if exists trash; then alias rm="trash"; fi
 if exists hexo; then alias h="hexo"; fi
 if exists jupyter; then alias jp='jupyter lab --NotebookApp.iopub_data_rate_limit=10000000'; fi
 if exists reveal-md; then
