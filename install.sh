@@ -92,6 +92,10 @@ echo "Install ideaVim setting"
 rm ~/.ideavimrc
 ln -s ~/Dotfiles/ideavimrc ~/.ideavimrc
 
+echo "Install cspell.json"
+rm ~/.cspell.json
+ln -s ~/Dotfiles/cspell.json ~/.cspell.json
+
 rm ~/.proton
 
 if [[ $CURRENT_OS == 'OS X' ]]; then
