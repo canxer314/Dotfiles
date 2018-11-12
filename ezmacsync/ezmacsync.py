@@ -68,6 +68,13 @@ if __name__ == "__main__":
     with open(synced_lists_file, "w+") as f:
         json.dump(synced_lists, f, indent=2, separators=(",", ":"))
 
+    # try prettier json files
+    try:
+        os.system("prettier ezmacsyncrc.json")
+        os.system("prettier ezmacsync_list.json")
+    except:
+        pass
+
     print("================ Backup Start ================")
     # endregion
 
@@ -221,10 +228,3 @@ if __name__ == "__main__":
         )
 
     print("\n================ Install End =================")
-
-    # try prettier json files
-    try:
-        os.system("prettier ezmacsyncrc.json")
-        os.system("prettier ezmacsync_list.json")
-    except:
-        pass
