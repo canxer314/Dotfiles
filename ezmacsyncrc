@@ -1,17 +1,7 @@
 {
-  "cloudDir":"Dropbox/AppList",
-  "masRemoveList":[
-    "Final Cut Pro",
-    "Compressor",
-    "Motion",
-    "Logic Pro X",
-    "MainStage 3"
-  ],
-  "brewRemoveList":[],
-  "brewCaskRemoveList":["emacs-mac-spacemacs-icon"],
-  "brewTapRemoveList":[
-    "homebrew/dupes",
-    "homebrew/php",
-    "homebrew/versions"
-  ]
+  "cloudDir": "Dropbox/AppList",
+  "masRemoveList": ["Final Cut Pro", "Compressor", "Motion", "Logic Pro X", "MainStage 3"],
+  "brewRemoveList": [],
+  "brewCaskRemoveList": [],
+  "brewTapRemoveList": []
 }
