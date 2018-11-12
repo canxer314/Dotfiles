@@ -9,8 +9,8 @@ import os
 import subprocess
 
 if __name__ == "__main__":
-    home = os.path.expanduser("~")
-    CLOUD_DIR = home + "/" + "Dotfiles/ezmacsync"
+    HOME = os.path.expanduser("~")
+    CLOUD_DIR = HOME + "/" + "Dotfiles/ezmacsync"
 
     if not os.path.isdir(CLOUD_DIR):
         os.makedirs(CLOUD_DIR)
@@ -70,8 +70,10 @@ if __name__ == "__main__":
 
     # try prettier json files
     try:
-        os.system("prettier ezmacsyncrc.json")
-        os.system("prettier ezmacsync_list.json")
+        print("Format eamacsync files...")
+        os.system(HOME + "/.npm-global/bin/prettier --write ezmacsyncrc.json")
+        os.system(HOME + "/.npm-global/bin/prettier --write ezmacsync_list.json")
+        print('\n')
     except:
         pass
 
