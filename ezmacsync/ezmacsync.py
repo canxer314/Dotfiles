@@ -16,7 +16,7 @@ if __name__ == "__main__":
         os.makedirs(CLOUD_DIR)
 
     # region get ignore_lists configs
-    ignore_lists_file = CLOUD_DIR + "/ezmacsyncrc.json"
+    ignore_lists_file = CLOUD_DIR + "/ignore_lists.json"
     ignore_lists = {}
     if not os.path.exists(ignore_lists_file):
         open(ignore_lists_file, "w+")
@@ -42,7 +42,7 @@ if __name__ == "__main__":
     # endregion
 
     # region get synced_lists data
-    synced_lists_file = CLOUD_DIR + "/ezmacsync_list.json"
+    synced_lists_file = CLOUD_DIR + "/synced_lists.json"
     synced_lists = {}
     if not os.path.exists(synced_lists_file):
         open(synced_lists_file, "w+")
@@ -71,9 +71,9 @@ if __name__ == "__main__":
     # try prettier json files
     try:
         print("Format eamacsync files...")
-        os.system(HOME + "/.npm-global/bin/prettier --write ezmacsyncrc.json")
-        os.system(HOME + "/.npm-global/bin/prettier --write ezmacsync_list.json")
-        print('\n')
+        os.system(HOME + "/.npm-global/bin/prettier --write " + ignore_lists_file)
+        os.system(HOME + "/.npm-global/bin/prettier --write " + synced_lists_file)
+        print("\n")
     except:
         pass
 
