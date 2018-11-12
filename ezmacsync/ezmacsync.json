@@ -1,0 +1,12 @@
+{
+  "masRemoveList":[
+    "Final Cut Pro",
+    "Compressor",
+    "Motion",
+    "Logic Pro X",
+    "MainStage 3"
+  ],
+  "brewRemoveList":[],
+  "brewCaskRemoveList":[],
+  "brewTapRemoveList":[]
+}

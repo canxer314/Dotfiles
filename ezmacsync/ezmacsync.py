@@ -10,9 +10,13 @@ import subprocess
 
 if __name__ == "__main__":
     home = os.path.expanduser("~")
+    CLOUD_DIR = home + "/" + "Dotfiles/ezmacsync"
+
+    if not os.path.isdir(CLOUD_DIR):
+        os.makedirs(CLOUD_DIR)
 
     # region get ignore_lists configs
-    ignore_lists_file = home + "/.ezmacsyncrc"
+    ignore_lists_file = CLOUD_DIR + "/.ezmacsyncrc.json"
     ignore_lists = {}
     if not os.path.exists(ignore_lists_file):
         open(ignore_lists_file, "w+")
@@ -21,16 +25,6 @@ if __name__ == "__main__":
         with open(ignore_lists_file) as f:
             ignore_lists = json.load(f)
             print("ignore_lists.json file loaded...")
-
-    # make sure every key exists in ignore list config file
-    if "cloudDir" not in ignore_lists or not ignore_lists["cloudDir"]:
-        cloud_path = raw_input(
-            "Input your cloud directory relative to $HOME for syncing...\ne.g. Dropbox/AppList\n"
-        )
-        ignore_lists["cloudDir"] = cloud_path
-    cloud_dir = home + "/" + ignore_lists["cloudDir"]
-    if not os.path.isdir(cloud_dir):
-        os.makedirs(cloud_dir)
 
     ignore_keys = [
         "brewTapRemoveList",
@@ -48,7 +42,7 @@ if __name__ == "__main__":
     # endregion
 
     # region get synced_lists data
-    synced_lists_file = cloud_dir + "/synced_lists.json"
+    synced_lists_file = CLOUD_DIR + "/ezmacsync_list.json"
     synced_lists = {}
     if not os.path.exists(synced_lists_file):
         open(synced_lists_file, "w+")
@@ -227,3 +221,10 @@ if __name__ == "__main__":
         )
 
     print("\n================ Install End =================")
+
+    # try prettier json files
+    try:
+        os.system('prettier ezmacsyncrc.json')
+        os.system('prettier ezmacsync_list.json')
+    except:
+        pass

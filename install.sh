@@ -84,10 +84,6 @@ echo "Install tmux setting"
 rm ~/.tmux.conf
 ln -s ~/Dotfiles/tmux.conf ~/.tmux.conf
 
-echo "Install ezmacsync"
-rm ~/.ezmacsyncrc
-ln -s ~/Dotfiles/ezmacsyncrc ~/.ezmacsyncrc
-
 echo "Install ideaVim setting"
 rm ~/.ideavimrc
 ln -s ~/Dotfiles/ideavimrc ~/.ideavimrc
@@ -97,6 +93,7 @@ rm ~/.cspell.json
 ln -s ~/Dotfiles/cspell.json ~/.cspell.json
 
 rm ~/.proton
+rm ~/.ezmacsyncrc
 
 if [[ $CURRENT_OS == 'OS X' ]]; then
     echo "OS X configurations here!"
