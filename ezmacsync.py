@@ -8,7 +8,6 @@ import json
 import os
 import subprocess
 
-
 if __name__ == "__main__":
     home = os.path.expanduser("~")
 
@@ -104,6 +103,10 @@ if __name__ == "__main__":
     brew_taps = list(
         filter(lambda app: app.lower() not in brew_taps_ignore_set, brew_taps)
     )
+    try:
+        brew_taps.remove("")
+    except ValueError:
+        pass
     synced_lists["brewTapList"] = brew_taps
     # endregion
 
@@ -117,6 +120,10 @@ if __name__ == "__main__":
     brew_apps = list(set(brew_apps) | set(synced_lists["brewAppList"]))
     brew_ignore_set = set(map(lambda app: app.lower(), ignore_lists["brewRemoveList"]))
     brew_apps = list(filter(lambda app: app.lower() not in brew_ignore_set, brew_apps))
+    try:
+        brew_apps.remove("")
+    except ValueError:
+        pass
     synced_lists["brewAppList"] = brew_apps
     # endregion
 
@@ -134,6 +141,10 @@ if __name__ == "__main__":
     brew_cask_apps = list(
         filter(lambda app: app.lower() not in brew_cask_ignore_set, brew_cask_apps)
     )
+    try:
+        brew_cask_apps.remove("")
+    except ValueError:
+        pass
     synced_lists["brewCaskAppList"] = brew_cask_apps
     # endregion
 
@@ -157,6 +168,10 @@ if __name__ == "__main__":
     )
     mas_ignore_set = set(map(lambda app: app.lower(), ignore_lists["masRemoveList"]))
     mas_apps = list(filter(lambda app: app[1].lower() not in mas_ignore_set, mas_apps))
+    try:
+        mas_apps.remove(("", ""))
+    except ValueError:
+        pass
     synced_lists["masAppList"] = mas_apps
 
     with open(synced_lists_file, "w+") as f:
@@ -175,16 +190,16 @@ if __name__ == "__main__":
             install_script += "brew untap " + tap + "\n"
 
     # brew apps install script
-    install_script += "brew install " + " ".join(synced_lists["brewAppList"]) + "\n"
+    for app in synced_lists["brewAppList"]:
+        install_script += "brew install " + app + "\n"
     if ignore_lists["brewRemoveList"]:
         install_script += (
             "brew uninstall " + " ".join(ignore_lists["brewRemoveList"]) + " --force\n"
         )
 
     # brew cask apps install script
-    install_script += (
-        "brew cask install " + " ".join(synced_lists["brewCaskAppList"]) + "\n"
-    )
+    for cask in synced_lists["brewCaskAppList"]:
+        install_script += "brew cask install " + cask + "\n"
     if ignore_lists["brewCaskRemoveList"]:
         install_script += (
             "brew cask uninstall "
@@ -197,6 +212,7 @@ if __name__ == "__main__":
         install_script += "mas install " + app[0] + "\n"
 
     # exec the install script
+    print(install_script)
     os.system(install_script)
 
     mas_apps_need_removal = list(
