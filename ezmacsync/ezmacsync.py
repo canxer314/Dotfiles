@@ -16,7 +16,7 @@ if __name__ == "__main__":
         os.makedirs(CLOUD_DIR)
 
     # region get ignore_lists configs
-    ignore_lists_file = CLOUD_DIR + "/.ezmacsyncrc.json"
+    ignore_lists_file = CLOUD_DIR + "/ezmacsyncrc.json"
     ignore_lists = {}
     if not os.path.exists(ignore_lists_file):
         open(ignore_lists_file, "w+")
@@ -224,7 +224,7 @@ if __name__ == "__main__":
 
     # try prettier json files
     try:
-        os.system('prettier ezmacsyncrc.json')
-        os.system('prettier ezmacsync_list.json')
+        os.system("prettier ezmacsyncrc.json")
+        os.system("prettier ezmacsync_list.json")
     except:
         pass
