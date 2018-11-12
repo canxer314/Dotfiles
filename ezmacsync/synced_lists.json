@@ -1,5 +1,5 @@
 {
-  "brewCaskAppList":[
+  "brewCaskAppList": [
     "karabiner-elements",
     "iterm2",
     "qlcolorcode",
@@ -39,7 +39,7 @@
     "kap",
     "dropbox"
   ],
-  "brewTapList":[
+  "brewTapList": [
     "beeftornado/rmtree",
     "heroku/brew",
     "homebrew/cask",
@@ -52,7 +52,7 @@
     "twlz0ne/cquery",
     "jesseduffield/lazygit"
   ],
-  "allAppList":[
+  "allAppList": [
     "Contacts.app",
     "Mendeley Desktop.app",
     "ShadowsocksX-NG.app",
@@ -241,93 +241,30 @@
     "Dropbox.app",
     "Grammarly.app"
   ],
-  "masAppList":[
-    [
-      "836500024",
-      "WeChat"
-    ],
-    [
-      "406056744",
-      "Evernote"
-    ],
-    [
-      "695406827",
-      "Dropzone 3"
-    ],
-    [
-      "1176895641",
-      "Spark"
-    ],
-    [
-      "451108668",
-      "QQ"
-    ],
-    [
-      "409203825",
-      "Numbers"
-    ],
-    [
-      "576338668",
-      "Leaf"
-    ],
-    [
-      "456609775",
-      "Window Tidy"
-    ],
-    [
-      "402592703",
-      "Time Out"
-    ],
-    [
-      "937984704",
-      "Amphetamine"
-    ],
-    [
-      "1221250572",
-      "Xnip"
-    ],
-    [
-      "409201541",
-      "Pages"
-    ],
-    [
-      "409183694",
-      "Keynote"
-    ],
-    [
-      "497799835",
-      "Xcode"
-    ],
-    [
-      "747648890",
-      "Telegram"
-    ],
-    [
-      "1254743014",
-      "LyricsX"
-    ],
-    [
-      "1173152781",
-      "Notebook"
-    ],
-    [
-      "1101244278",
-      "iPic"
-    ],
-    [
-      "552383089",
-      "Dashlane"
-    ],
-    [
-      "1332946020",
-      "Ufunr"
-    ],
-    [
-      "1127253508",
-      "DrUnarchiver"
-    ]
+  "masAppList": [
+    ["836500024", "WeChat"],
+    ["406056744", "Evernote"],
+    ["695406827", "Dropzone 3"],
+    ["1176895641", "Spark"],
+    ["451108668", "QQ"],
+    ["409203825", "Numbers"],
+    ["576338668", "Leaf"],
+    ["456609775", "Window Tidy"],
+    ["402592703", "Time Out"],
+    ["937984704", "Amphetamine"],
+    ["1221250572", "Xnip"],
+    ["409201541", "Pages"],
+    ["409183694", "Keynote"],
+    ["497799835", "Xcode"],
+    ["747648890", "Telegram"],
+    ["1254743014", "LyricsX"],
+    ["1173152781", "Notebook"],
+    ["1101244278", "iPic"],
+    ["552383089", "Dashlane"],
+    ["1332946020", "Ufunr"],
+    ["1127253508", "DrUnarchiver"]
   ],
-  "brewAppList":[
+  "brewAppList": [
     "libmpc",
     "sphinx-doc",
     "automake",
