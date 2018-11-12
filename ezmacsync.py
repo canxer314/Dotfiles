@@ -70,8 +70,8 @@ if __name__ == "__main__":
 
     # region backup /Applications
     print('Backup /Applications...')
-    all_apps = filter(lambda app: not app.startswith('.'),
-                      os.listdir('/Applications'))
+    all_apps = list(filter(lambda app: not app.startswith('.'),
+                      os.listdir('/Applications')))
     all_apps = list(set(all_apps)
                     | set(synced_lists["allAppList"]))
     synced_lists["allAppList"] = all_apps
@@ -83,44 +83,44 @@ if __name__ == "__main__":
     # region backup brew tap
     print('Backup brew taps...')
     brew_taps = subprocess.check_output(
-        '/usr/local/bin/brew tap', shell=True).strip('\n').split('\n')
+        '/usr/local/bin/brew tap', shell=True).decode("utf-8").split('\n')
     brew_taps = list(set(brew_taps) | set(synced_lists['brewTapList']))
     brew_taps_ignore_set = set(
         map(lambda tap: tap.lower(), ignore_lists['brewTapRemoveList']))
-    brew_taps = filter(lambda app: app.lower()
-                       not in brew_taps_ignore_set, brew_taps)
+    brew_taps = list(filter(lambda app: app.lower()
+                       not in brew_taps_ignore_set, brew_taps))
     synced_lists['brewTapList'] = brew_taps
     # endregion
 
     # region backup brew apps
     print('Backup brew apps...')
     brew_apps = subprocess.check_output(
-        '/usr/local/bin/brew list', shell=True).strip('\n').split('\n')
+        '/usr/local/bin/brew list', shell=True).decode("utf-8").split('\n')
     brew_apps = list(set(brew_apps) | set(synced_lists['brewAppList']))
     brew_ignore_set = set(
         map(lambda app: app.lower(), ignore_lists['brewRemoveList']))
-    brew_apps = filter(lambda app: app.lower()
-                       not in brew_ignore_set, brew_apps)
+    brew_apps = list(filter(lambda app: app.lower()
+                       not in brew_ignore_set, brew_apps))
     synced_lists['brewAppList'] = brew_apps
     # endregion
 
     # region backup brew cask apps
     print('Backup brew cask apps...')
     brew_cask_apps = subprocess.check_output(
-        '/usr/local/bin/brew cask list', shell=True).strip('\n').split('\n')
+        '/usr/local/bin/brew cask list', shell=True).decode("utf-8").split('\n')
     brew_cask_apps = list(set(brew_cask_apps) | set(
         synced_lists['brewCaskAppList']))
     brew_cask_ignore_set = set(
         map(lambda app: app.lower(), ignore_lists['brewCaskRemoveList']))
-    brew_cask_apps = filter(lambda app: app.lower(
-    ) not in brew_cask_ignore_set, brew_cask_apps)
+    brew_cask_apps = list(filter(lambda app: app.lower(
+    ) not in brew_cask_ignore_set, brew_cask_apps))
     synced_lists['brewCaskAppList'] = brew_cask_apps
     # endregion
 
     # region backup mas apps
     print('Backup mas apps...')
     mas_apps = subprocess.check_output(
-        '/usr/local/bin/mas list', shell=True).strip('\n').split('\n')
+        '/usr/local/bin/mas list', shell=True).decode("utf-8").split('\n')
 
     def split_mas_app(app):
         i1 = app.find(' ')
@@ -133,8 +133,8 @@ if __name__ == "__main__":
         map(lambda i: tuple(i), synced_lists['masAppList'])))
     mas_ignore_set = set(
         map(lambda app: app.lower(), ignore_lists['masRemoveList']))
-    mas_apps = filter(lambda app: app[1].lower()
-                      not in mas_ignore_set, mas_apps)
+    mas_apps = list(filter(lambda app: app[1].lower()
+                      not in mas_ignore_set, mas_apps))
     synced_lists['masAppList'] = mas_apps
 
     with open(synced_lists_file, 'w+') as f:
@@ -175,8 +175,8 @@ if __name__ == "__main__":
     # exec the install script
     os.system(install_script)
 
-    mas_apps_need_removal = filter(
-        lambda app: app[1].lower() in mas_ignore_set, mas_apps_local)
+    mas_apps_need_removal = list(filter(
+        lambda app: app[1].lower() in mas_ignore_set, mas_apps_local))
     mas_apps_need_removal = map(lambda app: app[1], mas_apps_need_removal)
     if mas_apps_need_removal:
         print('\nYou might need to remove {} manually.'.format(
