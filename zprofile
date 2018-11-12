@@ -19,7 +19,7 @@ export PATH=$PATH:/usr/local/miniconda3/bin
 
 # Java
 if [[ -f /usr/libexec/java_home ]]; then
-    export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+    export JAVA_HOME=`/usr/libexec/java_home -v 11`
 elif [[ -f /usr/bin/javac ]]; then
     export JAVA_HOME=$(dirname $(dirname $(readlink -e /usr/bin/javac)))
 else

@@ -182,8 +182,7 @@ brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize we
 7. Cask applications
    #+BEGIN_SRC shell
 # Install jdk8
-brew tap caskroom/versions
-brew cask install java8
+brew cask install java
 
 # miniconda
 brew cask install miniconda
