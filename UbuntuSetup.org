@@ -3,6 +3,8 @@
 * Theme setup
 Get the [[https://www.opendesktop.org/p/1214931/][Flat Remix GTK theme]], and icons
 
+[[https://extensions.gnome.org/extension/307/dash-to-dock/][Dash to Dock]] is an alternative to the default dock.
+
 * Libraries
 Update apt with ~sudo apt-get update~
 
