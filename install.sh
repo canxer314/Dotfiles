@@ -92,9 +92,6 @@ echo "Install cspell.json"
 rm ~/.cspell.json
 ln -s ~/Dotfiles/cspell.json ~/.cspell.json
 
-rm ~/.proton
-rm ~/.ezmacsyncrc
-
 if [[ $CURRENT_OS == 'OS X' ]]; then
     echo "OS X configurations here!"
     echo "Install DefaultKeyBinding.dict for mac"
