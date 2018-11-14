@@ -14,9 +14,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # Npm global packages
 export PATH=$HOME/.npm-global/bin:$PATH
 
-# Miniconda
-export PATH=$PATH:/usr/local/miniconda3/bin
-
 # Java
 if [[ -f /usr/libexec/java_home ]]; then
     export JAVA_HOME=`/usr/libexec/java_home -v 11`
@@ -71,8 +68,15 @@ if [ -f "$HOME/Dotfiles/zprofile-sys" ]; then
 fi
 
 # Linuxbrew
-if [[ $DISTRO == 'Ubuntu' ]]; then
+if [[ $CURRENT_OS == 'Linux' ]]; then
     export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
     export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
     export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
+fi
+
+# Miniconda
+if [[ $CURRENT_OS == 'OS X' ]]; then
+    export PATH=$PATH:/usr/local/miniconda3/bin
+else
+    export PATH=$PATH:$HOME/miniconda3/bin
 fi
