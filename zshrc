@@ -113,6 +113,7 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
     alias stat="stat -x"
 elif [[ $CURRENT_OS == 'Linux' ]]; then
     alias xx="xmodmap ~/.Xmodmap"
+    alias xh="xmodmap ~/Dotfiles/Xmodmap_hhkb"
     if [ -f "/usr/bin/konsole" ]; then
         alias ot="/usr/bin/konsole ."
     else
