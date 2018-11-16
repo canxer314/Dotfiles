@@ -1,9 +1,18 @@
 #+TITLE: UbuntuSetup
 
 * Theme setup
-Get the [[https://www.opendesktop.org/p/1214931/][Flat Remix GTK theme]], and icons
+- Get the [[https://www.opendesktop.org/p/1214931/][Flat Remix GTK theme]], and icons
 
-[[https://extensions.gnome.org/extension/307/dash-to-dock/][Dash to Dock]] is an alternative to the default dock.
+- [[https://extensions.gnome.org/extension/307/dash-to-dock/][Dash to Dock]] is an alternative to the default dock.
+
+- Fontconfig-infinality
+
+  #+BEGIN_SRC shell
+sudo add-apt-repository ppa:no1wantdthisname/ppa
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install fontconfig-infinality
+  #+END_SRC
 
 * Libraries
 Update apt with ~sudo apt-get update~
