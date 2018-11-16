@@ -107,8 +107,9 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
     alias ot="open -a iterm ."
     if [ -d '/Applications/ForkLift.app' ]; then
         alias oo="open -a ForkLift ."
+        alias soo="sudo open -a ForkLift ."
     else
-        alias oo="open ."
+        alias oo="sudo open ."
     fi
     alias stat="stat -x"
 elif [[ $CURRENT_OS == 'Linux' ]]; then
@@ -120,9 +121,11 @@ elif [[ $CURRENT_OS == 'Linux' ]]; then
         alias ot="/usr/bin/gnome-terminal"
     fi
     if [ -f "/usr/bin/xdg-open" ];then
-        alias oo="/usr/bin/xdg-open ."
+        alias oo="/usr/bin/xdg-open . &>/dev/null"
+        alias soo="sudo /usr/bin/xdg-open . &>/dev/null"
     else
-        alias oo="/usr/bin/gvfs-open ."
+        alias oo="/usr/bin/gvfs-open . &>/dev/null"
+        alias soo="sudo /usr/bin/gvfs-open . &>/dev/null"
     fi
     alias e.="emacsclient ."
 fi
