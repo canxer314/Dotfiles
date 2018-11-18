@@ -129,12 +129,12 @@ nvm alias default system
 *** Other Dependencies
 1. System package manager dependencies:
    #+BEGIN_SRC shell
-brew install screenfetch trash asciinema tree pandoc
+brew install screenfetch asciinema tree pandoc
    #+END_SRC
 
 2. NPM dependencies here, and you will need to install python.
    #+BEGIN_SRC shell
-npm i -g npm yarn prettier live-server hexo-cli reveal-md phantomjs \
+npm i -g npm yarn prettier trash live-server hexo-cli reveal-md phantomjs \
     eslint babel-eslint eslint-plugin-babel eslint-plugin-react \
     eslint-plugin-import eslint-plugin-prettier eslint-config-prettier \
     typescript tslint
