@@ -195,6 +195,9 @@ fi
 if exists clang-format; then
     alias format-all-clang='clang-format -i -style=file *.c *.cc *.cpp *.h *.hh *.hpp';
 fi
+if exists cspell; then
+    alias cspell-all="cspell --config '$HOME/Dotfiles/cspell.json' '**/*.{js,jsx,ts,tsx,c,cc,cpp,h,hh,hpp,go,json}'"
+fi
 alias mac=~/Dotfiles/ezmacsync/ezmacsync.py
 
 function update_git_repo() {
