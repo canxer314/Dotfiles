@@ -48,10 +48,6 @@ echo "Install ctags configurations..."
 rm ~/.ctags
 ln -s ~/Dotfiles/ctags ~/.ctags
 
-echo "Install gitconfig configurations..."
-rm ~/.gitconfig
-ln -s ~/Dotfiles/gitconfig ~/.gitconfig
-
 echo "Install global gitignore file..."
 rm ~/.gitignore_global
 ln -s ~/Dotfiles/gitignore_global ~/.gitignore_global
@@ -107,6 +103,11 @@ elif [[ $CURRENT_OS == 'Linux' ]]; then
     rm ~/.Xmodmap
     ln -s ~/Dotfiles/Xmodmap ~/.Xmodmap
 fi
+
+echo "************************"
+echo "Please install gitconfig configurations manually, e.g.:"
+echo "cp ~/Dotfiles/gitconfig ~/.gitconfig"
+echo "************************"
 
 # echo "update submodules"
 git submodule init
