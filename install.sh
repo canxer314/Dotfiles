@@ -104,10 +104,10 @@ elif [[ $CURRENT_OS == 'Linux' ]]; then
     ln -s ~/Dotfiles/Xmodmap ~/.Xmodmap
 fi
 
-echo "************************"
-echo "Please install gitconfig configurations manually, e.g.:"
-echo "cp ~/Dotfiles/gitconfig ~/.gitconfig"
-echo "************************"
+echo "Copy gitconfig configurations to HOME..."
+if ! [[ -f ~/.gitconfig ]]; then
+    cp ~/Dotfiles/gitconfig ~/.gitconfig
+fi
 
 # echo "update submodules"
 git submodule init
