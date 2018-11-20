@@ -48,9 +48,9 @@
 [github]
 	user = ztlevi
 [credential]
-	helper = osxkeychain
 	helper = store
 	helper = cache --timeout 30000
+	helper = osxkeychain
 [magithub]
 	cache = always
 	online = false
