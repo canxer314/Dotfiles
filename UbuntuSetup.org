@@ -34,6 +34,12 @@ sudo apt update; sudo apt install oracle-java8-installer
 sudo apt install oracle-java8-set-default
    #+END_SRC
 
+5. Other applications
+   #+BEGIN_SRC shell
+# Screenshot
+sudo apt-get install shutter
+   #+END_SRC
+
 * Ubuntu Applications
 1. Gnome-terminal: Use login shell, Go to ~Edit~ -> ~Preferences~ -> ~Profiles~ -> ~Command~ ->
    Check ~Run command as a login shell~
