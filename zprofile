@@ -1,7 +1,3 @@
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-export PATH="/usr/local/sbin:$PATH"
-
 # doom
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
@@ -67,6 +63,13 @@ if [ -f "$HOME/Dotfiles/zprofile-sys" ]; then
     source "$HOME/Dotfiles/zprofile-sys"
 fi
 
+# Miniconda
+if [[ $CURRENT_OS == 'OS X' ]]; then
+    export PATH=/usr/local/miniconda3/bin:$PATH
+else
+    export PATH=$HOME/miniconda3/bin:$PATH
+fi
+
 # Linuxbrew
 if [[ $CURRENT_OS == 'Linux' ]]; then
     export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
@@ -74,9 +77,5 @@ if [[ $CURRENT_OS == 'Linux' ]]; then
     export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
 fi
 
-# Miniconda
-if [[ $CURRENT_OS == 'OS X' ]]; then
-    export PATH=$PATH:/usr/local/miniconda3/bin
-else
-    export PATH=$PATH:$HOME/miniconda3/bin
-fi
+# Local path has the highest priority
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
