@@ -179,8 +179,8 @@ brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize we
 # Install jdk8
 brew cask install java
 
-# miniconda
-brew cask install miniconda
+# anaconda
+brew cask install anaconda
 
 # Install Others
 brew cask install typora slack skype dropbox neteasemusic obs iina firefox google-chrome kap \

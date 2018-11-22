@@ -34,7 +34,7 @@
     "google-cloud-sdk",
     "google-backup-and-sync",
     "slack",
-    "miniconda",
+    "anaconda",
     "webpquicklook",
     "kap",
     "dropbox"
