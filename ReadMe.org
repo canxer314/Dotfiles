@@ -143,7 +143,7 @@ npm i -g npm yarn prettier trash live-server hexo-cli reveal-md phantomjs \
 3. Pip
    Make sure your pip is the one you want to use. Options are from anaconda, python2 or python3. Check it with ~which -a pip ipython~
    #+BEGIN_SRC shell
-pip3 install pipenv jupyterlab 'python-language-server[all]'
+pip3 install pipenv 'python-language-server[all]'
    #+END_SRC
 
    *Note*: (optional) If you are using Python 2.7 and want to enable multiprocessing:
@@ -151,7 +151,13 @@ pip3 install pipenv jupyterlab 'python-language-server[all]'
 pip2 install futures
    #+END_SRC
 
-   Note: For all methods of installation, if you are using a version of Jupyter Notebook earlier than 5.3, then you must also run the following command after installation to enable the JupyterLab server extension:
+4. Anaconda
+   #+BEGIN_SRC shell
+conda install -c conda-forge jupyterlab
+   #+END_SRC
+   Note: For all methods of installation, if you are using a version of Jupyter Notebook earlier
+   than 5.3, then you must also run the following command after installation to enable the
+   JupyterLab server extension (check version with ~jupyter notebook --version~):
 
    #+BEGIN_SRC shell
 jupyter serverextension enable --py jupyterlab --sys-prefix
