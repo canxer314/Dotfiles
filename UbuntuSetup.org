@@ -40,6 +40,11 @@ sudo apt install oracle-java8-set-default
 sudo apt-get install shutter
    #+END_SRC
 
+6. Gnome-shell one light theme
+   #+BEGIN_SRC shell
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/denysdovhan/gnome-terminal-one/master/one-light.sh)"
+   #+END_SRC
+
 * Ubuntu Applications
 1. Gnome-terminal: Use login shell, Go to ~Edit~ -> ~Preferences~ -> ~Profiles~ -> ~Command~ ->
    Check ~Run command as a login shell~
