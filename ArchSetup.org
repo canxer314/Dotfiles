@@ -68,7 +68,7 @@
      #+BEGIN_SRC shell
      sudo pacman -Syu
      # install dependencies
-     sudo pacman -S cmake extra-cmake-modules python plasma-framework plasma-desktop
+     sudo pacman -S fd cmake extra-cmake-modules python plasma-framework plasma-desktop
      sudo pacman -S latte-dock
      #+END_SRC
 
