@@ -55,12 +55,8 @@
 ** Developer tools
    - JDK
    - Node, NPM
-   - Xampp: Apache, PHP, Phpmyadmin tool
-   - Eclipse jee
-   - Netbeans
+   - Terminator
    - Intellij idea
-   - vim-gnome: Install vim-gnome instead of just vim, because it including more features like xterm-clipboard.
-   - zeal: Developer docsets.
 
 ** Other tools
    - *Grub-customizer* :boot menu setting

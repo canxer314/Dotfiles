@@ -102,6 +102,11 @@ elif [[ $CURRENT_OS == 'Linux' ]]; then
     echo "Install Xmodmap key tweak for linux"
     rm ~/.Xmodmap
     ln -s ~/Dotfiles/Xmodmap ~/.Xmodmap
+
+    echo "Install Terminator config..."
+    mkdir -p ~/.config/terminator/
+    rm ~/.config/terminator/config
+    ln -s ~/Dotfiles/terminator_config ~/.config/terminator/config
 fi
 
 echo "Copy gitconfig configurations to HOME..."

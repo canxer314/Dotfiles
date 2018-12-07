@@ -40,9 +40,11 @@ sudo apt install oracle-java8-set-default
 sudo apt-get install shutter
    #+END_SRC
 
-6. Gnome-shell one light theme
+6. Terminator
    #+BEGIN_SRC shell
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/denysdovhan/gnome-terminal-one/master/one-light.sh)"
+sudo add-apt-repository ppa:gnome-terminator
+sudo apt-get update
+sudo apt-get install terminator
    #+END_SRC
 
 * Ubuntu Applications
