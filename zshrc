@@ -117,9 +117,9 @@ elif [[ $CURRENT_OS == 'Linux' ]]; then
     alias xh="xmodmap ~/Dotfiles/Xmodmap_hhkb"
     if exists terminator; then
         alias ot="terminator --new-tab ."
-    else if exists konsole; then
+    elif exists konsole; then
         alias ot="konsole --new-tab ."
-    else if exists gnome-terminal; then
+    elif exists gnome-terminal; then
         alias ot="gnome-terminal --tab --working-directory='.'"
     fi
     if [ -f "/usr/bin/xdg-open" ];then
