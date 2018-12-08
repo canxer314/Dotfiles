@@ -9,7 +9,15 @@ The root directory should be *~/Dotfiles/*
 git clone https://github.com/ztlevi/Dotfiles.git ~/Dotfiles
    #+END_SRC
 
-2. Put the dotfiles in the home directory:
+2. Install GNU stow
+   #+BEGIN_SRC shell
+# OSX
+brew install stow
+# Ubuntu
+sudo apt install stow
+   #+END_SRC
+
+3. Put the dotfiles in the home directory:
    #+BEGIN_SRC shell
 cd ~/Dotfiles
 ./install.sh

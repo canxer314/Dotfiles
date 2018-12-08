@@ -18,25 +18,21 @@ fi
 echo "cd to Dotfiles directory..."
 cd ~/Dotfiles || exit
 
-echo "Install generatl home dotfiles..."
-stow Home
+echo "Uninstall generatl home dotfiles..."
+stow -D Home
 
-echo "Install zsh..."
-stow zsh
+echo "Uninstall zsh..."
+stow -D zsh
 
 if [[ $CURRENT_OS == 'OS X' ]]; then
-    echo "Install OSX home dotfiles..."
-    stow Home_OSX
+    echo "Uninstall OSX home dotfiles..."
+    stow -D Home_OSX
 elif [[ $CURRENT_OS == 'Linux' ]]; then
-    echo "Install Linux home dotfiles..."
-    stow Home_Linux
+    echo "Uninstall Linux home dotfiles..."
+    stow -D Home_Linux
 fi
 
 if ! [[ -f ~/.gitconfig ]]; then
-    echo "Copy gitconfig configurations to HOME..."
-    cp ~/Dotfiles/gitconfig ~/.gitconfig
+    echo "Delate gitconfig configurations from HOME..."
+    rm ~/.gitconfig
 fi
-
-# echo "update submodules"
-git submodule init
-git submodule update

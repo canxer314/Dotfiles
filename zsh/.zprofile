@@ -59,8 +59,8 @@ export MANPATH="/usr/local/man:$MANPATH"
 export PATH="/usr/local/opt/texinfo/bin:$PATH"
 
 # System based environments
-if [ -f "$HOME/Dotfiles/zprofile-sys" ]; then
-    source "$HOME/Dotfiles/zprofile-sys"
+if [ -f "$HOME/.zprofile-sys" ]; then
+    source "$HOME/.zprofile-sys"
 fi
 
 # Anaconda

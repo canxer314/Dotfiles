@@ -114,7 +114,7 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
     alias stat="stat -x"
 elif [[ $CURRENT_OS == 'Linux' ]]; then
     alias xx="xmodmap ~/.Xmodmap"
-    alias xh="xmodmap ~/Dotfiles/Xmodmap_hhkb"
+    alias xh="xmodmap ~/.Xmodmap_hhkb"
     if exists terminator; then
         alias ot="terminator --new-tab ."
     elif exists konsole; then
