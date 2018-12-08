@@ -29,6 +29,7 @@ antigen bundle autojump
 antigen bundle textmate
 antigen bundle lein
 antigen bundle gulp
+antigen bundle rsync
 
 # Ruby
 antigen bundle ruby
@@ -116,11 +117,11 @@ elif [[ $CURRENT_OS == 'Linux' ]]; then
     alias xx="xmodmap ~/.Xmodmap"
     alias xh="xmodmap ~/.Xmodmap_hhkb"
     if exists terminator; then
-        alias ot="terminator --new-tab ."
+        alias ot="terminator"
     elif exists konsole; then
-        alias ot="konsole --new-tab ."
+        alias ot="konsole"
     elif exists gnome-terminal; then
-        alias ot="gnome-terminal --tab --working-directory='.'"
+        alias ot="gnome-terminal"
     fi
     if [ -f "/usr/bin/xdg-open" ];then
         alias oo="/usr/bin/xdg-open . &>/dev/null"
