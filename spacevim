@@ -140,10 +140,6 @@ function! UserConfig()
 
     set noundofile
 
-    if (has("termguicolors"))
-      set termguicolors
-    endif
-
     " ===================================================
     " AutoFormat
     " ===================================================
