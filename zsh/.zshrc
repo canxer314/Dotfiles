@@ -178,6 +178,8 @@ if exists npm; then
     alias npmgL0="npm list -g --depth=0"
 fi
 
+alias dud="du -hd 1"
+alias dua="du -had 1"
 if exists ccat; then alias cat="ccat"; fi
 if exists hexo; then alias h="hexo"; fi
 if exists jupyter; then alias jp='jupyter lab --NotebookApp.iopub_data_rate_limit=10000000'; fi
