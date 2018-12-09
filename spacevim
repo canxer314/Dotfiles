@@ -238,7 +238,9 @@ function! UserConfig()
     " ===================================================
     " LSP config
     " ===================================================
-    let g:deoplete#enable_at_startup = 1
+    " Terminator has issue, manually enable deoplete
+    " let g:deoplete#enable_at_startup = 1
+    nmap <leader>od :call deoplete#enable()<CR>
 
     " Some serverCommands options: https://spacevim.org/layers/language-server-protocol/
     " Required for operations modifying multiple buffers like rename.
