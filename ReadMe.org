@@ -153,14 +153,14 @@ npm i -g npm yarn prettier trash live-server hexo-cli reveal-md phantomjs \
    #+END_SRC
 
 3. Pip
-   Make sure your pip is the one you want to use. Options are from anaconda, python2 or python3. Check it with ~which -a pip ipython~
+   Make sure your pip is the one you want to use. Options are from anaconda, python2 or python3.
    #+BEGIN_SRC shell
-pip3 install pipenv 'python-language-server[all]'
+python3 -m pip install pipenv 'python-language-server[all]'
    #+END_SRC
 
    *Note*: (optional) If you are using Python 2.7 and want to enable multiprocessing:
    #+BEGIN_SRC shell
-pip2 install futures
+python2 -m pip install futures
    #+END_SRC
 
 4. Anaconda
