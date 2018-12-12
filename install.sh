@@ -30,6 +30,9 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
 elif [[ $CURRENT_OS == 'Linux' ]]; then
     echo "Install Linux home dotfiles..."
     stow Home_Linux
+    echo "Install Tilix config..."
+    dconf reset -f /com/gexperts/Tilix/
+    dconf load /com/gexperts/Tilix/ < ~/.config/tilix/tilix.dconf
 fi
 
 if ! [[ -f ~/.gitconfig ]]; then

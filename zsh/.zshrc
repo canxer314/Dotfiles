@@ -138,6 +138,9 @@ elif [[ $CURRENT_OS == 'Linux' ]]; then
         alias soo="sudo /usr/bin/gvfs-open . &>/dev/null"
     fi
     alias e.="emacsclient ."
+    alias tilix-reset="dconf reset -f /com/gexperts/Tilix/"
+    alias tilix-load="dconf load /com/gexperts/Tilix/ < ~/.config/tilix/tilix.dconf"
+    alias tilix-dump="dconf dump /com/gexperts/Tilix/ > ~/.config/tilix/tilix.dconf"
 fi
 
 # Vim & Emacs
