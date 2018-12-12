@@ -67,8 +67,10 @@ sudo apt install xclip
 
 1. Install zsh first, instructions [[https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH][here]].
    #+BEGIN_SRC shell
-# set zsh as default
+# set zsh as default, this one does not need root
 chsh -s $(which zsh)
+# alternative for Linux
+sudo usermod -s /usr/bin/zsh <username>
    #+END_SRC
 
 2. Install oh-my-zsh:

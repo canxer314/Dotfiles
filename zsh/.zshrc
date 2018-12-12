@@ -30,6 +30,7 @@ antigen bundle textmate
 antigen bundle lein
 antigen bundle gulp
 antigen bundle rsync
+antigen bundle ranger
 
 # Ruby
 antigen bundle ruby
@@ -84,6 +85,12 @@ antigen apply
 autoload -U deer
 zle -N deer
 bindkey '\ek' deer # shortcut is Alt-k
+
+# Ranger
+if [ -f "$HOME/.zsh-config/ranger.zsh" ]; then
+    source $HOME/.zsh-config/ranger.zsh
+    bindkey '^o' widget-ranger-cd
+fi
 
 # User configuration
 
