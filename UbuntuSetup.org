@@ -12,7 +12,7 @@ Update apt with ~sudo apt-get update~
    #+BEGIN_SRC shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 
-sudo apt-get install build-essential curl file git zsh
+sudo apt-get install build-essential curl file git zsh p7zip-full
    #+END_SRC
 
 2. Use apt and Linuxbrew to install dependencies

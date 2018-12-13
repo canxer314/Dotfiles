@@ -143,7 +143,7 @@ nvm alias default system
 *** Other Dependencies
 1. System package manager dependencies:
    #+BEGIN_SRC shell
-brew install fd ranger screenfetch asciinema tree pandoc
+brew install fd ranger p7zip screenfetch asciinema tree pandoc
    #+END_SRC
 
 2. NPM dependencies here, and you will need to install python.
