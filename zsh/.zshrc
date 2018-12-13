@@ -123,8 +123,8 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
 elif [[ $CURRENT_OS == 'Linux' ]]; then
     alias xx="xmodmap ~/.Xmodmap"
     alias xh="xmodmap ~/.Xmodmap_hhkb"
-    if exists terminator; then
-        alias ot="terminator"
+    if exists tilix; then
+        alias ot="tilix ."
     elif exists konsole; then
         alias ot="konsole"
     elif exists gnome-terminal; then

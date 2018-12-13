@@ -55,7 +55,7 @@
 ** Developer tools
    - JDK
    - Node, NPM
-   - Terminator
+   - Tilix
    - Intellij idea
 
 ** Other tools

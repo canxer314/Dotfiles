@@ -238,7 +238,6 @@ function! UserConfig()
     " ===================================================
     " LSP config
     " ===================================================
-    " Terminator has issue, manually enable deoplete
     let g:deoplete#enable_at_startup = 1
 
     " Some serverCommands options: https://spacevim.org/layers/language-server-protocol/
