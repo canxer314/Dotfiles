@@ -201,7 +201,10 @@ if exists reveal-md; then
 fi
 if exists asciinema; then alias arec="asciinema rec --max-wait=2"; fi # -t to specify title
 if exists screenfetch; then alias sf="screenfetch"; fi
-if exists youtube-dl; then alias yd='youtube-dl --write-auto-sub --ignore-errors'; fi
+if exists youtube-dl; then
+    alias yd='youtube-dl --write-auto-sub --ignore-errors'
+    alias yda='youtube-dl --extract-audio --audio-format mp3'
+fi
 if exists you-get; then alias yg='you-get'; fi
 if exists prettier; then
     alias format-all-prettier='prettier --write "**/*.{js,ts,jsx,tsx,json,css,scss,md}';
