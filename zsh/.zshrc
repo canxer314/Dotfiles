@@ -147,8 +147,8 @@ elif [[ $CURRENT_OS == 'Linux' ]]; then
     alias tilix-load="dconf load /com/gexperts/Tilix/ < ~/.config/tilix/tilix.dconf"
     alias tilix-dump="dconf dump /com/gexperts/Tilix/ > ~/.config/tilix/tilix.dconf"
 
-    alias cnet="sudo route del default gw 0.0.0.0 enp3s0 
-                sudo ip route add 10.213.37.0/24 via 10.193.35.1 dev enp3s0"
+    alias cnet="sudo route del default gw 0.0.0.0 enp4s0 
+                sudo ip route add 10.213.37.0/24 via 10.193.35.1 dev enp4s0"
 fi
 
 # Vim & Emacs
