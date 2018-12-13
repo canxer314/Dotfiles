@@ -34,12 +34,3 @@ elif [[ $CURRENT_OS == 'Linux' ]]; then
     dconf reset -f /com/gexperts/Tilix/
     dconf load /com/gexperts/Tilix/ < ~/.config/tilix/tilix.dconf
 fi
-
-if ! [[ -f ~/.gitconfig ]]; then
-    echo "Copy gitconfig configurations to HOME..."
-    cp ~/Dotfiles/gitconfig ~/.gitconfig
-fi
-
-# echo "update submodules"
-git submodule init
-git submodule update
