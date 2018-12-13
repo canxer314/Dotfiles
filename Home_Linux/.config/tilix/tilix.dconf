@@ -2,7 +2,7 @@
 foreground-color='#2d2d2c'
 visible-name='Default'
 login-shell=true
-palette=['#2c2c2c', '#c62727', '#558b2e', '#f9a824', '#1564bf', '#691e99', '#00828e', '#f2f2f2', '#535353', '#ef524f', '#8bc249', '#f9a824', '#64b5f6', '#ba67c8', '#26c6da', '#e0e0e0']
+palette=['#2c2c2c', '#c62727', '#558b2e', '#f9a824', '#1564bf', '#691e99', '#00828e', '#f2f2f2', '#535353', '#c62727', '#558b2e', '#f9a824', '#1564bf', '#ba67c8', '#00828e', '#e0e0e0']
 badge-color-set=false
 cursor-colors-set=false
 highlight-colors-set=false
