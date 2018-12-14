@@ -96,6 +96,28 @@ fi
 
 exists() { type "$1" > /dev/null 2>&1; }
 
+function iterm-new-tab () {
+    local cdto="$PWD"
+    local args="$@"
+
+    if [ -d "$1" ]; then
+        cdto=`cd "$1"; pwd`
+        args="${@:2}"
+    fi
+
+    osascript -i <<EOF
+        tell application "iTerm2"
+            activate
+            tell current window
+                create tab with default profile
+                tell the current session
+                    write text "cd \"$cdto\" $args"
+                end tell
+            end tell
+        end tell
+EOF
+}
+
 # OS setting
 if [[ $CURRENT_OS == 'OS X' ]]; then
     if exists ggrep; then alias grep="ggrep"; fi
@@ -112,7 +134,7 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
         alias emacs=/Applications/Emacs.app/Contents/MacOS/emacs
     fi
     alias e.="open -a emacs ."
-    alias ot="open -a iterm ."
+    alias ot="iterm-new-tab"
     if [ -d '/Applications/ForkLift.app' ]; then
         alias oo="open -a ForkLift ."
         alias soo="sudo open -a ForkLift ."
