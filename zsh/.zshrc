@@ -251,7 +251,7 @@ if exists cspell; then
 fi
 alias mac=~/Dotfiles/ezmacsync/ezmacsync.py
 alias hstg="mkdir -p ~/huawei-storage && sshfs admin@10.213.37.36:/share/ ~/huawei-storage"
-alias hgpu="ssh root@10.213.37.34:/root/ringzhou"
+alias hgpu="ssh root@10.213.37.34"
 alias hgpuh="mkdir -p ~/huawei-gpu && sshfs root@10.213.37.34:/root/tingzhou ~/huawei-gpu"
 alias hgpud="mkdir -p ~/huawei-gpu-data && sshfs root@10.213.37.34:/data/workspace_tingzhou/ ~/huawei-gpu-data"
 
