@@ -143,7 +143,7 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
     fi
     alias stat="stat -x"
 elif [[ $CURRENT_OS == 'Linux' ]]; then
-    alias xx="xmodmap ~/.Xmodmap"
+    alias xx="xmodmap ~/.Xmodmap_linux"
     alias xh="xmodmap ~/.Xmodmap_hhkb"
     if exists tilix; then
         alias ot="tilix ."
