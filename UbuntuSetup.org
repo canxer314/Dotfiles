@@ -1,9 +1,31 @@
 #+TITLE: UbuntuSetup
 
 * Theme setup
-- Get the [[https://www.opendesktop.org/p/1214931/][Flat Remix GTK theme]], and icons
+- i3wm
+  - Install i3wm-themer
 
-- [[https://extensions.gnome.org/extension/307/dash-to-dock/][Dash to Dock]] is an alternative to the default dock.
+    Make sure `which python` returns `/usr/bin/python`, the installation script uses local python2.7
+
+    #+BEGIN_SRC shell
+git clone https://github.com/unix121/i3wm-themer
+cd i3wm-themer/
+sudo pip install -r requirements.txt
+
+vim ./src/config.yaml # edit the path
+
+./install_ubuntu.sh
+
+python src/i3wm-themer.py --config config.yaml --load themes/008.json
+    #+END_SRC
+  - Display Management
+    #+BEGIN_SRC shell
+sudo apt-get install arandr
+    #+END_SRC
+
+- Gnome:
+  - [[https://extensions.gnome.org/extension/307/dash-to-dock/][Dash to Dock]] is an alternative to the default dock.
+
+  - Get the [[https://www.opendesktop.org/p/1214931/][Flat Remix GTK theme]], and icons
 
 * Libraries
 Update apt with ~sudo apt-get update~
