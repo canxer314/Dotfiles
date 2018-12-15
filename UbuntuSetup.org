@@ -2,9 +2,18 @@
 
 * Theme setup
 - Gnome:
-  - [[https://extensions.gnome.org/extension/307/dash-to-dock/][Dash to Dock]] is an alternative to the default dock.
+  - Install
+    Gnome user theme extension https://extensions.gnome.org/extension/19/user-themes/.
 
-  - Get the [[https://www.opendesktop.org/p/1214931/][Flat Remix GTK theme]], and icons
+    Get the Flat Remix theme, and icons. Then select them in Gnome-tweaks.
+    #+BEGIN_SRC bash
+sudo apt install chrome-gnome-shell
+sudo add-apt-repository ppa:daniruiz/flat-remix
+sudo apt-get update
+sudo apt-get install flat-remix-gnome flat-remix-gtk flat-remix
+    #+END_SRC
+
+  - [[https://extensions.gnome.org/extension/307/dash-to-dock/][Dash to Dock]] is an alternative to the default dock.
 
 * Libraries
 Update apt with ~sudo apt-get update~
