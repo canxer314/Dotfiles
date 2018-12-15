@@ -165,9 +165,15 @@ elif [[ $CURRENT_OS == 'Linux' ]]; then
     if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
     fi
-    alias tilix-reset="dconf reset -f /com/gexperts/Tilix/"
-    alias tilix-load="dconf load /com/gexperts/Tilix/ < ~/.config/tilix/tilix.dconf"
-    alias tilix-dump="dconf dump /com/gexperts/Tilix/ > ~/.config/tilix/tilix.dconf"
+
+    # Dump all config: dconf dump / >~/Downloads/user.conf
+    alias dconf-dump-all="
+    dconf dump /com/gexperts/Tilix/ > ~/Dotfiles/Home_Linux/.config/dconf/tilix.conf
+    dconf dump /org/gnome/terminal/legacy/ > ~/Dotfiles/Home_Linux/.config/dconf/gnome.conf
+    dconf dump /org/gnome/settings-daemon/plugins/media-keys/ > ~/Dotfiles/Home_Linux/.config/dconf/media-keys.conf
+    dconf dump /org/gnome/desktop/wm/keybindings/ > ~/Dotfiles/Home_Linux/.config/dconf/wm-keys.conf
+    dconf dump /org/gnome/mutter/keybindings/ > ~/Dotfiles/Home_Linux/.config/dconf/mutter-keys.conf
+"
 
     alias cnet="sudo route del default gw 0.0.0.0 enp3s0 
                 sudo ip route add 10.213.37.0/24 via 10.193.35.1 dev enp3s0"
