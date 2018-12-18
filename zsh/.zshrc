@@ -20,9 +20,11 @@ antigen use oh-my-zsh
 # Git plugin
 antigen bundle git
 antigen bundle git-extras
+antigen bundle gitignore
 antigen bundle tig
 
 antigen bundle tmux
+antigen bundle tmux-cssh
 antigen bundle heroku
 antigen bundle command-not-found
 antigen bundle autojump
@@ -30,7 +32,8 @@ antigen bundle textmate
 antigen bundle lein
 antigen bundle gulp
 antigen bundle rsync
-antigen bundle ranger
+antigen bundle dotenv
+antigen bundle emacs
 
 # Ruby
 antigen bundle ruby
