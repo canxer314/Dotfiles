@@ -287,7 +287,3 @@ alias rr='reload_source'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-if [ -f '/Users/ztlevi/torch/install/bin/torch-activate' ]; then
-    . /Users/ztlevi/torch/install/bin/torch-activate
-fi
