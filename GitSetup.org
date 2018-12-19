@@ -1,63 +1,53 @@
 * Git Setup
 
 **  Git Installation
-   - Install git on Ubuntu
-     #+BEGIN_SRC shell
-     sudo apt-get purge runit
-     sudo apt-get purge git-all
-     sudo apt-get purge git
-     sudo apt-get autoremove
-     sudo apt update
-     sudo apt install git
-     #+END_SRC
+#+BEGIN_SRC shell
+# MacOS
+brew install git
 
-   - Install git on MacOS
+# Ubuntu
+sudo apt-get purge runit
+sudo apt-get purge git-all
+sudo apt-get purge git
+sudo apt-get autoremove
+sudo apt update
+sudo apt install git
+#+END_SRC
 
-     #+BEGIN_SRC shell
-     brew install git
-     #+END_SRC
+** Credential Storage: default credential is stored in "~/.git-credentials".
 
-   - Setup email address and username by:
+https://git-scm.com/book/en/v2/Git-Tools-Credential-Storage
 
-     #+BEGIN_SRC shell
-     git config --global user.email "you@example.com"
-     git config --global user.name "Your Name"
-     #+END_SRC
+** (Optional) SSH Setup
+Setup SSH key to prevent typing username and password each time you operate your github:
 
-   - Credential Storage: default credential is stored in "~/.git-credentials".
+1. Paste the text below, substituting in your GitHub email address.
 
-     https://git-scm.com/book/en/v2/Git-Tools-Credential-Storage
+   #+BEGIN_SRC shell
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+   #+END_SRC
+   This creates a new ssh key, using the provided email as a label.
 
-** SSH Setup
-   Setup SSH key to prevent typing username and password each time you operate your github:
+2. Adding your SSH key to the ssh-agent, ensure ssh-agent is enabled:
 
-   1. Paste the text below, substituting in your GitHub email address.
+   #+BEGIN_SRC shell
+eval "$(ssh-agent -s)"
+   #+END_SRC
 
-      #+BEGIN_SRC shell
-     ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-      #+END_SRC
-      This creates a new ssh key, using the provided email as a label. 
+3. Add your SSH key to the ssh-agent. If you used an existing SSH key rather than generating a new SSH key, you'll need to replace id_rsa in the command with the name of your existing private key file.
 
-   2. Adding your SSH key to the ssh-agent, ensure ssh-agent is enabled:
+   #+BEGIN_SRC shell
+ssh-add ~/.ssh/id_rsa
+   #+END_SRC
 
-      #+BEGIN_SRC shell
-     eval "$(ssh-agent -s)"
-      #+END_SRC
+4. Adding a new SSH key to your GitHub account 1)Copy the SSH key to your clipboard:
 
-   3. Add your SSH key to the ssh-agent. If you used an existing SSH key rather than generating a new SSH key, you'll need to replace id_rsa in the command with the name of your existing private key file.
-
-      #+BEGIN_SRC shell
-     ssh-add ~/.ssh/id_rsa
-      #+END_SRC
-
-   4. Adding a new SSH key to your GitHub account 1)Copy the SSH key to your clipboard:
-
-      #+BEGIN_SRC shell
-     sudo apt-get install xclip
-     xclip -sel clip < ~/.ssh/id_rsa.pub
-      #+END_SRC
-   5. Go to Github profile-->settings-->SSH and GPG keys-->New SSH key or Add SSH key-->paste ssh key you copy-->Add SSH key
-   6. Go to repo-->Clone or download-->Use SSH: git@github.com:ztlevi/Dotfiles.git
-      #+BEGIN_SRC shell
-      git remote set-url origin git@github.com:ztlevi/Dotfiles.git
-      #+END_SRC
+   #+BEGIN_SRC shell
+sudo apt-get install xclip
+xclip -sel clip < ~/.ssh/id_rsa.pub
+   #+END_SRC
+5. Go to Github profile-->settings-->SSH and GPG keys-->New SSH key or Add SSH key-->paste ssh key you copy-->Add SSH key
+6. Go to repo-->Clone or download-->Use SSH: git@github.com:ztlevi/Dotfiles.git
+   #+BEGIN_SRC shell
+git remote set-url origin git@github.com:ztlevi/Dotfiles.git
+   #+END_SRC
