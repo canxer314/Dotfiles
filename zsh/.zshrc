@@ -260,9 +260,11 @@ if exists cspell; then
     alias cspell-all="cspell --config '$HOME/Dotfiles/cspell.json' '**/*.{js,jsx,ts,tsx,c,cc,cpp,h,hh,hpp,go,json}'"
 fi
 alias mac=~/Dotfiles/ezmacsync/ezmacsync.py
+
 alias hstg="mkdir -p ~/huawei-storage && sshfs admin@10.213.37.36:/share/ ~/huawei-storage"
 alias hgpu="ssh root@10.213.37.34"
 alias hgpufs="mkdir -p ~/huawei-gpu && sshfs root@10.213.37.34:/ ~/huawei-gpu"
+alias tbgpu="ssh -NfL 6006:localhost:6006 root@10.213.37.34"
 
 function update_git_repo() {
     LASTDIR=`pwd`
