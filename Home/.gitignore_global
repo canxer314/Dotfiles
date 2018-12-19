@@ -42,3 +42,4 @@ TAGS
 cmake-build-debug
 .ccls-cache
 .env
+.flycheck_*
