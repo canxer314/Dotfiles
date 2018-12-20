@@ -148,7 +148,7 @@ brew install fd ranger p7zip screenfetch asciinema tree pandoc
 
 2. NPM dependencies here, and you will need to install python.
    #+BEGIN_SRC shell
-npm i -g npm yarn prettier trash live-server hexo-cli reveal-md phantomjs \
+npm i -g npm yarn prettier trash-cli live-server hexo-cli reveal-md phantomjs \
     eslint babel-eslint eslint-plugin-babel eslint-plugin-react \
     eslint-plugin-import eslint-plugin-prettier eslint-config-prettier \
     typescript tslint
