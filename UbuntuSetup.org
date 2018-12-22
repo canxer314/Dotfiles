@@ -18,17 +18,15 @@ sudo apt-get install flat-remix-gnome flat-remix-gtk flat-remix
 * Libraries
 Update apt with ~sudo apt-get update~
 
-1. Install [[http://linuxbrew.sh/][Linuxbrew]]:
+1. Apt:
    #+BEGIN_SRC shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-
-sudo apt-get install build-essential curl file git zsh p7zip-full ranger
+sudo apt-get install build-essential curl wget file git zsh p7zip-full ranger clang-format python3-pip
    #+END_SRC
 
-2. Use apt and Linuxbrew to install dependencies
+2. [[http://linuxbrew.sh/][Linuxbrew]]:
    #+BEGIN_SRC shell
-sudo apt install clang-format
-brew install git curl wget ripgrep python3 gcc@7 cmake ninja tmux fzf
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+brew install ripgrep cmake ninja tmux fzf
    #+END_SRC
 
 3. Nodejs (LTS): [[https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions][Tutorial]]
@@ -55,6 +53,9 @@ sudo apt-get install shutter
 sudo add-apt-repository ppa:webupd8team/terminix
 sudo apt-get update
 sudo apt-get install tilix
+
+# Fix tilix issue
+ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
    #+END_SRC
 
 * Ubuntu Applications
