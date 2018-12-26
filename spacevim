@@ -67,7 +67,6 @@ function! UserInit()
     " ===================================================
     " Install private plugins
     " ===================================================
-    Plug 'extr0py/oni'
     Plug 'mileszs/ack.vim'
     Plug 'benmills/vimux'
     Plug 'rakr/vim-one'
