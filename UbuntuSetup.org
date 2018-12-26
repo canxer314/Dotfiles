@@ -26,7 +26,7 @@ sudo apt-get install build-essential curl wget file git zsh p7zip-full ranger cl
 2. [[http://linuxbrew.sh/][Linuxbrew]]:
    #+BEGIN_SRC shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-brew install ripgrep cmake ninja tmux fzf
+brew install ripgrep cmake ninja tmux fzf neovim
    #+END_SRC
 
 3. Nodejs (LTS): [[https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions][Tutorial]]
