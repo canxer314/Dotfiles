@@ -20,7 +20,7 @@ Update apt with ~sudo apt-get update~
 
 1. Apt:
    #+BEGIN_SRC shell
-sudo apt-get install build-essential curl wget file git zsh p7zip-full ranger clang-format python3-pip
+sudo apt-get install build-essential curl wget file git zsh p7zip-full ranger clang-format python3-pip net-tools exfat-fuse exfat-utils
    #+END_SRC
 
 2. [[http://linuxbrew.sh/][Linuxbrew]]:
