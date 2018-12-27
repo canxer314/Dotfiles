@@ -35,20 +35,37 @@ curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install -y nodejs
    #+END_SRC
 
-4. Java: [[http://tipsonubuntu.com/2016/07/31/install-oracle-java-8-9-ubuntu-16-04-linux-mint-18/][Tutorial]]
+4. GCC7
+   #+BEGIN_SRC shell
+# Install the gcc-7 packages:
+
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo apt update
+sudo apt install g++-7 -y
+
+# Set it up so the symbolic links gcc, g++ point to the newer version:
+
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 60 \
+                         --slave /usr/bin/g++ g++ /usr/bin/g++-7
+sudo update-alternatives --config gcc
+gcc --version
+g++ --version
+   #+END_SRC
+
+5. Java: [[http://tipsonubuntu.com/2016/07/31/install-oracle-java-8-9-ubuntu-16-04-linux-mint-18/][Tutorial]]
    #+BEGIN_SRC shell
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt update; sudo apt install oracle-java8-installer
 sudo apt install oracle-java8-set-default
    #+END_SRC
 
-5. Other applications
+6. Other applications
    #+BEGIN_SRC shell
 # Screenshot
 sudo apt-get install shutter
    #+END_SRC
 
-6. Tilix: https://gnunn1.github.io/tilix-web/
+7. Tilix: https://gnunn1.github.io/tilix-web/
    #+BEGIN_SRC shell
 sudo add-apt-repository ppa:webupd8team/terminix
 sudo apt-get update
