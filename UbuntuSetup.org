@@ -80,6 +80,20 @@ sudo apt-get install tilix
 ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
    #+END_SRC
 
+8. Typora
+   #+BEGIN_SRC shell
+# or use
+# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
+wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+
+# add Typora's repository
+sudo add-apt-repository 'deb https://typora.io/linux ./'
+sudo apt-get update
+
+# install typora
+sudo apt-get install typora
+   #+END_SRC
+
 * Ubuntu Applications
 1. Gnome-terminal: Use login shell, Go to ~Edit~ -> ~Preferences~ -> ~Profiles~ -> ~Command~ ->
    Check ~Run command as a login shell~
