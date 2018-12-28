@@ -59,6 +59,11 @@ sudo apt update; sudo apt install oracle-java8-installer
 sudo apt install oracle-java8-set-default
    #+END_SRC
 
+   If you have multiple Java packages installed on your machine, to check which version to use as the default type use the following command.
+   #+BEGIN_SRC shell
+sudo update-alternatives --config java
+   #+END_SRC
+
 6. Other applications
    #+BEGIN_SRC shell
 # Screenshot
