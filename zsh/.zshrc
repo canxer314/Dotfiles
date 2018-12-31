@@ -183,9 +183,9 @@ elif [[ $CURRENT_OS == 'Linux' ]]; then
 fi
 
 # Vim & Emacs
-if exists nvim; then alias vim="nvim"; fi
+if exists nvim; then alias vim="$(which nvim)"; fi
 alias v="vim"
-alias sv="sudo nvim"
+alias sv="sudo $(which nvim)"
 alias e="emacs"
 alias ec="emacsclient"
 alias se="sudo -E emacs"
