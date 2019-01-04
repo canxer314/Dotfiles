@@ -33,6 +33,7 @@ antigen bundle lein
 antigen bundle gulp
 antigen bundle rsync
 antigen bundle dotenv
+antigen bundle vi-mode
 
 # Ruby
 antigen bundle ruby
