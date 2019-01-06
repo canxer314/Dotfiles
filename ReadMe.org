@@ -165,18 +165,6 @@ python3 -m pip install pipenv 'python-language-server[all]'
 python2 -m pip install futures
    #+END_SRC
 
-4. Anaconda
-   #+BEGIN_SRC shell
-conda install -c conda-forge jupyterlab
-   #+END_SRC
-   Note: For all methods of installation, if you are using a version of Jupyter Notebook earlier
-   than 5.3, then you must also run the following command after installation to enable the
-   JupyterLab server extension (check version with ~jupyter notebook --version~):
-
-   #+BEGIN_SRC shell
-jupyter serverextension enable --py jupyterlab --sys-prefix
-   #+END_SRC
-
 4. C++
    #+BEGIN_SRC shell
 brew install gcc@7 cmake ninja clang-format
@@ -191,7 +179,7 @@ sudo tlmgr install latexmk multirow
 
 6. Mac quick look ([[https://github.com/sindresorhus/quick-look-plugins][Preview]])
    #+BEGIN_SRC shell
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package quicklookase qlvideo
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json webpquicklook suspicious-package quicklookase qlvideo
    #+END_SRC
 
 7. Cask applications

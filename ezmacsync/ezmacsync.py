@@ -15,7 +15,10 @@ if __name__ == "__main__":
     if not os.path.isdir(CLOUD_DIR):
         os.makedirs(CLOUD_DIR)
 
-    # region get ignore_lists configs
+    # #################################################################################################
+    # get ignore_lists configs
+    # #################################################################################################
+
     ignore_lists_file = CLOUD_DIR + "/ignore_lists.json"
     ignore_lists = {}
     if not os.path.exists(ignore_lists_file):
@@ -36,12 +39,16 @@ if __name__ == "__main__":
         if key not in ignore_lists:
             ignore_lists[key] = []
 
+    for k, v in ignore_lists.items():
+        ignore_lists[k] = sorted(v)
+
     # dump ignore_lists
     with open(ignore_lists_file, "w+") as f:
         json.dump(ignore_lists, f, indent=2, separators=(",", ":"))
-    # endregion
 
-    # region get synced_lists data
+    # #################################################################################################
+    # get synced_lists data
+    # #################################################################################################
     synced_lists_file = CLOUD_DIR + "/synced_lists.json"
     synced_lists = {}
     if not os.path.exists(synced_lists_file):
@@ -64,41 +71,32 @@ if __name__ == "__main__":
         if key not in synced_lists:
             synced_lists[key] = []
 
-    # dump synced_lists
-    with open(synced_lists_file, "w+") as f:
-        json.dump(synced_lists, f, indent=2, separators=(",", ":"))
-
-    # try prettier json files
-    try:
-        print("Format eamacsync files...")
-        os.system(HOME + "/.npm-global/bin/prettier --write " + ignore_lists_file)
-        os.system(HOME + "/.npm-global/bin/prettier --write " + synced_lists_file)
-        print("\n")
-    except:
-        pass
-
     print("================ Backup Start ================")
-    # endregion
-
-    # region backup /Applications
+    # #################################################################################################
+    # backup /Applications
+    # #################################################################################################
     print("Backup /Applications...")
     all_apps = list(
         filter(lambda app: not app.startswith("."), os.listdir("/Applications"))
     )
     all_apps = list(set(all_apps) | set(synced_lists["allAppList"]))
     synced_lists["allAppList"] = all_apps
-    # endregion
 
-    # update brew
+    # #################################################################################################
+    # update homebrew
+    # #################################################################################################
     os.system("/usr/local/bin/brew update")
 
-    # region backup brew tap
+    # #################################################################################################
+    # backup brew tap
+    # #################################################################################################
     print("Backup brew taps...")
     brew_taps = (
         subprocess.check_output("/usr/local/bin/brew tap", shell=True)
         .decode("utf-8")
         .split("\n")
     )
+
     brew_taps = list(set(brew_taps) | set(synced_lists["brewTapList"]))
     brew_taps_ignore_set = set(
         map(lambda tap: tap.lower(), ignore_lists["brewTapRemoveList"])
@@ -111,9 +109,10 @@ if __name__ == "__main__":
     except ValueError:
         pass
     synced_lists["brewTapList"] = brew_taps
-    # endregion
 
-    # region backup brew apps
+    # #################################################################################################
+    # backup brew apps
+    # #################################################################################################
     print("Backup brew apps...")
     brew_apps = (
         subprocess.check_output("/usr/local/bin/brew list", shell=True)
@@ -128,9 +127,10 @@ if __name__ == "__main__":
     except ValueError:
         pass
     synced_lists["brewAppList"] = brew_apps
-    # endregion
 
-    # region backup brew cask apps
+    # #################################################################################################
+    # backup brew cask apps
+    # #################################################################################################
     print("Backup brew cask apps...")
     brew_cask_apps = (
         subprocess.check_output("/usr/local/bin/brew cask list", shell=True)
@@ -149,9 +149,10 @@ if __name__ == "__main__":
     except ValueError:
         pass
     synced_lists["brewCaskAppList"] = brew_cask_apps
-    # endregion
 
-    # region backup mas apps
+    # #################################################################################################
+    # backup mas apps
+    # #################################################################################################
     print("Backup mas apps...")
     mas_apps = (
         subprocess.check_output("/usr/local/bin/mas list", shell=True)
@@ -177,12 +178,27 @@ if __name__ == "__main__":
         pass
     synced_lists["masAppList"] = mas_apps
 
+    # Sort list
+    for k, v in synced_lists.items():
+        synced_lists[k] = sorted(v)
+
     with open(synced_lists_file, "w+") as f:
         json.dump(synced_lists, f, indent=2, separators=(",", ":"))
-    # endregion
+
+    # try prettier json files
+    try:
+        print("Format eamacsync files...")
+        os.system(HOME + "/.npm-global/bin/prettier --write " + ignore_lists_file)
+        os.system(HOME + "/.npm-global/bin/prettier --write " + synced_lists_file)
+        print("\n")
+    except:
+        print("No prettier installed, pass the formatting...")
 
     print("================ Backup End ================")
 
+    # #################################################################################################
+    # Start Installation
+    # #################################################################################################
     print("================ Install Start =================")
     install_script = ""
     # brew tap install
