@@ -16,6 +16,10 @@ sudo apt-get install flat-remix-gnome flat-remix-gtk flat-remix
   - [[https://extensions.gnome.org/extension/307/dash-to-dock/][Dash to Dock]] is an alternative to the default dock.
 
 - [[https://wiki.manjaro.org/index.php?title=Improve_Font_Rendering][Imporve Font Rendering]]
+- Redshift
+  #+BEGIN_SRC shell
+sudo apt-get install redshift-gtk
+  #+END_SRC
 
 * Libraries
 Update apt with ~sudo apt-get update~
