@@ -78,4 +78,4 @@ if [[ $CURRENT_OS == 'Linux' ]]; then
 fi
 
 # Local path has the highest priority
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=$HOME/bin:/usr/bin:/usr/local/bin:/usr/local/sbin:$PATH
