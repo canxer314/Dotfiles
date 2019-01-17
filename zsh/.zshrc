@@ -289,3 +289,11 @@ alias rr='reload_source'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# DSM setup
+if [ -d ~/Developer/Github/DSMv2 ]; then
+    # home of the DSM workspace to avoid hardcoding paths
+    export DSM_WORKSPACE=~/Developer/Github/DSMv2
+    # setup the rest of the DSM environmental variables, such as camera serial numbers, etc
+    source $DSM_WORKSPACE/dsm_database/dsm_setup_environment
+fi
