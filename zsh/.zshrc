@@ -73,7 +73,7 @@ elif [[ $CURRENT_OS == 'Linux' ]]; then
     elif [[ $DISTRO == 'Arch' ]]; then
         antigen bundle archlinux
     elif [[ $DISTRO == 'Ubuntu' ]]; then
-        antigen bundle debian
+        antigen bundle ubuntu
     fi
 
 elif [[ $CURRENT_OS == 'Cygwin' ]]; then
