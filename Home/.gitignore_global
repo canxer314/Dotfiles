@@ -41,5 +41,6 @@ TAGS
 .mypy_cache
 cmake-build-debug
 .ccls-cache
+compile_commands.json
 .env
 .flycheck_*
