@@ -1,3 +1,13 @@
+export EDITOR=vim
+export FZF_DEFAULT_COMMAND='
+  (git ls-tree -r --name-only HEAD ||
+   find . -path "*/\.*" -prune -o -type f -print -o -type l -print |
+      sed s/^..//) 2> /dev/null'
+
+export ARCHFLAGS="-arch x86_64"
+export SSH_KEY_PATH="~/.ssh/rsa_id"
+export MANPATH="/usr/local/man:$MANPATH"
+
 # doom
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
@@ -15,12 +25,12 @@ if [[ -f /usr/libexec/java_home ]]; then
     export JAVA_HOME=`/usr/libexec/java_home -v 11`
 elif [[ -f /usr/bin/javac ]]; then
     export JAVA_HOME=$(dirname $(dirname $(readlink -e /usr/bin/javac)))
-else
-    export JAVA_HOME=''
 fi
-export JRE_HOME=$JAVA_HOME/jre
-export CLASSPATH=$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
-export PATH=$JAVA_HOME/bin:$PATH
+if [[ $JAVA_HOME ]];then
+    export JRE_HOME=$JAVA_HOME/jre
+    export CLASSPATH=$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
+    export PATH=$JAVA_HOME/bin:$PATH
+fi
 
 # Android
 export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -28,35 +38,15 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Go
+if [ -d /usr/local/go ]; then # for non package manager installation
+    export PATH=$PATH:/usr/local/go/bin
+fi
 if [ -f /usr/local/bin/go ]; then
     export GOPATH=$HOME/go
     export GOROOT=$(go env GOROOT)
     export PATH=$PATH:/usr/local/opt/go/libexec/bin
     export PATH=$PATH:$HOME/go/bin
 fi
-
-export EDITOR=vim
-export FZF_DEFAULT_COMMAND='
-  (git ls-tree -r --name-only HEAD ||
-   find . -path "*/\.*" -prune -o -type f -print -o -type l -print |
-      sed s/^..//) 2> /dev/null'
-
-# Compilation flags
-export ARCHFLAGS="-arch x86_64"
-
-# Zlib flags
-export LDFLAGS="-L/usr/local/opt/zlib/lib"
-export CPPFLAGS="-I/usr/local/opt/zlib/include"
-export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
-
-# ssh
-export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-export MANPATH="/usr/local/man:$MANPATH"
-
-# for Remacs
-# https://github.com/Wilfred/remacs#requirements
-export PATH="/usr/local/opt/texinfo/bin:$PATH"
 
 # System based environments
 if [ -f "$HOME/.zprofile-sys" ]; then

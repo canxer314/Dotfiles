@@ -16,6 +16,7 @@ else
     VER=$(lsb_release -sr)
 fi
 export CURRENT_OS
+export DISTRO
 
 # No github credentials
 HOMEBREW_NO_GITHUB_API=1
