@@ -26,6 +26,7 @@ else
     alias oo="sudo open ."
 fi
 alias stat="stat -x"
+alias nt="nettop -cdP"
 alias mac=~/Dotfiles/ezmacsync/ezmacsync.py
 
 
