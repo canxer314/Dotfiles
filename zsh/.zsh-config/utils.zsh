@@ -35,3 +35,29 @@ function reload_source() {
     zsh --login
 }
 alias rr='reload_source'
+
+# Load FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Switch projects
+function counsel_projectile(){
+    projects=("$HOME/Dotfiles" "$HOME/.emacs.d" "$HOME/.doom.d" "$HOME/Dropbox/Developer"
+             "$HOME/Dropbox/Snippets")
+    developer_root=$HOME/Developer
+    for dir in $(find $developer_root -maxdepth 2 -type d); do
+        if [ -d $dir/.git ]; then
+            projects+=($dir)
+        fi
+    done
+
+    fzf_projects=""
+    for project in $projects; do
+        fzf_projects=$fzf_projects\\n$project;
+    done
+    # Trim first \n
+    fzf_projects=${fzf_projects:2:${#fzf_projects}-1}
+
+    selected_project=$(echo $fzf_projects | fzf)
+    cd $selected_project
+}
+alias pp=counsel_projectile

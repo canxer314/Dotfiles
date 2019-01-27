@@ -14,12 +14,9 @@ function exists() {
     type "$1" > /dev/null 2>&1;
 }
 
-# Ranger
+# Load zsh configs
 if [ -d "$HOME/.zsh-config" ]; then
     for file in $HOME/.zsh-config/*.zsh; do
         source "$file"
     done
-    bindkey '^o' widget-ranger-cd
 fi
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

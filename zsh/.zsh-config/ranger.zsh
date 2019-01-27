@@ -15,3 +15,6 @@ function widget-ranger-cd() {
     zle accept-line
 }
 zle -N widget-ranger-cd
+
+# Ranger
+bindkey '^o' widget-ranger-cd
