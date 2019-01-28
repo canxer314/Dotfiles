@@ -104,9 +104,9 @@ nmap <leader>tb      :action ToggleBookmark<CR>
 nmap <leader>tt      :action ToggleLineBreakpoint<CR>
 nmap gR              :action Resume<CR>
 nmap gd              :action GotoDeclaration<CR>
+nmap gD              :action FindUsages<CR>
 nmap gi              :action StepInto<CR>
 nmap go              :action StepOut<CR>
-nmap gr              :action FindUsages<CR>
 nmap gs              :action StepOver<CR>
 
 vmap <CR>            :<Backspace><Backspace><Backspace><Backspace><Backspace>action RecentFiles<CR>
@@ -141,9 +141,9 @@ vmap <leader>tb      :<Backspace><Backspace><Backspace><Backspace><Backspace>act
 vmap <leader>tt      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ToggleLineBreakpoint<CR>
 vmap gR              :<Backspace><Backspace><Backspace><Backspace><Backspace>action Resume<CR>
 vmap gd              :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoDeclaration<CR>
+vmap gD              :<Backspace><Backspace><Backspace><Backspace><Backspace>action FindUsages<CR>
 vmap gi              :<Backspace><Backspace><Backspace><Backspace><Backspace>action StepInto<CR>
 vmap go              :<Backspace><Backspace><Backspace><Backspace><Backspace>action StepOut<CR>
-vmap gr              :<Backspace><Backspace><Backspace><Backspace><Backspace>action FindUsages<CR>
 vmap gs              :<Backspace><Backspace><Backspace><Backspace><Backspace>action StepOver<CR>
 
 " tab is used in karabiner as <C-i>, <C-d> as delete
