@@ -90,6 +90,7 @@ nmap <leader>dD      :action DebugClass<CR>
 nmap <leader>dd      :action Debug<CR>
 nmap <leader>ee      :action ShowErrorDescription<CR>
 nmap <leader>op      :action SelectInProjectView<CR>
+nmap <leader>o,      :action Tool_External Tools_Open in Emacs<CR>
 nmap <leader>fb      :action ShowBookmarks<CR>
 nmap <leader>fd      :action SmartSearchAction<CR>
 nmap <leader>ft      :action ActivateProjectToolWindow<CR>
@@ -124,6 +125,7 @@ vmap <leader>dD      :<Backspace><Backspace><Backspace><Backspace><Backspace>act
 vmap <leader>dd      :<Backspace><Backspace><Backspace><Backspace><Backspace>action Debug<CR>
 vmap <leader>ee      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ShowErrorDescription<CR>
 vmap <leader>op      :<Backspace><Backspace><Backspace><Backspace><Backspace>action SelectInProjectView<CR>
+vmap <leader>o,      :<Backspace><Backspace><Backspace><Backspace><Backspace>action Tool_External Tools_Open in Emacs<CR>
 vmap <leader>fb      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ShowBookmarks<CR>
 vmap <leader>fd      :<Backspace><Backspace><Backspace><Backspace><Backspace>action SmartSearchAction<CR>
 vmap <leader>ff      :<Backspace><Backspace><Backspace><Backspace><Backspace>action SearchEverywhere<CR>

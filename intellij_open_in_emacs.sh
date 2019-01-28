@@ -1,10 +1,11 @@
 #!/usr/bin/env zsh
 # Tutorial: https://developer.atlassian.com/blog/2015/03/emacs-intellij/
-# https://ws3.sinaimg.cn/large/006tNc79ly1fzma8zswoij318f0u0jxt.jpg
+# Name: Open in Emacs
 # Program: /Users/ztlevi/Dotfiles/intellij_open_in_emacs.sh
 # Arguments: $FilePath$ $LineNumber$ $ColumnNumber$
 # Working directory: $FileDir$
-# Assign key to C-shift-e
+# Advanced Options: Uncheck open counsel for tool output
+# https://ws3.sinaimg.cn/large/006tNc79ly1fzma8zswoij318f0u0jxt.jpg
 
 file=$1
 line=$2
