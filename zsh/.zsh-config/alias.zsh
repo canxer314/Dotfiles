@@ -5,6 +5,7 @@ if exists nvim; then alias vim="$(which nvim)"; fi
 alias v="vim"
 alias sv="sudo $(which nvim)"
 alias e="emacs"
+alias et="emacs -nw"
 alias ec="emacsclient"
 alias se="sudo -E emacs"
 alias magit="emacsclient -n -e \(magit-status\)"
