@@ -35,8 +35,6 @@ alias dconf-dump-all="
     dconf dump /org/gnome/desktop/wm/keybindings/ > ~/Dotfiles/Home_Linux/.config/dconf/wm-keys.conf
     dconf dump /org/gnome/mutter/keybindings/ > ~/Dotfiles/Home_Linux/.config/dconf/mutter-keys.conf
 "
-alias cnet="sudo route del default gw 0.0.0.0 enp6s0
-                sudo ip route add 10.213.37.0/24 via 10.193.35.1 dev enp6s0"
 
 
 function ppalist() {
