@@ -32,6 +32,9 @@ if [[ $JAVA_HOME ]];then
     export PATH=$JAVA_HOME/bin:$PATH
 fi
 
+# Python
+export PYTHONPATH=$PYTHONPATH:.
+
 # Android
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
