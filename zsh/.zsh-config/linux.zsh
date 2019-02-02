@@ -13,6 +13,7 @@ elif exists konsole; then
 elif exists gnome-terminal; then
     alias ot="gnome-terminal"
 fi
+alias xo="xdg-open"
 if [ -f "/usr/bin/xdg-open" ];then
     alias oo="/usr/bin/xdg-open . &>/dev/null"
     alias soo="sudo /usr/bin/xdg-open . &>/dev/null"
