@@ -41,8 +41,19 @@ alias rr='reload_source'
 
 # Switch projects
 function counsel_projectile(){
-    projects=("$HOME/Dotfiles" "$HOME/.emacs.d" "$HOME/.doom.d" "$HOME/Dropbox/Developer"
-             "$HOME/Dropbox/Snippets")
+    projects=()
+
+    # Scan roots with depth 1
+    project_roots=("$HOME" "$HOME/Dropbox")
+    for root in $project_roots; do
+        for dir in $(find $root -maxdepth 1 -type d); do
+            if [ -d $dir/.git ]; then
+                projects+=($dir)
+            fi
+        done
+    done
+
+    # Scan Developer directory with depth 2
     developer_root=$HOME/Developer
     for dir in $(find $developer_root -maxdepth 2 -type d); do
         if [ -d $dir/.git ]; then
