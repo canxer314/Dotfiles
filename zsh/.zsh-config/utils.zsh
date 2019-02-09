@@ -40,7 +40,7 @@ alias rr='reload_source'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Switch projects
-function counsel_projectile(){
+function fzf_projects(){
     projects=()
 
     # Scan roots with depth 1
@@ -71,4 +71,4 @@ function counsel_projectile(){
     selected_project=$(echo $fzf_projects | fzf)
     cd $selected_project
 }
-alias pp=counsel_projectile
+alias pp=fzf_projects
