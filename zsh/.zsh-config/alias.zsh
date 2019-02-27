@@ -28,7 +28,7 @@ if exists python3; then alias p3="python3"; fi
 if exists pipenv; then alias pe="pipenv"; fi
 if exists pip3; then alias pip="noglob pip3"; fi
 alias sa="source activate"
-alias sd="source deactivate"
+alias sd="conda deactivate"
 
 if exists npm; then
     alias npmgL0="npm list -g --depth=0"
