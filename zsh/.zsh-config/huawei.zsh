@@ -4,6 +4,7 @@ alias hstg="mkdir -p ~/huawei-storage && sshfs admin@10.213.37.36:/share/ ~/huaw
 alias hgpu="ssh root@10.213.37.34"
 alias hgpufs="mkdir -p ~/huawei-gpu && sshfs root@10.213.37.34:/ ~/huawei-gpu"
 alias tbgpu="ssh -NfL 6006:localhost:6006 root@10.213.37.34"
+alias ddd="dsm_make && dsmlaunch"
 
 # add entries to /etc/hosts if you use domains
 # /etc/hosts
