@@ -19,6 +19,10 @@ sudo ip route add 10.193.5.0/24 via 10.193.35.1 dev enp6s0
 sudo ip route add 10.208.119.0/24 via 10.193.35.1 dev enp6s0
 "
 
+alias lcm_fix="sudo ifconfig lo multicast
+sudo route add -net 224.0.0.0 netmask 240.0.0.0 dev lo
+"
+
 # DSM setup
 if [ -d ~/Developer/Github/DSMv2 ]; then
     # home of the DSM workspace to avoid hardcoding paths
