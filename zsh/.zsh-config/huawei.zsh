@@ -12,11 +12,13 @@ alias ddd="dsm_make && dsmlaunch"
 # 10.193.5.117 email-us.huawei.com
 # 10.208.119.42 login.huawei.com
 # 10.208.119.43 w3.huawei.com
+# 10.208.124.99 rnd-jira-usa.inhuawei.com
 alias cnet=" sudo route del default gw 0.0.0.0 enp6s0
 sudo ip route add 10.208.88.0/24 via 10.193.35.1 dev enp6s0
 sudo ip route add 10.213.37.0/24 via 10.193.35.1 dev enp6s0
 sudo ip route add 10.193.5.0/24 via 10.193.35.1 dev enp6s0
 sudo ip route add 10.208.119.0/24 via 10.193.35.1 dev enp6s0
+sudo ip route add 10.208.124.0/24 via 10.193.35.1 dev enp6s0
 "
 
 alias lcm_fix="sudo ifconfig lo multicast
