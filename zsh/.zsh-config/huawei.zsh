@@ -15,6 +15,7 @@ alias dmaa="rm -rf $DSM_WORKSPACE/build && dsm_make_all"
 # 10.208.119.42 login.huawei.com
 # 10.208.119.43 w3.huawei.com
 # 10.208.124.99 rnd-jira-usa.inhuawei.com
+# 10.208.90.43 usasjcsvn05-rd.huawei.com
 ETHERNET_DEVICE="enp6s0"
 alias cnet=" sudo route del default gw 0.0.0.0 $ETHERNET_DEVICE
 sudo ip route add 10.208.88.0/24 via 10.193.35.1 dev $ETHERNET_DEVICE
@@ -22,6 +23,7 @@ sudo ip route add 10.213.37.0/24 via 10.193.35.1 dev $ETHERNET_DEVICE
 sudo ip route add 10.193.5.0/24 via 10.193.35.1 dev $ETHERNET_DEVICE
 sudo ip route add 10.208.119.0/24 via 10.193.35.1 dev $ETHERNET_DEVICE
 sudo ip route add 10.208.124.0/24 via 10.193.35.1 dev $ETHERNET_DEVICE
+sudo ip route add 10.208.90.0/24 via 10.193.35.1 dev $ETHERNET_DEVICE
 "
 
 alias lcm_fix="sudo ifconfig lo multicast
