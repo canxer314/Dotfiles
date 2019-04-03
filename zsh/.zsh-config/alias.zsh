@@ -57,7 +57,8 @@ if exists black; then
     alias format-all-black='black -q **/*.py';
 fi
 if exists clang-format; then
-    alias format-all-clang='fd -e c -e cc -e cpp -e h -e hh -e hpp -x clang-format -i style=file'
+    # alias format-all-clang="find . -regex '.*\.\(cpp\|hpp\|cc\|cxx\|h\)' -exec clang-format -style=file -i {} \;"
+    alias format-all-clang="fd -x clang-format -i style=file {} \; -e c -e cc -e cpp -e h -e hh -e hpp . ."
 fi
 if exists cspell; then
     alias cspell-all="cspell --config '$HOME/Dotfiles/cspell.json' '**/*.{js,jsx,ts,tsx,c,cc,cpp,h,hh,hpp,go,json}'"
